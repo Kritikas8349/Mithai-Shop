@@ -1,8 +1,27 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./LandingPage.css";
 import { FaSearch, FaUser, FaShoppingBag } from "react-icons/fa";
 
 const LandingPage = () => {
+    const images = [
+        "mitha.jpg",
+        "gulabjamun.jpg",
+        "jalebi.jpg"
+      ];
+      
+      const [currentIndex, setCurrentIndex] = useState(0);
+      
+      useEffect(() => {
+        const interval = setInterval(() => {
+          setCurrentIndex((prevIndex) =>
+            prevIndex === images.length - 1 ? 0 : prevIndex + 1
+          );
+        }, 10000); 
+      
+        return () => clearInterval(interval);
+      }, []);
+      
+      
   return (
     <>
       {/* Top Announcement Bar */}
@@ -21,11 +40,12 @@ const LandingPage = () => {
 
         <ul className="nav-links">
           <li>WINTER SPECIAL</li>
-          <li>SHOP CHANCHAL</li>
-          <li>GIFTING</li>
-          <li>CELEBRATE WITH CHANCHAL</li>
-          <li>MENU</li>
           <li>ABOUT US</li>
+          <li>GIFTING</li>
+          <li>CELEBRATE WITH US</li>
+          <li>MENU</li>
+          <li>RESTUARANT</li>
+          
         </ul>
 
         <div className="nav-icons">
@@ -42,27 +62,41 @@ const LandingPage = () => {
 
     {/* Inner light box */}
     <div className="hero-box">
-      <h1>
-        Chanchal Sweets <br />
-        <span>House of Quality</span>
-      </h1>
 
-      <p className="subtitle">
-      Chanchal Sweets, making every moment sweet!
-      </p>
+  {/* Background image */}
+  <img
+    src="bg1.avif"
+    alt="background"
+    className="hero-box-bg"
+  />
 
-      {/* <p className="subtitles">
-      Experience the rich taste of traditional Indian sweets, lovingly crafted using pure, high-quality ingredients and timeless recipes passed down through generations. Perfect for celebrations, gifting, or simply indulging in a moment of sweetness.
-      </p> */}
+  {/* Content */}
+  <h1>
+    Chanchal Sweets <br />
+    <span>House of Quality</span>
+  </h1>
 
-      <button className="cta">SHOP NOW</button>
-    </div>
+  <p className="subtitle">
+    Chanchal Sweets, making every moment sweet!
+  </p>
+
+  <button className="cta">SHOP NOW</button>
+</div>
+
   </div>
 
   {/* RIGHT PANEL */}
   <div className="hero-right">
-    <img src="mitha.jpg" alt="Dessert" />
-  </div>
+  <img
+    key={currentIndex}   
+    src={images[currentIndex]}
+    alt="Dessert"
+    className="hero-image"
+  />
+</div>
+
+
+
 
   {/* Bottom-left sweets */}
   <img src="stand.png" alt="Barfi" className="barfi" />
