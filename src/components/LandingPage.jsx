@@ -4,9 +4,9 @@ import { FaSearch, FaUser, FaShoppingBag } from "react-icons/fa";
 
 const LandingPage = () => {
     const images = [
-        "mitha.jpg",
-        "gulabjamun.jpg",
-        "jalebi.jpg"
+        "/mitha.jpg",
+        "/gulabjamun.jpg",
+        "/jalebi.jpg"
       ];
       
       const [currentIndex, setCurrentIndex] = useState(0);
