@@ -45,6 +45,51 @@ const LandingPage = () => {
   
     reveals.forEach((el) => observer.observe(el));
   }, []);
+
+
+  const data = {
+    sweets: {
+      title: "Sweets",
+      desc: "Traditional mithai prepared with love since 1957",
+      items: ["Rasmalai", "Gulab Jamun", "Kaju Katli", "Ladoo", "Gujiya", "Ghevar"],
+      images: [
+        "rasmalai.jpg",
+        "gulabjamun.jpg",
+        "kaju.jpg",
+        "lado.jpg",
+        "gujiya.jpg",
+        "ghevar.jpg"
+      ]
+    },
+    chaat: {
+      title: "Chaat Center",
+      desc: "Street-style chaat with authentic Indian flavors",
+      items: ["Samosa", "Pani Puri", "Raj Kachori", "Bhel Puri", "DahiChaat", "Chole Tikki"],
+      images: [
+        "samosa.jpg",
+        "panipuri.jpg",
+        "rajkachori.jpg",
+        "bhel.jpg",
+        "dahipuri.jpg",
+        "choletikki.jpg"
+      ]
+    },
+    fastfood: {
+      title: "Fast Food",
+      desc: "Quick bites made fresh for every craving",
+      items: ["Pasta", "Manchurian", "Noodles", "Spring Rolls", "Chilli Potato", "Momos"],
+      images: [
+        "pasta.jpg",
+        "manch.jpg",
+        "noodle.jpg",
+        "roll.jpg",
+        "chillipotato.jpg",
+        "momo.jpg"
+      ]
+    }
+  };
+
+  const [active, setActive] = useState("sweets");
   
 
   return (
@@ -218,6 +263,219 @@ const LandingPage = () => {
 </div>
 </section>
 
+
+
+<section className="catalog-section">
+<h2 className="catalog-title reveal">Our Catalog</h2>
+      {/* TABS */}
+      <div className="catalog-tabs reveal">
+        <button
+          className={active === "sweets" ? "active" : ""}
+          onClick={() => setActive("sweets")}
+        >
+          Sweets
+        </button>
+        <button
+          className={active === "chaat" ? "active" : ""}
+          onClick={() => setActive("chaat")}
+        >
+          Chaat Center
+        </button>
+        <button
+          className={active === "fastfood" ? "active" : ""}
+          onClick={() => setActive("fastfood")}
+        >
+          Fast Food
+        </button>
+      </div>
+
+      <div className="catalog-layout">
+        {/* LEFT INFO BOX */}
+        <div className="catalog-info reveal reveal-left">
+          <h3>{data[active].title}</h3>
+          <p>{data[active].desc}</p>
+
+          <ul>
+            {data[active].items.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ul>
+
+          <button>View Menu</button>
+        </div>
+
+        {/* IMAGE GRID */}
+        <div className="catalog-grid">
+          {data[active].images.map((img, index) => (
+            <img src={img} alt="" key={index} />
+          ))}
+        </div>
+      </div>
+    </section>
+
+
+    <section className="testimonials">
+
+<h1 className="testimonials-titles reveal reveal-up">
+  Sweet Reviews
+</h1>
+
+<h2 className="testimonials-title reveal reveal-up delay-1">
+  Loved by families, and sweet lovers across the city.
+</h2>
+
+<div className="testimonials-grid">
+  {/* CARD 1 */}
+  <div className="testimonial-card reveal reveal-up delay-1">
+    <div className="stars">★★★★★</div>
+    <p className="testimonial-text">
+      The taste instantly reminded me of childhood festivals. Fresh,
+      perfectly balanced sweetness, and authentic flavors that you
+      rarely find today.
+    </p>
+
+    <div className="testimonial-user">
+      <img src="t.png" alt="Anita Sharma" />
+      <div>
+        <strong>Anita Sharma</strong>
+        <span>Bhopal, MP</span>
+      </div>
+    </div>
+  </div>
+
+  {/* CARD 2 */}
+  <div className="testimonial-card reveal reveal-up delay-2">
+    <div className="stars">★★★★★</div>
+    <p className="testimonial-text">
+      Chanchal Sweets never disappoints. From laddoos to chaat, everything
+      is prepared fresh and served with warmth. Truly a trusted name.
+    </p>
+
+    <div className="testimonial-user">
+      <img src="ss3.png" alt="Rohit Verma" />
+      <div>
+        <strong>Rohit Verma</strong>
+        <span>Bairagarh, MP</span>
+      </div>
+    </div>
+  </div>
+
+  {/* CARD 3 */}
+  <div className="testimonial-card reveal reveal-up delay-3">
+    <div className="stars">★★★★★</div>
+    <p className="testimonial-text">
+      Ordered sweets for a family function and everyone loved it.
+      Beautiful packaging, rich taste, and on-time delivery.
+    </p>
+
+    <div className="testimonial-user">
+      <img src="ss4.png" alt="Neha Patel" />
+      <div>
+        <strong>Neha Patel</strong>
+        <span>Sehore, MP</span>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<section className="footer">
+  <div className="footer-container reveal reveal-up">
+
+    {/* LEFT CONTENT */}
+    <div className="footer-left">
+    <div className="footer-logo">
+  <img
+    src="newlogo.png"     // put your logo path here
+    alt="Chanchal Sweets Logo"
+    className="footer-logo-img"
+  />
+</div>
+
+
+      <h2>
+        WHERE EVERY <br />
+        TREAT IS A LITTLE <br />
+        <span>SLICE OF HEAVEN</span>
+      </h2>
+
+      <div className="footer-subscribe">
+        <input type="email" placeholder="Email" />
+        <button>
+          <span>Subscribe</span>
+        </button>
+      </div>
+
+      <p className="footer-note">
+        We won’t flood your inbox, just sweet updates and offers!
+      </p>
+    </div>
+
+    {/* RIGHT LINKS */}
+    <div className="footer-links">
+
+      <div className="footer-column">
+        <h4>Quick Links</h4>
+        <a href="#">Homepage</a>
+        <a href="#">About Us</a>
+        <a href="#">Our Menu</a>
+        <a href="#">What We Offer</a>
+        <a href="#">Testimonials</a>
+      </div>
+
+      <div className="footer-column">
+        <h4>Customer Support</h4>
+        <a href="#">Contact Us</a>
+        <a href="#">FAQs</a>
+        <a href="#">Order Tracking</a>
+        <a href="#">Delivery Info</a>
+        <a href="#">Returns & Refunds</a>
+      </div>
+
+      <div className="footer-badges">
+        <h4>There is nothing to hide!</h4>
+
+        <div className="badges">
+          <div className="badge">
+            <span>🚫</span>
+            <p>No Artificial<br />Colors Added</p>
+          </div>
+          <div className="badge">
+            <span>🥛</span>
+            <p>No Chemicals<br />In Our Bakes</p>
+          </div>
+          <div className="badge">
+            <span>🌿</span>
+            <p>No Artificial<br />Flavours Used</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  {/* FOOTER BOTTOM */}
+  <div className="footer-bottom ">
+    <div className="footer-bottom-left reveal reveal-up">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms & Conditions</a>
+      <a href="#">Cookie Policy</a>
+      <a href="#">Allergen Information</a>
+      <a href="#">Nutritional Information</a>
+    </div>
+
+    <div className="footer-bottom-center reveal reveal-up">
+      Designed by Dini Pixel Copyright © 2025. All Rights Reserved.
+    </div>
+
+    <div className="footer-bottom-right reveal reveal-up">
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+      <a href="#">Pinterest</a>
+    </div>
+  </div>
+</section>
 
 
 
