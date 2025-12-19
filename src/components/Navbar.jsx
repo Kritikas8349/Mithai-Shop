@@ -1,40 +1,63 @@
 import React, { useState } from "react";
-import {
-  FaSearch,
-  FaUser,
-  FaShoppingBag,
-  FaBars,
-  FaTimes
-} from "react-icons/fa";
-import "./Navbar.css"; // agar same CSS use kar rahe ho to LandingPage.css bhi chal jayega
+import { FaBars, FaTimes } from "react-icons/fa";
+import "./Navbar.css";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <>
+      {/* TOP BAR */}
+      <div className="top-bar">
+        <div className="top-bar-track">
+          <p>
+            SAME DAY DELIVERY WITHIN BHOPAL
+            <span className="dot">•</span>
+            FRESHNESS AND HYGIENE ASSURED
+          </p>
+          <p aria-hidden="true">
+            SAME DAY DELIVERY WITHIN BHOPAL
+            <span className="dot">•</span>
+            FRESHNESS AND HYGIENE ASSURED
+          </p>
+          <p aria-hidden="true">
+            SAME DAY DELIVERY WITHIN BHOPAL
+            <span className="dot">•</span>
+            FRESHNESS AND HYGIENE ASSURED
+          </p>
+          <p aria-hidden="true">
+            SAME DAY DELIVERY WITHIN BHOPAL
+            <span className="dot">•</span>
+            FRESHNESS AND HYGIENE ASSURED
+          </p>
+          <p aria-hidden="true">
+            SAME DAY DELIVERY WITHIN BHOPAL
+            <span className="dot">•</span>
+            FRESHNESS AND HYGIENE ASSURED
+          </p>
+        </div>
+      </div>
+
       {/* NAVBAR */}
       <nav className="navbar">
         <div className="nav-left">
-          <img src="logo.png" alt="Chanchal Sweets Logo" className="logo" />
+          <img src="clogo.png" alt="Logo" className="logo" />
         </div>
 
-        {/* Desktop Menu */}
         <ul className="nav-links">
-          <li>WINTER SPECIAL</li>
+          <li>HOME</li>
           <li>ABOUT US</li>
-          <li>GIFTING</li>
-          <li>CELEBRATE WITH US</li>
+          <li>CELEBRATIONS</li>
           <li>MENU</li>
           <li>RESTAURANT</li>
         </ul>
 
         <div className="nav-icons">
-          <FaSearch />
-          <FaUser />
-          <FaShoppingBag />
+          {/* DESKTOP CONTACT BUTTON — SAME AS BEFORE */}
+          <button className="contact-btn desktop-only">
+            CONTACT US
+          </button>
 
-          {/* Hamburger for mobile */}
           <FaBars
             className="hamburger"
             onClick={() => setMenuOpen(true)}
@@ -42,33 +65,31 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {/* MOBILE MENU OVERLAY */}
+      {/* OVERLAY */}
       <div
         className={`menu-overlay ${menuOpen ? "show" : ""}`}
         onClick={() => setMenuOpen(false)}
       />
 
-      {/* MOBILE SLIDE MENU */}
+      {/* MOBILE MENU */}
       <div className={`mobile-menu ${menuOpen ? "open" : ""}`}>
         <FaTimes
           className="close-btn"
           onClick={() => setMenuOpen(false)}
         />
 
-        {/* Logo inside menu */}
-        <div className="mobile-menu-logo">
-          <img src="logo.png" alt="Chanchal Logo" />
-        </div>
-
-        {/* Menu cards */}
         <ul className="mobile-menu-links">
-          <li className="menu-card">WINTER SPECIAL</li>
+          <li className="menu-card">HOME</li>
           <li className="menu-card">ABOUT US</li>
-          <li className="menu-card">GIFTING</li>
-          <li className="menu-card">CELEBRATE WITH US</li>
+          <li className="menu-card">CELEBRATIONS</li>
           <li className="menu-card">MENU</li>
           <li className="menu-card">RESTAURANT</li>
         </ul>
+
+        {/* SAME CONTACT BUTTON — MOBILE */}
+        <button className="contact-btn mobile-only">
+          CONTACT US
+        </button>
       </div>
     </>
   );

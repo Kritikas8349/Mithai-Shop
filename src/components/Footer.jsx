@@ -35,15 +35,15 @@ const Footer = () => {
           </p>
         </div>
 
-        {/* RIGHT LINKS */}
+        
         <div className="footer-links">
 
           <div className="footer-column">
             <h4>Quick Links</h4>
-            <a href="#">Homepage</a>
+            <a href="#">Home</a>
             <a href="#">About Us</a>
             <a href="#">Our Menu</a>
-            <a href="#">What We Offer</a>
+            <a href="#">Restaurant</a>
             <a href="#">Testimonials</a>
           </div>
 
@@ -51,12 +51,11 @@ const Footer = () => {
             <h4>Customer Support</h4>
             <a href="#">Contact Us</a>
             <a href="#">FAQs</a>
-            <a href="#">Order Tracking</a>
-            <a href="#">Delivery Info</a>
+            <a href="#">Location</a>
             <a href="#">Returns & Refunds</a>
           </div>
 
-          {/* BADGES */}
+          
           <div className="footer-badges">
             <h4>There is nothing to hide!</h4>
 
@@ -90,7 +89,7 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* FOOTER BOTTOM */}
+      
       <div className="footer-bottom">
         <div className="footer-bottom-left reveal reveal-up">
           <a href="#">Privacy Policy</a>
