@@ -1,0 +1,133 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+  }
+  
+  /* TOP BAR */
+  .top-bar {
+    background: #5b1f1f;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 12px;
+    padding: 22px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  /* NAVBAR */
+  .navbar {
+    background: #f8f4ef;
+    height: 83px; /* Reduced height */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+  
+  .logo {
+    width: 180px;
+    margin-top: 20px;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+    font-size: 13px;
+    letter-spacing: 1px;
+  }
+  
+  .nav-links li {
+    cursor: pointer;
+  }
+  
+  .nav-icons {
+    display: flex;
+    gap: 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  /* Hamburger for mobile */
+  .hamburger {
+    display: none;
+    font-size: 22px;
+    cursor: pointer;
+  }
+  
+  /* MOBILE MENU */
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background: #fff;
+    padding: 20px;
+    transition: right 0.4s ease;
+    z-index: 1001;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .mobile-menu.open {
+    right: 0;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+  
+  /* Logo inside menu */
+  .mobile-menu-logo img {
+    width: 120px;
+  }
+  
+  /* Menu cards */
+  .mobile-menu-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: -30px;
+  }
+  
+  .menu-card {
+    padding: 12px 15px;
+    border-radius: 10px;
+    background: #fff0e5;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .menu-card:hover {
+    background: #f6d9b8;
+  }
+  
+  /* Overlay */
+  .menu-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+  }
+  
+  .menu-overlay.show {
+    opacity: 1;
+    pointer-events: all;
+  }
+  
