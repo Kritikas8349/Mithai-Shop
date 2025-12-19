@@ -91,6 +91,7 @@
     opacity: 0.8;
     text-decoration: none;
     color: #fff;
+    white-space: nowrap;
   }
 
   .badge-icon {

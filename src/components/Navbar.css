@@ -1,0 +1,207 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+/* ================= TOP BAR ================= */
+.top-bar {
+  background: #6b2b2b;
+  color: #fff;
+  overflow: hidden;
+  white-space: nowrap;
+  height: 38px;
+  display: flex;
+  align-items: center;
+}
+
+.top-bar-track {
+  display: flex;
+  width: max-content;
+  animation: scrollText 18s linear infinite;
+}
+
+.top-bar-track p {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  letter-spacing: 1px;
+  padding-right: 60px;
+}
+
+.dot {
+  margin: 0 14px;
+  font-size: 16px;
+}
+
+@keyframes scrollText {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-30%);
+  }
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 40px;
+  background: #fff;
+}
+
+.logo {
+  height: 50px;
+}
+
+.nav-links {
+  color: #6b2b2b;
+  font-weight: 600;
+  display: flex;
+  gap: 34px;
+  list-style: none;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.nav-links li {
+  position: relative;
+  cursor: pointer;
+}
+
+.nav-links li:hover {
+  color: #8a5a2b;
+}
+
+/* underline animation */
+.nav-links li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 2px;
+  background-color: #8a5a2b;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+.nav-links li:hover::after {
+  transform: scaleX(1);
+}
+
+.nav-icons {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+/* ================= CONTACT BUTTON ================= */
+.contact-btn {
+  background: transparent;
+  border: 2px solid #6b2b2b;
+  color: #6b2b2b;
+  padding: 10px 18px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+  background: #6b2b2b;
+  color: #fff;
+}
+
+/* ================= HAMBURGER ================= */
+.hamburger {
+  display: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* ================= MOBILE MENU ================= */
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+  z-index: 90;
+}
+
+.menu-overlay.show {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 80%;
+  height: 100%;
+  background: #fff;
+  padding: 30px;
+  transition: 0.4s ease;
+  z-index: 100;
+}
+
+.mobile-menu.open {
+  right: 0;
+}
+
+.close-btn {
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.mobile-menu-links {
+  list-style: none;
+  padding: 0;
+  margin-top: 40px;
+}
+
+.menu-card {
+  padding: 14px;
+  margin-bottom: 12px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+
+/* ================= VISIBILITY CONTROL ================= */
+.desktop-only {
+  display: inline-block;
+}
+
+.mobile-only {
+  display: none;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+  }
+}
