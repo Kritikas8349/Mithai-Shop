@@ -47,9 +47,9 @@ const Navbar = () => {
         <ul className="nav-links">
           <li>HOME</li>
           <li>ABOUT US</li>
-          <li>CELEBRATIONS</li>
           <li>MENU</li>
           <li>RESTAURANT</li>
+          <li>CATERING</li>
         </ul>
 
         <div className="nav-icons">

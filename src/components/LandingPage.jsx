@@ -91,30 +91,24 @@ const LandingPage = () => {
 
       {/* HERO SECTION */}
       <section className="hero">
-    
-  <div className="hero-left">
-    
-    <img src="stand.png" alt="Barfi" className="barfi" />
+      
+      <div className="hero-left">
+  <img src=".png" alt="Barfi" className="barfi" />
 
-    <div className="hero-box">
-      <img
-        src="bg1.avif"
-        alt="background"
-        className="hero-box-bg"
-      />
+  <div className="hero-box">
+    <h1>
+      Chanchal Sweets <br />
+      <span>House of Quality</span>
+    </h1>
 
-      <h1 >
-        Chanchal Sweets <br />
-        <span>House of Quality</span>
-      </h1>
+    <p className="subtitle">
+      Chanchal Sweets, making every moment sweet!
+    </p>
 
-      <p className="subtitle">
-        Chanchal Sweets, making every moment sweet!
-      </p>
-
-      <button className="cta">EXPLORE SWEETS</button>
-    </div>
+    <button className="cta">EXPLORE SWEETS</button>
   </div>
+</div>
+
 
   <div className="hero-right">
   

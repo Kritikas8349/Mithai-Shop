@@ -165,21 +165,6 @@
     opacity: 1;
   }
   
-  
-  /* ===========================
-     REVEAL ANIMATION
-     =========================== */
-  .reveal {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 1s ease;
-  }
-  
-  .reveal.active {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
   /* RESPONSIVE */
   @media (max-width: 992px) {
     .footer-container {

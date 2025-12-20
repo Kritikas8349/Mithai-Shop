@@ -1,0 +1,150 @@
+/* HERO SECTION */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Dancing+Script:wght@500;600&family=Allura&family=Sacramento&family=Pacifico&family=Poppins:wght@300;400;500&display=swap');
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 88vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+/* BACKGROUND IMAGE */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* OVERLAY (BEIGE + MAROON GRADIENT) */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+
+/* CONTENT WRAPPER */
+.hero-content {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  padding: 0 50px;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column-reverse;
+}
+
+/* RIGHT SIDE CONTENT */
+.hero-right {
+  max-width: 580px;
+  text-align: left;
+  color: #6b2b2b;
+}
+
+
+.hero-right h1 {
+  font-size: 4.8rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  line-height: 1.1;
+  font-family: Lexend;
+  font-style: italic;
+}
+
+.hero-right h1 span {
+  color: #6b2b2b; 
+  font-family: Lexend;
+  font-weight: 800;
+}
+
+
+.hero-right h2 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #6b2b2b;
+  margin-bottom: 20px;
+  font-family: Lexend;
+  max-width: 520px;
+}
+
+
+.hero-right p {
+  font-size: 1.5rem;
+  line-height: 1.2;
+  color: #6b2b2b;
+  margin-bottom: 35px;
+  font-family: Lexend;
+  /* font-style: italic; */
+  max-width: 520px;
+}
+
+
+.hero-btn {
+  display: inline-block;
+  padding: 14px 36px;
+  background-color: #6b2b2b;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+  color: #ffd3a6;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero-content {
+    padding: 0 25px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero-right h1 {
+    font-size: 2.8rem;
+  }
+
+  .hero-right h2 {
+    font-size: 1.4rem;
+  }
+}
+
+
+.feature-strip {
+  width: 100%;
+  background: #F8E5C6; /* soft beige */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 56px;
+  padding: 20px 0;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #7a5a2f; 
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  font-family: Lexend;
+}
+
+.feature-icon {
+  font-size: 32px;
+  color: #8a5a2b; 
+}
+
+.divider {
+  height: 38px;
+  width: 2px;
+  background: #d8c2a3;
+}
+

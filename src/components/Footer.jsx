@@ -5,7 +5,7 @@ import { FaBan, FaTint, FaLeaf } from "react-icons/fa";
 const Footer = () => {
   return (
     <section className="footer">
-      <div className="footer-container reveal reveal-up">
+      <div className="footer-container">
 
         {/* LEFT CONTENT */}
         <div className="footer-left">
@@ -91,17 +91,17 @@ const Footer = () => {
 
       
       <div className="footer-bottom">
-        <div className="footer-bottom-left reveal reveal-up">
+        <div className="footer-bottom-left">
           <a href="#">Privacy Policy</a>
           <a href="#">Terms & Conditions</a>
           <a href="#">Cookie Policy</a>
         </div>
 
-        <div className="footer-bottom-center reveal reveal-up">
+        <div className="footer-bottom-center">
           Chanchal Sweets © 2025. All Rights Reserved.
         </div>
 
-        <div className="footer-bottom-right reveal reveal-up">
+        <div className="footer-bottom-right">
           <a href="#">Facebook</a>
           <a href="#">Instagram</a>
           <a href="#">Pinterest</a>
