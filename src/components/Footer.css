@@ -1,199 +1,295 @@
-
 .footer {
-    background: #6b0f24;
-    color: #fff;
-    padding: 80px 90px 30px;
-    font-family: "Inter", sans-serif;
-  }
-  
-  /* CONTAINER */
-  .footer-container {
-    display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    gap: 80px;
-  }
-  
-  /* LEFT */
-  .footer-left h2 {
-    font-size: 42px;
-    line-height: 1.2;
-    margin-bottom: 25px;
-  }
-  
-  .footer-left h2 span {
-    color: #ce693a;
-  }
-  
-  /* LOGO IMAGE */
-  .footer-logo {
-    margin-bottom: 20px;
-  }
-  
-  .footer-logo-img {
-    width: 160px;          /* adjust as needed */
-    height: auto;
-    object-fit: contain;
-  }
-  
-  
-  /* SUBSCRIBE */
-  .footer-subscribe {
-    display: flex;
-    margin-top: 25px;
-    border-radius: 30px;
-    gap: 20px;
-  }
-  
-  .footer-subscribe input {
-    padding: 14px;
-    width: 260px;
-    border: none;
-    outline: none;
-    border-radius: 30px;
-  }
-  
-  .footer-subscribe button {
-    background: #6b0f24;
-    border: 2px solid white;
-    color: #fff;
-    padding: 0 22px;
-    cursor: pointer;
-    font-weight: 600;
-    border-radius: 30px;
-  }
-  
-  .footer-note {
-    font-size: 12px;
-    margin-top: 8px;
-    opacity: 0.7;
-  }
-  
-  /* RIGHT */
-  .footer-links {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 50px;
-  }
-  
-  .footer-column h4,
-  .footer-badges h4 {
-    font-size: 16px;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-    font-weight: 600;
-    white-space: nowrap;
-  }
-  
-  .footer-column a {
-    display: block;
-    font-size: 16px;
-    margin-bottom: 10px;
-    opacity: 0.8;
-    text-decoration: none;
-    color: #fff;
-    white-space: nowrap;
-  }
+  background: #6b0f24;
+  color: #fff;
+  padding: 80px 90px 30px;
+  font-family: "Inter", sans-serif;
+}
 
-  .badge-icon {
+/* CONTAINER */
+.footer-container {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 80px;
+}
+
+/* LEFT */
+.footer-left h2 {
+  font-size: 42px;
+  line-height: 1.2;
+  margin-bottom: 25px;
+}
+
+.footer-left h2 span {
+  color: #ce693a;
+}
+
+/* LOGO IMAGE */
+.footer-logo {
+  margin-bottom: 20px;
+}
+
+.footer-logo-img {
+  width: 160px;
+  /* adjust as needed */
+  height: auto;
+  object-fit: contain;
+}
+
+
+/* SUBSCRIBE */
+.footer-subscribe {
+  display: flex;
+  margin-top: 25px;
+  border-radius: 30px;
+  gap: 20px;
+}
+
+.footer-subscribe input {
+  padding: 14px;
+  width: 260px;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+}
+
+.footer-subscribe button {
+  background: #6b0f24;
+  border: 2px solid white;
+  color: #fff;
+  padding: 0 22px;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 30px;
+}
+
+.footer-note {
+  font-size: 12px;
+  margin-top: 8px;
+  opacity: 0.7;
+}
+
+/* RIGHT */
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+}
+
+.footer-column h4,
+.footer-badges h4 {
+  font-size: 16px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.footer-column a {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 10px;
+  opacity: 0.8;
+  text-decoration: none;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.badge-icon {
   font-size: 28px;
   color: #ce693a;
   margin-bottom: 8px;
 }
 
-  
-  /* BADGES */
-  .badges {
-    display: flex;
-    gap: 20px;
-    margin-top: 15px;
-  }
-  
-  .badge {
-    text-align: center;
-    font-size: 11px;
-    opacity: 0.9;
-  }
-  
-  .badge span {
-    font-size: 22px;
-    display: block;
-    margin-bottom: 6px;
-  }
-  
- /* BOTTOM */
+
+/* BADGES */
+.badges {
+  display: flex;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.badge {
+  text-align: center;
+  font-size: 11px;
+  opacity: 0.9;
+}
+
+.badge span {
+  font-size: 22px;
+  display: block;
+  margin-bottom: 6px;
+}
+
+/* BOTTOM */
 .footer-bottom {
-    margin-top: 60px;
-    padding-top: 25px;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-  
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    align-items: center;
-  
-    font-size: 11px;
-  }
-  
-  /* LEFT LINKS */
-  .footer-bottom-left {
-    display: flex;
-    gap: 15px;
-    justify-content: flex-start;
-  }
-  
-  /* CENTER COPYRIGHT */
-  .footer-bottom-center {
-    text-align: center;
-    font-size: 14px;
-  }
-  
-  /* RIGHT SOCIALS */
-  .footer-bottom-right {
-    display: flex;
-    gap: 15px;
-    justify-content: flex-end;
-  }
-  
-  /* LINKS STYLE */
-  .footer-bottom a {
-    color: #fff;
-    opacity: 0.7;
-    text-decoration: none;
-    white-space: nowrap;
-  }
-  
-  .footer-bottom a:hover {
-    opacity: 1;
-  }
-  
-  
-  /* ===========================
+  margin-top: 60px;
+  padding-top: 25px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+
+  font-size: 11px;
+}
+
+/* LEFT LINKS */
+.footer-bottom-left {
+  display: flex;
+  gap: 15px;
+  justify-content: flex-start;
+}
+
+/* CENTER COPYRIGHT */
+.footer-bottom-center {
+  text-align: center;
+  font-size: 14px;
+}
+
+/* RIGHT SOCIALS */
+.footer-bottom-right {
+  display: flex;
+  gap: 15px;
+  justify-content: flex-end;
+}
+
+/* LINKS STYLE */
+.footer-bottom a {
+  color: #fff;
+  opacity: 0.7;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.footer-bottom a:hover {
+  opacity: 1;
+}
+
+
+/* ===========================
      REVEAL ANIMATION
      =========================== */
-  .reveal {
+/* .reveal {
     opacity: 0;
     transform: translateY(50px);
     transition: all 1s ease;
-  }
-  
-  .reveal.active {
+  } */
+
+/* .reveal.active {
     opacity: 1;
     transform: translateY(0);
+  } */
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .footer-container {
+    grid-template-columns: 1fr;
   }
-  
-  /* RESPONSIVE */
-  @media (max-width: 992px) {
-    .footer-container {
-      grid-template-columns: 1fr;
-    }
-  
-    .footer-links {
-      grid-template-columns: 1fr 1fr;
-    }
-  
-    .footer-bottom {
-      grid-template-columns: 1fr;
-      gap: 15px;
-      text-align: center;
-    }
+
+  .footer-links {
+    grid-template-columns: 1fr 1fr;
   }
-  
+
+  .footer-bottom {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+
+  .footer {
+    padding: 50px 20px 25px;
+    text-align: center;
+  }
+
+  /* CONTAINER */
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  /* LEFT */
+  .footer-left h2 {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+
+  .footer-logo-img {
+    width: 130px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  /* SUBSCRIBE */
+  .footer-subscribe {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .footer-subscribe input {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+  }
+
+  .footer-subscribe button {
+    width: 140px;
+    padding: 10px 0;
+  }
+
+  .footer-note {
+    font-size: 11px;
+  }
+
+  /* RIGHT LINKS */
+  .footer-links {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .footer-column h4,
+  .footer-badges h4 {
+    font-size: 14px;
+  }
+
+  .footer-column a {
+    font-size: 14px;
+  }
+
+  /* BADGES */
+  .badges {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+  }
+
+  .badge {
+    width: 90px;
+    font-size: 10px;
+  }
+
+  .badge-icon {
+    font-size: 24px;
+  }
+
+  /* BOTTOM */
+  .footer-bottom {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  .footer-bottom-left,
+  .footer-bottom-right {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .footer-bottom-center {
+    font-size: 12px;
+  }
+}

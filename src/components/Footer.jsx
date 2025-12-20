@@ -5,7 +5,7 @@ import { FaBan, FaTint, FaLeaf } from "react-icons/fa";
 const Footer = () => {
   return (
     <section className="footer">
-      <div className="footer-container reveal reveal-up">
+      <div className="footer-container">
 
         {/* LEFT CONTENT */}
         <div className="footer-left">
@@ -25,8 +25,8 @@ const Footer = () => {
 
           <div className="footer-subscribe">
             <input type="email" placeholder="Email" />
-            <button>
-              <span>Subscribe</span>
+            <button type="submit">
+              <span  >Subscribe</span>
             </button>
           </div>
 
@@ -35,9 +35,8 @@ const Footer = () => {
           </p>
         </div>
 
-        
+        {/* RIGHT CONTENT */}
         <div className="footer-links">
-
           <div className="footer-column">
             <h4>Quick Links</h4>
             <a href="#">Home</a>
@@ -55,53 +54,42 @@ const Footer = () => {
             <a href="#">Returns & Refunds</a>
           </div>
 
-          
           <div className="footer-badges">
             <h4>There is nothing to hide!</h4>
 
             <div className="badges">
               <div className="badge">
                 <FaBan className="badge-icon" />
-                <p>
-                  No Artificial <br />
-                  Colors Added
-                </p>
+                <p>No Artificial<br />Colors Added</p>
               </div>
 
               <div className="badge">
                 <FaTint className="badge-icon" />
-                <p>
-                  No Chemicals <br />
-                  In Our Bakes
-                </p>
+                <p>No Chemicals<br />In Our Bakes</p>
               </div>
 
               <div className="badge">
                 <FaLeaf className="badge-icon" />
-                <p>
-                  No Artificial <br />
-                  Flavours Used
-                </p>
+                <p>No Artificial<br />Flavours Used</p>
               </div>
             </div>
           </div>
-
         </div>
       </div>
 
-      
+      {/* BOTTOM */}
       <div className="footer-bottom">
-        <div className="footer-bottom-left reveal reveal-up">
+        <div className="footer-bottom-left">
           <a href="#">Privacy Policy</a>
           <a href="#">Terms & Conditions</a>
           <a href="#">Cookie Policy</a>
         </div>
 
-        <div className="footer-bottom-center reveal reveal-up">
+        <div className="footer-bottom-center">
           Chanchal Sweets © 2025. All Rights Reserved.
         </div>
 
-        <div className="footer-bottom-right reveal reveal-up">
+        <div className="footer-bottom-right">
           <a href="#">Facebook</a>
           <a href="#">Instagram</a>
           <a href="#">Pinterest</a>
