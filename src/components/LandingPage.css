@@ -1,4 +1,13 @@
 /* RESET */
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+.logo-text {
+  font-family: 'Great Vibes', cursive;
+  font-size: 48px;
+  color: #8b1e1e;
+}
+
 * {
     margin: 0;
     padding: 0;
