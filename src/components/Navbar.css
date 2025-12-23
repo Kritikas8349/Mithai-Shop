@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Arial", sans-serif;
+  font-family: Lexend;
 }
 
 /* ================= TOP BAR ================= */
@@ -76,6 +76,7 @@
 
 .nav-links li:hover {
   color: #8a5a2b;
+  
 }
 
 /* underline animation */

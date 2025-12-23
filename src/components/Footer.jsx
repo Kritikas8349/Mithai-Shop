@@ -78,18 +78,18 @@ const Footer = () => {
       </div>
 
       {/* BOTTOM */}
-      <div className="footer-bottom">
-        <div className="footer-bottom-left">
+      <div className="footer-bottom1">
+        <div className="footer-bottom-left1">
           <a href="#">Privacy Policy</a>
           <a href="#">Terms & Conditions</a>
           <a href="#">Cookie Policy</a>
         </div>
 
-        <div className="footer-bottom-center">
+        <div className="footer-bottom-center1">
           Chanchal Sweets © 2025. All Rights Reserved.
         </div>
 
-        <div className="footer-bottom-right">
+        <div className="footer-bottom-right1">
           <a href="#">Facebook</a>
           <a href="#">Instagram</a>
           <a href="#">Pinterest</a>
