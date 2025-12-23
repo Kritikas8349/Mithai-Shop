@@ -1,81 +1,236 @@
 import React from "react";
-import { FaLeaf, FaUtensils, FaCheckCircle } from "react-icons/fa";
+import { GiBowlOfRice, GiChefToque, GiHealthPotion } from "react-icons/gi";
+import { FiEye } from "react-icons/fi";
 import "./Resturant.css";
 
 const Resturant = () => {
-  return (<>
-    <section
-      className="restaurant-hero"
-      role="banner"
-      aria-label="The Chanchal Restaurant - Authentic Indian Dining"
-    >
-      {/* Background slider */}
-      <div className="bg-slider" aria-hidden="true"></div>
 
-      <div className="overlay"></div>
+  const meals = [
+    {
+      title: "Noodles",
+      description: "Freshly prepared pasta with authentic Italian spices ",
+      price: "180",
+      image: "/noo.jpg",
+    },
+    {
+      title: "Saahi Paneer",
+      description: "Freshly prepared pasta with authentic Italian spices ",
+      price: "200",
+      image: "/paneer2.jpg",
+    },
+    {
+      title: "Pav Bhaji",
+      description: "Freshly prepared pasta with authentic Italian spices ",
+      price: "150",
+      image: "/pav2.jpg",
+    },
+    {
+      title: "Special Thali",
+      description: "Freshly prepared pasta with authentic Italian spices ",
+      price: "250",
+      image: "/plat.jpg",
+    },
+    {
+      title: "Fried Rice",
+      description: "Freshly prepared pasta with authentic Italian spices ",
+      price: "250",
+      image: "/rice.png",
+    },
+  ];
+  return (
+    <>
+      <section className="restaurant-hero"
+        role="banner"
+        aria-label="The Chanchal Restaurant - Authentic Indian Dining"
+      >
+        {/* Background slider */}
+        <div className="bg-slider" aria-hidden="true"></div>
 
-      <div className="hero-content">
-        <p className="small-top">
-          Since 1950 • Pure Veg Restaurant in Bhopal
-        </p>
+        <div className="overlay"></div>
 
-        {/* MAIN SEO HEADING */}
-        <h1 className="main-heading">
-          The <br /> Chanchal <br /> Restaurant
-        </h1>
+        <div className="hero-content">
+          <p className="small-top">
+            Since 1950 • Pure Veg Restaurant in Bhopal
+          </p>
 
-        {/* SUPPORTING KEYWORDS */}
-        <h2 className="script-text">
-          Authentic Indian Cuisine & Family Dining
-        </h2>
+          {/* MAIN SEO HEADING */}
+          <h1 className="main-heading">
+            The <br /> Chanchal <br /> Restaurant
+          </h1>
 
-        {/* Hidden SEO paragraph */}
-        <p className="seo-text">
-          The Chanchal Restaurant in Bhopal offers authentic Indian cuisine,
-          traditional recipes, hygienic preparation, and a premium family
-          dining experience since 1950.
-        </p>
-      </div>
+          {/* SUPPORTING KEYWORDS */}
+          <h2 className="script-text">
+            Authentic Indian Cuisine & Family Dining
+          </h2>
 
-      {/* <div className="bottom-bar">
+          {/* Hidden SEO paragraph */}
+          <p className="seo-text">
+            The Chanchal Restaurant in Bhopal offers authentic Indian cuisine,
+            traditional recipes, hygienic preparation, and a premium family
+            dining experience since 1950.
+          </p>
+        </div>
+
+        {/* <div className="bottom-bar">
         Authentic Indian Restaurant in Bhopal • Family Dining • Since 1950
       </div> */}
-    </section>
+      </section>
 
-    <section className="why-section">
-      <div className="why-container">
 
-        <div className="why-card">
-          <FaLeaf className="why-icon" />
-          <h3>Fresh Ingredients</h3>
-          <p>
-            We use handpicked fresh ingredients every day to ensure
-            rich taste, purity and authentic flavours in every dish.
-          </p>
+
+      <section className="why-section">
+        <div className="why-container">
+
+          <div className="why-card">
+            <div className="icon-wrap">
+              <GiBowlOfRice className="why-icon" />
+            </div>
+            <h3>Fresh Daily Preparation</h3>
+            <p>
+              Every sweet and dish is freshly prepared each day using
+              premium ingredients to maintain authentic taste and purity.
+            </p>
+          </div>
+
+          <div className="why-card">
+            <div className="icon-wrap">
+              <GiChefToque className="why-icon" />
+            </div>
+            <h3>Traditional Expertise</h3>
+            <p>
+              Crafted by experienced halwais and chefs following
+              time-honored recipes passed through generations.
+            </p>
+          </div>
+
+          <div className="why-card">
+            <div className="icon-wrap">
+              <GiHealthPotion className="why-icon" />
+            </div>
+            <h3>Hygiene & Trust</h3>
+            <p>
+              Strict hygiene standards and quality checks ensure
+              safe, delicious and trustworthy food every time.
+            </p>
+          </div>
+
         </div>
+      </section>
 
-        <div className="why-card">
-          <FaUtensils className="why-icon" />
-          <h3>Authentic Recipes</h3>
-          <p>
-            Our recipes are passed down through generations,
-            preserving the true essence of Indian sweets & cuisine.
-          </p>
+
+
+      <section className="food-showcase">
+        <div className="showcase-container">
+
+          {/* LEFT IMAGE */}
+          <div className="showcase-image">
+            <img
+              src="/best.png"   // 👈 apni image yahan lagao
+              alt="Delicious Food"
+            />
+          </div>
+
+          {/* RIGHT CONTENT */}
+          <div className="showcase-content">
+            <h4 className="tagline">Taste That Speaks</h4>
+
+            <p>
+              Every dish is crafted with authentic spices, premium ingredients,
+              and a passion for perfection. From the first bite to the last,
+              experience flavors that stay with you forever.
+            </p>
+
+            <button className="explore-btn">Explore Menu</button>
+          </div>
+
         </div>
+      </section>
 
-        <div className="why-card">
-          <FaCheckCircle className="why-icon" />
-          <h3>Hygiene & Quality</h3>
-          <p>
-            Prepared in a clean, hygienic environment with strict
-            quality checks to serve you the best every time.
-          </p>
+
+
+      <section className="meals-section">
+        <h2 className="meals-title">Best Meals for You</h2>
+
+        <div className="meals-container">
+          {meals.map((meal, index) => (
+            <div className="meal-card" key={index}>
+
+              {/* IMAGE */}
+              <div className="meal-image-wrapper">
+                <img src={meal.image} alt={meal.title} />
+              </div>
+
+              <div className="meal-content">
+                <h3>{meal.title}</h3>
+
+                {/* DESCRIPTION */}
+                <p className="meal-desc">
+                  {meal.description}
+                </p>
+
+                <div className="meal-bottom">
+                  <p className="price">₹{meal.price}</p>
+                  <button className="view-btn">View</button>
+                </div>
+              </div>
+
+            </div>
+          ))}
         </div>
+      </section>
 
-      </div>
-    </section>
 
-  </>
+
+      <section className="offers-section">
+        <div className="offers-grid">
+
+          {/* LEFT COUPON CARD */}
+          <div className="card coupon-card">
+            <img
+              src="plat.jpg"
+              alt="Indian food"
+              className="food-img"
+            />
+
+            <h4 className="small-title">Indian Special</h4>
+            <h2>Coupon Code</h2>
+
+            <div className="coupon-box">
+              <span>60% OFF</span>
+              <p>For all items</p>
+            </div>
+
+            <p className="code-text">
+              Use this code: <strong>FOODDASH60</strong>
+            </p>
+          </div>
+
+          {/* RIGHT TOP IMAGE CARD */}
+          <div className="card image-card">
+            <img
+              src="/Hen2.png"
+              alt="Special Offer"
+              className="full-img"
+            />
+          </div>
+
+          {/* RIGHT BOTTOM IMAGE CARD */}
+          <div className="card image-card">
+            <img
+              src="/maine.jpg"
+              alt="Indian Restaurant"
+              className="full-img"
+            />
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+
+    </>
   );
 };
 

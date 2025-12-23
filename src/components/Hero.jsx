@@ -179,61 +179,61 @@ const Hero = () => {
 
       <section className="catalog-section">
 
-  {/* BACKGROUND IMAGE */}
-  <img
-    src="/patterns.jpg"
-    alt="Catalog background"
-    className="catalog-bg-img"
-  />
+        {/* BACKGROUND IMAGE */}
+        <img
+          src="/patterns.jpg"
+          alt="Catalog background"
+          className="catalog-bg-img"
+        />
 
-  <h2 className="catalog-title reveal">Our Catalog</h2>
+        <h2 className="catalog-title reveal">Our Catalog</h2>
 
-  {/* TABS */}
-  <div className="catalog-tabs reveal">
-    <button
-      className={active === "sweets" ? "active" : ""}
-      onClick={() => setActive("sweets")}
-    >
-      Sweets
-    </button>
-    <button
-      className={active === "chaat" ? "active" : ""}
-      onClick={() => setActive("chaat")}
-    >
-      Chaat Center
-    </button>
-    <button
-      className={active === "fastfood" ? "active" : ""}
-      onClick={() => setActive("fastfood")}
-    >
-      Fast Food
-    </button>
-  </div>
+        {/* TABS */}
+        <div className="catalog-tabs reveal">
+          <button
+            className={active === "sweets" ? "active" : ""}
+            onClick={() => setActive("sweets")}
+          >
+            Sweets
+          </button>
+          <button
+            className={active === "chaat" ? "active" : ""}
+            onClick={() => setActive("chaat")}
+          >
+            Chaat Center
+          </button>
+          <button
+            className={active === "fastfood" ? "active" : ""}
+            onClick={() => setActive("fastfood")}
+          >
+            Fast Food
+          </button>
+        </div>
 
-  <div className="catalog-layout">
-    {/* LEFT INFO BOX */}
-    <div className="catalog-info reveal reveal-left">
-      <h3>{data[active].title}</h3>
-      <p>{data[active].desc}</p>
+        <div className="catalog-layout">
+          {/* LEFT INFO BOX */}
+          <div className="catalog-info reveal reveal-left">
+            <h3>{data[active].title}</h3>
+            <p>{data[active].desc}</p>
 
-      <ul>
-        {data[active].items.map((item, index) => (
-          <li key={index}>{item}</li>
-        ))}
-      </ul>
+            <ul>
+              {data[active].items.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
 
-      <button>View Menu</button>
-    </div>
+            <button>View Menu</button>
+          </div>
 
-    {/* IMAGE GRID */}
-    <div className="catalog-grid">
-      {data[active].images.map((img, index) => (
-        <img src={img} alt="" key={index} />
-      ))}
-    </div>
-  </div>
+          {/* IMAGE GRID */}
+          <div className="catalog-grid">
+            {data[active].images.map((img, index) => (
+              <img src={img} alt="" key={index} />
+            ))}
+          </div>
+        </div>
 
-</section>
+      </section>
 
 
 
