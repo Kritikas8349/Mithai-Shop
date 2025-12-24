@@ -1,28 +1,23 @@
-import { useState } from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
-// import LandingPage from './components/LandingPage';
 import Footer from './components/Footer'; 
-// import Hero from './components/Hero';
-// import Resturant from './components/Resturant';
-import Menu from './components/Menu';
-
+import Hero from './components/Hero';
+import Menu from './components/Menu';   
+import { Routes, Route } from "react-router-dom";
 
 function App() {
- 
-
   return (
     <>
-     <Navbar/>
-     {/* <Hero/> */}
-     {/* <LandingPage/> */}
-     {/* <Resturant/> */}
-     <Menu/>
-     <Footer/>
-     
+      <Navbar />
 
+      <Routes>
+        <Route path="/" element={<Hero />} />
+        <Route path="/menu" element={<Menu />} />
+      </Routes>
+
+      <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

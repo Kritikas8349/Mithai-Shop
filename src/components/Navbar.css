@@ -6,7 +6,7 @@
   font-family: Lexend;
 }
 
-html,body{
+html, body {
   width: 100%;
   overflow-x: hidden;
 }
@@ -20,6 +20,11 @@ html,body{
   height: 30px;
   display: flex;
   align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 .top-bar-track {
@@ -42,55 +47,71 @@ html,body{
 }
 
 @keyframes scrollText {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-30%);
-  }
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-30%); }
 }
 
 /* ================= NAVBAR ================= */
 .navbar {
+  position: fixed;
+  top: 30px;
+  left: 0;
+  width: 100%;
+  z-index: 999;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  min-height: 70px;
   padding: 8px 40px;
   background: #fff;
-  flex-wrap: wrap;
+}
+
+/* PUSH CONTENT DOWN */
+body {
+  padding-top: 100px;
 }
 
 .logo {
-  padding-top: 2px;
   height: 50px;
 }
 
+/* ================= NAV LINKS ================= */
 .nav-links {
   color: #6b2b2b;
   font-weight: 600;
   display: flex;
+  align-items: center;
   gap: 34px;
   list-style: none;
   font-size: 14px;
   letter-spacing: 1px;
-  flex-wrap: wrap;
 }
 
+/* LI */
 .nav-links li {
-  position: relative;
   cursor: pointer;
 }
 
-.nav-links li:hover {
+/* LINK */
+.nav-links li a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  padding-bottom: 4px;
+}
+
+/* HOVER COLOR */
+.nav-links li a:hover {
   color: #8a5a2b;
 }
 
-/* underline animation */
-.nav-links li::after {
+/* UNDERLINE (TEXT WIDTH ONLY) */
+.nav-links li a::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -1px;
+  bottom: 0;
   width: 100%;
   height: 2px;
   background-color: #8a5a2b;
@@ -99,10 +120,11 @@ html,body{
   transition: transform 0.3s ease;
 }
 
-.nav-links li:hover::after {
+.nav-links li a:hover::after {
   transform: scaleX(1);
 }
 
+/* ================= NAV ICONS ================= */
 .nav-icons {
   display: flex;
   gap: 18px;
@@ -143,7 +165,7 @@ html,body{
   opacity: 0;
   pointer-events: none;
   transition: 0.3s;
-  z-index: 90;
+  z-index: 998;
 }
 
 .menu-overlay.show {
@@ -161,7 +183,7 @@ html,body{
   background: #fff;
   padding: 30px 20px;
   transition: 0.4s ease;
-  z-index: 100;
+  z-index: 1001;
   overflow-y: auto;
 }
 
@@ -174,19 +196,7 @@ html,body{
   cursor: pointer;
 }
 
-.mobile-menu-links {
-  list-style: none;
-  padding: 0;
-  margin-top: 40px;
-}
-
-.mobile-menu-links li {
-  padding: 14px 0;
-  border-bottom: 1px solid #ddd;
-  cursor: pointer;
-}
-
-/* ================= VISIBILITY CONTROL ================= */
+/* ================= VISIBILITY ================= */
 .desktop-only {
   display: inline-block;
 }
@@ -195,17 +205,41 @@ html,body{
   display: none;
 }
 
-/* ================= RESPONSIVE ================= */
+/* ================= SMALL LAPTOPS ================= */
+@media (max-width: 1200px) {
+  .navbar {
+    padding: 8px 24px;
+  }
+
+  .nav-links {
+    gap: 22px;
+    font-size: 13px;
+    letter-spacing: 0.8px;
+  }
+
+  .logo {
+    height: 46px;
+  }
+
+  .contact-btn {
+    padding: 8px 14px;
+    font-size: 12px;
+  }
+}
+
+/* ================= TABLET ================= */
 @media (max-width: 1050px) {
   .navbar {
     padding: 8px 20px;
   }
+
   .nav-links {
-    gap: 20px;
+    gap: 18px;
     font-size: 13px;
   }
 }
 
+/* ================= MOBILE ================= */
 @media (max-width: 900px) {
   .nav-links {
     display: none;
@@ -231,9 +265,7 @@ html,body{
     font-size: 9px;
     padding-right: 40px;
   }
-  .navbar {
-    justify-content: space-between;
-  }
+
   .mobile-menu {
     width: 90%;
     max-width: 280px;

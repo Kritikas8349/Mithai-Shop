@@ -116,7 +116,7 @@ const Hero = () => {
   const [active, setActive] = useState("sweets");
 
   return (
-    <div className="main">
+    <div className="main" id="home" >
      <section className="hero">
   {/* DESKTOP IMAGE */}
   <img

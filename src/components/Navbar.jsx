@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import "./Navbar.css";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -45,12 +46,28 @@ const Navbar = () => {
         </div>
 
         <ul className="nav-links">
-          <li>HOME</li>
-          <li>ABOUT US</li>
-          <li>MENU</li>
-          <li>RESTAURANT</li>
-          <li>CATERING</li>
-        </ul>
+        <li className="menu-card">
+  <Link to="/" onClick={() => setMenuOpen(false)}>HOME</Link>
+</li>
+
+        <li className="menu-card">
+  <Link to="/about" onClick={() => setMenuOpen(false)}>ABOUT US</Link>
+</li>
+
+        <li className="menu-card">
+          <Link to="/menu" onClick={() => setMenuOpen(false)}>MENU</Link>
+        </li>
+
+        <li className="menu-card">
+  <Link to="/restaurant" onClick={() => setMenuOpen(false)}>RESTAURANT</Link>
+</li>
+
+<li className="menu-card">
+  <Link to="/catering" onClick={() => setMenuOpen(false)}>CATERING</Link>
+</li>
+
+      </ul>
+
 
         <div className="nav-icons">
           {/* DESKTOP CONTACT BUTTON — SAME AS BEFORE */}
