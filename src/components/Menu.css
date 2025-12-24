@@ -58,6 +58,9 @@
 .menu-content {
   flex: 1;
   padding: 30px;
+  max-width: 100%;
+  /* prevent horizontal overflow */
+  overflow-x: hidden;
 }
 
 .top-bar {
@@ -67,8 +70,11 @@
 }
 
 .menu-grid {
+  max-height: 500px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  max-width: 100%;
+  /* overflow-x: hidden; */
   gap: 24px;
 }
 
@@ -109,7 +115,7 @@
 
 /* PAGINATION */
 .pagination {
-  margin-top: 30px;
+  margin-top: 60px;
   text-align: center;
 }
 
@@ -140,6 +146,10 @@
 @media (max-width: 768px) {
   .menu-page {
     flex-direction: column;
+  }
+
+  .menu-grid {
+    overflow-x: hidden;
   }
 
   .sidebar {
@@ -176,10 +186,11 @@
   .overlay {
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,0.4);
+    background: rgba(0, 0, 0, 0.4);
     z-index: 9;
   }
 }
+
 /* ---------------- VISIBILITY HELPERS ---------------- */
 .desktop-only {
   display: block;
@@ -195,15 +206,18 @@
 @media (max-width: 768px) {
 
   .sidebar {
-    display: none; /* ❌ sidebar removed */
+    display: none;
+    /* ❌ sidebar removed */
   }
 
   .desktop-only {
-    display: none; /* ❌ badge + sidebar content hide */
+    display: none;
+    /* ❌ badge + sidebar content hide */
   }
 
   .mobile-search-only {
-    display: block; /* ✅ only search */
+    display: none;
+    /* ✅ only search */
   }
 
   .menu-content {
@@ -217,5 +231,142 @@
   .menu-card img {
     width: 100px;
     height: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .menu-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .menu-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px;
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  }
+
+  /* LEFT IMAGE */
+  .menu-card img {
+    width: 90px;
+    height: 90px;
+    border-radius: 14px;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  /* RIGHT CONTENT WRAPPER */
+  .menu-card-content {
+    flex: 1;
+    margin-left: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .menu-card h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 6px;
+    color: #111;
+  }
+
+  .menu-card p {
+    font-size: 13px;
+    color: #777;
+    margin: 0 0 8px;
+  }
+
+  .price {
+    font-size: 15px;
+    font-weight: 700;
+    color: #8b1d2c;
+  }
+
+  /* REMOVE DESKTOP ITEMS */
+  .badges2,
+  .desktop-only {
+    display: none;
+  }
+}
+
+/* ================= MOBILE INLINE SIDEBAR ================= */
+@media (max-width: 768px) {
+
+
+  /* SIDEBAR AS INLINE FILTER */
+  .sidebar {
+    display: block;
+    position: static;
+    width: 100%;
+    padding: 12px 14px;
+    border-right: none;
+    background: #fff;
+  }
+
+  .sidebar h4 {
+    margin-top: 1px;
+  }
+
+  .popular-tags {
+    display: none;
+  }
+
+  /* REMOVE SLIDE EFFECT */
+  .sidebar.open {
+    left: 0;
+  }
+
+  /* SEARCH */
+  .search {
+    width: 100%;
+    margin-bottom: 12px;
+  }
+
+  /* CATEGORY LIST */
+  .category {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+  }
+
+  .category li {
+    white-space: nowrap;
+    background: #f2f2f2;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    flex-shrink: 0;
+  }
+
+  /* TAGS */
+  .tags {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    margin-top: 10px;
+  }
+
+  .tags span {
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  /* FILTER BUTTON */
+  .filter-btn {
+    margin-top: 12px;
+    border-radius: 10px;
+  }
+
+  /* MENU CONTENT */
+  .menu-content {
+    padding: 14px;
   }
 }
