@@ -18,7 +18,9 @@
 }
 
 .sidebar h4 {
-  margin: 20px 0 10px;
+  font-size: 20px;
+  margin: 30px 0 10px;
+  color: #6b2b2b;
 }
 
 .search {
@@ -59,8 +61,8 @@
   flex: 1;
   padding: 30px;
   max-width: 100%;
-  /* prevent horizontal overflow */
   overflow-x: hidden;
+  background: linear-gradient(90deg, #eee0c7, #f9eedd);;
 }
 
 .top-bar {
@@ -339,11 +341,12 @@
 
   .category li {
     white-space: nowrap;
-    background: #f2f2f2;
+    background: #6b2b2b;
     padding: 8px 14px;
     border-radius: 20px;
     font-size: 13px;
     flex-shrink: 0;
+    color: #fff;
   }
 
   /* TAGS */
