@@ -1,14 +1,13 @@
 import React, { useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
 import "./Navbar.css";
-import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <>
-      {/* TOP BAR */}
+      {/* ================= TOP BAR ================= */}
       <div className="top-bar">
         <div className="top-bar-track">
           <p>
@@ -21,92 +20,53 @@ const Navbar = () => {
             <span className="dot">•</span>
             FRESHNESS AND HYGIENE ASSURED
           </p>
-          <p aria-hidden="true">
-            SAME DAY DELIVERY WITHIN BHOPAL
-            <span className="dot">•</span>
-            FRESHNESS AND HYGIENE ASSURED
-          </p>
-          <p aria-hidden="true">
-            SAME DAY DELIVERY WITHIN BHOPAL
-            <span className="dot">•</span>
-            FRESHNESS AND HYGIENE ASSURED
-          </p>
-          <p aria-hidden="true">
-            SAME DAY DELIVERY WITHIN BHOPAL
-            <span className="dot">•</span>
-            FRESHNESS AND HYGIENE ASSURED
-          </p>
         </div>
       </div>
 
-      {/* NAVBAR */}
+      {/* ================= NAVBAR ================= */}
       <nav className="navbar">
-        <div className="nav-left">
-          <img src="clogo.png" alt="Logo" className="logo" />
-        </div>
+        <img src="clogo.png" alt="Logo" className="logo" />
 
         <ul className="nav-links">
-        <li className="menu-card">
-  <Link to="/" onClick={() => setMenuOpen(false)}>HOME</Link>
-</li>
-
-        <li className="menu-card">
-  <Link to="/about" onClick={() => setMenuOpen(false)}>ABOUT US</Link>
-</li>
-
-        <li className="menu-card">
-          <Link to="/menu" onClick={() => setMenuOpen(false)}>MENU</Link>
-        </li>
-
-        <li className="menu-card">
-  <Link to="/restaurant" onClick={() => setMenuOpen(false)}>RESTAURANT</Link>
-</li>
-
-<li className="menu-card">
-  <Link to="/catering" onClick={() => setMenuOpen(false)}>CATERING</Link>
-</li>
-
-      </ul>
-
+          <li><NavLink to="/" end>HOME</NavLink></li>
+          <li><NavLink to="/about">ABOUT US</NavLink></li>
+          <li><NavLink to="/menu">MENU</NavLink></li>
+          <li><NavLink to="/restaurant">RESTAURANT</NavLink></li>
+          <li><NavLink to="/catering">CATERING</NavLink></li>
+        </ul>
 
         <div className="nav-icons">
-          {/* DESKTOP CONTACT BUTTON — SAME AS BEFORE */}
-          <button className="contact-btn desktop-only">
-            CONTACT US
-          </button>
+          <button className="contact-btn desktop-only">CONTACT US</button>
 
-          <FaBars
-            className="hamburger"
-            onClick={() => setMenuOpen(true)}
-          />
+          {/* HAMBURGER */}
+          <div
+            className={`hamburger ${menuOpen ? "active" : ""}`}
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
       </nav>
 
-      {/* OVERLAY */}
+      {/* ================= OVERLAY ================= */}
       <div
         className={`menu-overlay ${menuOpen ? "show" : ""}`}
         onClick={() => setMenuOpen(false)}
       />
 
-      {/* MOBILE MENU */}
+      {/* ================= MOBILE MENU ================= */}
       <div className={`mobile-menu ${menuOpen ? "open" : ""}`}>
-        <FaTimes
-          className="close-btn"
-          onClick={() => setMenuOpen(false)}
-        />
-
         <ul className="mobile-menu-links">
-          <li className="menu-card">HOME</li>
-          <li className="menu-card">ABOUT US</li>
-          <li className="menu-card">CELEBRATIONS</li>
-          <li className="menu-card">MENU</li>
-          <li className="menu-card">RESTAURANT</li>
+          <li><NavLink to="/" end onClick={() => setMenuOpen(false)}>HOME</NavLink></li>
+          <li><NavLink to="/about" onClick={() => setMenuOpen(false)}>ABOUT US</NavLink></li>
+          <li><NavLink to="/menu" onClick={() => setMenuOpen(false)}>MENU</NavLink></li>
+          <li><NavLink to="/restaurant" onClick={() => setMenuOpen(false)}>RESTAURANT</NavLink></li>
+          <li><NavLink to="/catering" onClick={() => setMenuOpen(false)}>CATERING</NavLink></li>
         </ul>
 
-        {/* SAME CONTACT BUTTON — MOBILE */}
-        <button className="contact-btn mobile-only">
-          CONTACT US
-        </button>
+        <button className="contact-btn mobile-only">CONTACT US</button>
       </div>
     </>
   );
