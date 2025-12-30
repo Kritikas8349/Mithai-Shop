@@ -62,8 +62,24 @@
   padding: 30px;
   max-width: 100%;
   overflow-x: hidden;
-  background: linear-gradient(90deg, #eee0c7, #f9eedd);;
+  background-color:#f9f1e4 ;
+  /* background: linear-gradient(90deg, #eee0c7, #f9eedd);; */
 }
+.menu-content::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/bgr.png"); /* image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.1;              /* 🔥 opacity yahin control hogi */
+  z-index: 0;
+}
+/* .menu-content > * {
+  position: relative;
+  z-index: 1;
+} */
 
 .top-bar {
   display: flex;
@@ -74,14 +90,14 @@
 .menu-grid {
   max-height: 500px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   max-width: 100%;
   /* overflow-x: hidden; */
   gap: 24px;
 }
 
 .menu-card {
-  background: #fff;
+  background: #ffffff;
   border-radius: 14px;
   padding: 16px;
   text-align: center;
@@ -122,14 +138,16 @@
 }
 
 .pagination button {
-  padding: 8px 12px;
+  padding: 10px 12px;
   margin: 0 4px;
   border-radius: 50%;
   border: none;
+  margin-top: -20px;
+  margin-bottom: 10px;
 }
 
 .pagination .active {
-  background: red;
+  background: #6b0f24;
   color: #fff;
 }
 
@@ -250,7 +268,7 @@
     justify-content: space-between;
     padding: 14px;
     border-radius: 16px;
-    background: #fff;
+    /* background: #fff; */
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
   }
 
@@ -329,6 +347,7 @@
   .search {
     width: 100%;
     margin-bottom: 12px;
+    border: 2px solid maroon;
   }
 
   /* CATEGORY LIST */

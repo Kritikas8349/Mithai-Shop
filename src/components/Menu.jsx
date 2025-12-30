@@ -3,10 +3,10 @@ import "./Menu.css";
 
 /* ✅ MENU DATA */
 const menuItems = [
+    { id: 4, name: "Rabri", price: 10.99, img: "/rabdi.jpg", category: "Sweets" },
     { id: 1, name: "Gulab Jamun", price: 9.99, img: "/gulabjamun.jpg", category: "Sweets" },
     { id: 2, name: "Rasgulla", price: 8.99, img: "/ras.jpg", category: "Sweets" },
     { id: 3, name: "Kaju Katli", price: 12.99, img: "/kaju1.jpg", category: "Sweets" },
-    { id: 4, name: "Rabri", price: 10.99, img: "/rabdi.jpg", category: "Sweets" },
     { id: 5, name: "Jalebi", price: 7.99, img: "/jalebi.jpg", category: "Sweets" },
 
     { id: 6, name: "Veg Burger", price: 6.99, img: "/burger.jpg", category: "FastFood" },
