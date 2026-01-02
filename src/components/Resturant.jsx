@@ -48,7 +48,7 @@ const Resturant = () => {
 
         <div className="overlay"></div>
 
-        <div className="hero-content">
+        <div className="hero-content1">
           <p className="small-top">
             Since 1950 • Pure Veg Restaurant in Bhopal
           </p>
