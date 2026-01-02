@@ -72,48 +72,68 @@ const Hero = () => {
 
 
   const data = {
+    hampers: {
+      title: "Gift Hampers",
+      desc: "Premium festive and customized hampers for every occasion.",
+      items: [
+        "Diwali Mawa Sweets",
+        "Dry Fruit Box",
+        "Corporate Gift Box",
+        "Mix Chikki Box",
+        "Festival Special Combos",
+        "Baklava Box"
+      ],
+      images: [
+        "diwali mawa sweets.JPG",
+        "4 in 1 dry fruit box.JPG",
+        "Hamper.JPG",
+        "mix lai chikki 1kg.JPG",
+        "4 in 1 mix box.JPG",
+        "baklava.JPG"
+      ]
+    },
     sweets: {
       title: "Sweets",
       desc: "Traditional mithai prepared with love since 1957.",
-      items: ["Rasmalai", "Gulab Jamun", "Kaju Katli", "Ladoo", "Gujiya", "Ghevar"],
+      items: ["Rasmalai", "Dryfruit Laddu", "Kaju Katli", "Ghee Boondi Ladoo", "Kheer Kadam", "Sugar Free Anjeer"],
       images: [
-        "rasmalai.jpg",
-        "gulabjamun.jpg",
-        "kaju.jpg",
-        "lado.jpg",
-        "gujiya.jpg",
-        "ghevar.jpg"
+        "/rasmalai.png",
+        "/dry fruit laddu.JPG",
+        "/kaju katli.JPG",
+        "/ghee boondi laddu.JPG",
+        "/kheer kadam.JPG",
+        "/sugar free anjeer.JPG"
       ]
     },
     chaat: {
       title: "Chaat Center",
       desc: "Street-style chaat with authentic Indian flavors.",
-      items: ["Samosa", "Pani Puri", "Raj Kachori", "Bhel Puri", "DahiChaat", "Chole Tikki"],
+      items: ["Kachori", "Pani Puri", "Masala Patties", "Sev Poori", "Bombay Bhel", "Chole Tikki"],
       images: [
-        "samosa.jpg",
-        "panipuri.jpg",
-        "rajkachori.jpg",
-        "bhel.jpg",
-        "dahipuri.jpg",
-        "choletikki.jpg"
+        "kachori.JPG",
+        "panipoori.png",
+        "masala patties.JPG",
+        "sev poori.JPG",
+        "bombay bhel.JPG",
+        "chole tikki (1).JPG"
       ]
     },
     fastfood: {
       title: "Fast Food",
       desc: "Quick bites made fresh for every craving.",
-      items: ["Pasta", "Manchurian", "Noodles", "Spring Rolls", "Chilli Potato", "Momos"],
+      items: ["Red Sauce Pasta", "Manchurian", "Schezwan Noodles", "Pav Bhaji", "Chilli Paneer", "Veg Hot Sandwich"],
       images: [
-        "pasta.jpg",
-        "manch.jpg",
-        "noodle.jpg",
-        "roll.jpg",
-        "chillipotato.jpg",
-        "momo.jpg"
+        "red sauce pasta.JPG",
+        "dry Manchurian (2) (1).JPG",
+        "Schezwan noodles.JPG",
+        "pav bhaji (1).JPG",
+        "chilli paneer.JPG",
+        "veg hot sandwich.JPG"
       ]
-    }
+    },
   };
 
-  const [active, setActive] = useState("sweets");
+  const [active, setActive] = useState("hampers");
 
   return (
     <div className="main" id="home" >
@@ -178,45 +198,52 @@ const Hero = () => {
       </section>
 
       <section className="about-section" ref={aboutRef}>
-        <div className="about-container">
-          <div className="about-images image-cluster">
-            <img src="/meethai.jpg" alt="Indian dish" className="cluster-img img-a" />
-            <img src="/noodle.jpg" alt="Traditional sweets" className="cluster-img img-b" />
-            <img src="/panipuri.jpg" alt="Veg thali" className="cluster-img img-c" />
-            <img src="/jalebi.jpg" alt="Restaurant burgers" className="cluster-img img-d" />
-          </div>
+  <div className="about-container">
 
-          <div className="about-content">
-            <img src="/border.png" alt="Top border" className="border-img-top" />
-            <span className="about-tag">Our Story</span>
+    {/* LEFT : SINGLE IMAGE */}
+    <div className="about-image-single">
+      <img
+        src="/fl.png"
+        alt="Chanchal Sweets Special"
+        className="single-img"
+      />
+    </div>
 
-            <h2>
-              Authentic Mithai & <br />
-              Pure Vegetarian Restaurant
-            </h2>
+    {/* RIGHT : CONTENT (UNCHANGED) */}
+    <div className="about-content">
+      <img src="/border.png" alt="Top border" className="border-img-top" />
 
-            <p>
-              <strong>Chanchal Sweets</strong> is a trusted name for premium Indian
-              mithai and traditional vegetarian food. From handcrafted sweets
-              made with pure ingredients to a welcoming family restaurant above,
-              we bring you the true taste of Indian culture and hospitality.
-            </p>
+      <span className="about-tag">Our Story</span>
 
-            <p>
-              Whether you are celebrating festivals, weddings, or simply craving
-              something delicious, our sweets and meals are prepared fresh every
-              day with unmatched quality and hygiene.
-            </p>
+      <h2>
+        Authentic Mithai & <br />
+        Pure Vegetarian Restaurant
+      </h2>
 
-            <div className="about-buttons">
-              <a href="#menu" className="btn primary">View Menu</a>
-              <a href="#contact" className="btn secondary">About Us</a>
-            </div>
+      <p>
+        <strong>Chanchal Sweets</strong> is a trusted name for premium Indian
+        mithai and traditional vegetarian food. From handcrafted sweets
+        made with pure ingredients to a welcoming family restaurant above,
+        we bring you the true taste of Indian culture and hospitality.
+      </p>
 
-            <img src="/border.png" alt="Bottom border" className="border-img-bottom" />
-          </div>
-        </div>
-      </section>
+      <p>
+        Whether you are celebrating festivals, weddings, or simply craving
+        something delicious, our sweets and meals are prepared fresh every
+        day with unmatched quality and hygiene.
+      </p>
+
+      <div className="about-buttons">
+        <a href="#menu" className="btn primary">View Menu</a>
+        <a href="#contact" className="btn secondary">About Us</a>
+      </div>
+
+      <img src="/border.png" alt="Bottom border" className="border-img-bottom" />
+    </div>
+
+  </div>
+</section>
+
 
 
 
@@ -234,26 +261,35 @@ const Hero = () => {
 
 
     {/* TABS */}
-    <div className="catalog-tabs ">
-      <button
-        className={active === "sweets" ? "active" : ""}
-        onClick={() => setActive("sweets")}
-      >
-        Sweets
-      </button>
-      <button
-        className={active === "chaat" ? "active" : ""}
-        onClick={() => setActive("chaat")}
-      >
-        Chaat Center
-      </button>
-      <button
-        className={active === "fastfood" ? "active" : ""}
-        onClick={() => setActive("fastfood")}
-      >
-        Fast Food
-      </button>
-    </div>
+    <div className="catalog-tabs">
+    <button
+    className={active === "hampers" ? "active" : ""}
+    onClick={() => setActive("hampers")}
+  >
+    Hampers
+  </button>
+  <button
+    className={active === "sweets" ? "active" : ""}
+    onClick={() => setActive("sweets")}
+  >
+    Sweets
+  </button>
+
+  <button
+    className={active === "chaat" ? "active" : ""}
+    onClick={() => setActive("chaat")}
+  >
+    Chaat Center
+  </button>
+
+  <button
+    className={active === "fastfood" ? "active" : ""}
+    onClick={() => setActive("fastfood")}
+  >
+    Fast Food
+  </button>
+</div>
+
 
     <div className="catalog-layout">
       {/* LEFT INFO BOX */}
