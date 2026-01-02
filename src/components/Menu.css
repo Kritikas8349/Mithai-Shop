@@ -27,13 +27,13 @@
   width: 100%;
   padding: 10px;
   border-radius: 8px;
-  border: 1px solid #ddd;
+  border: 2px solid maroon;
 }
 
 .category li {
   list-style: none;
   padding: 8px 0;
-  color: #555;
+  color:#6b2b2b;
   cursor: pointer;
 }
 
@@ -43,6 +43,7 @@
   padding: 8px;
   background: #ff4d30;
   color: #fff;
+
   border: none;
   border-radius: 6px;
 }
@@ -50,6 +51,7 @@
 .tags span {
   display: inline-block;
   background: #eee;
+  color:#6b2b2b;
   padding: 6px 10px;
   margin: 6px 4px;
   border-radius: 20px;
@@ -63,10 +65,10 @@
   max-width: 100%;
   overflow-x: hidden;
   background-color:#f9f1e4 ;
-  /* background: linear-gradient(90deg, #eee0c7, #f9eedd);; */
+  
 }
 .menu-content::before {
-  content: "";
+  /* content: ""; */
   position: absolute;
   inset: 0;
   background-image: url("/bgr.png"); /* image path */
@@ -81,13 +83,7 @@
   z-index: 1;
 } */
 
-.top-bar {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
-}
-
-.menu-grid {
+.menu-grid {  
   max-height: 500px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -113,11 +109,7 @@
 
 .menu-card h3 {
   margin: 10px 0 4px;
-}
-
-.price {
-  color: #ff4d30;
-  font-weight: 600;
+  color: #6b2b2b;
 }
 
 .badges2 {
@@ -133,7 +125,7 @@
 
 /* PAGINATION */
 .pagination {
-  margin-top: 60px;
+  margin-top: 180px;
   text-align: center;
 }
 

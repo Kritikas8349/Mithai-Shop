@@ -20,6 +20,7 @@ const Navbar = () => {
             <span className="dot">•</span>
             FRESHNESS AND HYGIENE ASSURED
           </p>
+          
         </div>
       </div>
 

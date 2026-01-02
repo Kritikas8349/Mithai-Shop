@@ -3,44 +3,44 @@ import "./Menu.css";
 
 /* ✅ MENU DATA */
 const menuItems = [
-    { id: 4, name: "Rabri", price: 10.99, img: "/rabdi.jpg", category: "Sweets" },
-    { id: 1, name: "Gulab Jamun", price: 9.99, img: "/gulabjamun.jpg", category: "Sweets" },
-    { id: 2, name: "Rasgulla", price: 8.99, img: "/ras.jpg", category: "Sweets" },
-    { id: 3, name: "Kaju Katli", price: 12.99, img: "/kaju1.jpg", category: "Sweets" },
-    { id: 5, name: "Jalebi", price: 7.99, img: "/jalebi.jpg", category: "Sweets" },
+    { id: 4, name: "Rabri", img: "/rabdi.jpg", category: "Sweets" },
+    { id: 1, name: "Gulab Jamun" ,img: "/gulabjamun.jpg", category: "Sweets" },
+    { id: 2, name: "Rasgulla" ,img: "/ras.jpg", category: "Sweets" },
+    { id: 3, name: "Kaju Katli", img: "/kaju1.jpg", category: "Sweets" },
+    { id: 5, name: "Jalebi", img: "/jalebi.jpg", category: "Sweets" },
 
-    { id: 6, name: "Veg Burger", price: 6.99, img: "/burger.jpg", category: "FastFood" },
-    { id: 7, name: "Cheese Pizza", price: 11.99, img: "/pizz.jpg", category: "FastFood" },
-    { id: 8, name: "French Fries", price: 4.99, img: "/french.jpg", category: "FastFood" },
-    { id: 9, name: "Hot Dog", price: 5.99, img: "/hot dog.jpg", category: "FastFood" },
-    { id: 10, name: "Sandwich", price: 6.49, img: "/sand.jpg", category: "FastFood" },
+    { id: 6, name: "Veg Burger" ,img: "/burger.jpg", category: "FastFood" },
+    { id: 7, name: "Cheese Pizza", img: "/pizz.jpg", category: "FastFood" },
+    { id: 8, name: "French Fries", img: "/french.jpg", category: "FastFood" },
+    { id: 9, name: "Hot Dog", img: "/hot dog.jpg", category: "FastFood" },
+    { id: 10, name: "Sandwich", img: "/sand.jpg", category: "FastFood" },
 
-    { id: 11, name: "Paneer Butter Masala", price: 14.99, img: "/paneer2.jpg", category: "Main Course" },
-    { id: 12, name: "Dal Makhani", price: 12.99, img: "/dal.jpg", category: "Main Course" },
-    { id: 13, name: "Garlic Naan", price: 15.99, img: "/naan.jpg", category: "Main Course" },
-    { id: 14, name: "Veg Biryani", price: 13.99, img: "/biryani.jpg", category: "Main Course" },
-    { id: 15, name: "Matar Panner", price: 9.99, img: "/matar.jpg", category: "Main Course" },
+    { id: 11, name: "Paneer Butter Masala", img: "/paneer2.jpg", category: "Main Course" },
+    { id: 12, name: "Dal Makhani", img: "/dal.jpg", category: "Main Course" },
+    { id: 13, name: "Garlic Naan", img: "/naan.jpg", category: "Main Course" },
+    { id: 14, name: "Veg Biryani", img: "/biryani.jpg", category: "Main Course" },
+    { id: 15, name: "Matar Panner" ,img: "/matar.jpg", category: "Main Course" },
 
-    { id: 16, name: "Paneer Tikka", price: 8.99, img: "/tikka.jpg", category: "Starters" },
-    { id: 17, name: "Veg Spring Roll", price: 6.99, img: "/spring.jpg", category: "Starters" },
-    { id: 18, name: "Honey Chilli Potato", price: 9.99, img: "/honey chili potato.jpg", category: "Starters" },
-    { id: 19, name: "Baby Corn", price: 7.49, img: "/baby corn.jpg", category: "Starters" },
-    { id: 20, name: "Hara Bhara Kabab", price: 8.49, img: "/hara.jpg", category: "Starters" },
+    { id: 16, name: "Paneer Tikka" ,img: "/tikka.jpg", category: "Starters" },
+    { id: 17, name: "Veg Spring Roll" ,img: "/spring.jpg", category: "Starters" },
+    { id: 18, name: "Honey Chilli Potato", img: "/honey chili potato.jpg", category: "Starters" },
+    { id: 19, name: "Baby Corn" ,img: "/baby corn.jpg", category: "Starters" },
+    { id: 20, name: "Hara Bhara Kabab" ,img: "/hara.jpg", category: "Starters" },
 
-    { id: 21, name: "Cold Coffee", price: 4.99, img: "/cold1.jpg", category: "Beverages" },
-    { id: 22, name: "Lassi", price: 3.99, img: "/lassi.jpg", category: "Beverages" },
-    { id: 23, name: "Fresh Lime Soda", price: 3.49, img: "/soda.jpg", category: "Beverages" },
-    { id: 24, name: "Masala Chai", price: 2.99, img: "/chaai.jpg", category: "Beverages" },
-    { id: 25, name: "Mocktail", price: 5.99, img: "/mock2.jpg", category: "Beverages" },
+    { id: 21, name: "Cold Coffee" ,img: "/cold1.jpg", category: "Beverages" },
+    { id: 22, name: "Lassi" ,img: "/lassi.jpg", category: "Beverages" },
+    { id: 23, name: "Fresh Lime Soda" ,img: "/soda.jpg", category: "Beverages" },
+    { id: 24, name: "Masala Chai", img: "/chaai.jpg", category: "Beverages" },
+    { id: 25, name: "Mocktail", img: "/mock2.jpg", category: "Beverages" },
 
-    { id: 26, name: "Chef Special Thali", price: 18.99, img: "/thali.jpg", category: "Our Special" },
-    { id: 27, name: "Royal Biryani", price: 19.99, img: "/biryani.jpg", category: "Our Special" },
-    { id: 28, name: "Special chinese Platter", price: 17.99, img: "/chi.jpg", category: "Our Special" },
-    { id: 29, name: "Tandoori Combo", price: 20.99, img: "/.jpg", category: "Our Special" },
-    { id: 30, name: "Festival Special Dessert", price: 14.99, img: "/t.jpg", category: "Our Special" },
+    { id: 26, name: "Chef Special Thali", img: "/thali.jpg", category: "Our Special" },
+    { id: 27, name: "Royal Biryani", img: "/biryani.jpg", category: "Our Special" },
+    { id: 28, name: "Special chinese Platter", img: "/chi.jpg", category: "Our Special" },
+    { id: 29, name: "Tandoori Combo", img: "/.jpg", category: "Our Special" },
+    { id: 30, name: "Festival Special Dessert", img: "/t.jpg", category: "Our Special" },
 ];
 
-const ITEMS_PER_PAGE = 8;
+const ITEMS_PER_PAGE = 12;
 
 /* ⭐ MOST SELLING ITEMS */
 const popularItems = [
@@ -138,8 +138,8 @@ export default function Menu() {
                         <div className="menu-card" key={item.id}>
                             <img src={item.img} alt={item.name} />
                             <h3>{item.name}</h3>
-                            <p>{item.category}</p>
-                            <span className="price">${item.price}</span>
+                            {/* <p>{item.category}</p> */}
+                            <span className="price">{item.price}</span>
                         </div>
                     ))}
                 </div>

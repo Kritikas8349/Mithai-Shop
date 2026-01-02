@@ -37,8 +37,7 @@ body {
 /* 👇 SLIDING IMAGES */
 @keyframes bgSlide {
   0% {
-    background-image: url("/res4.avif");
-
+    background-image: url("/chanchalr1.jpg");
   }
 
   50% {
@@ -46,7 +45,7 @@ body {
   }
 
   100% {
-    background-image: url("/res5.jpg");
+    background-image: url("/chanchalr3.jpg");
   }
 }
 
