@@ -110,12 +110,12 @@ const Hero = () => {
       desc: "Street-style chaat with authentic Indian flavors.",
       items: ["Kachori", "Pani Puri", "Masala Patties", "Sev Poori", "Bombay Bhel", "Chole Tikki"],
       images: [
-        "kachori.JPG",
-        "panipoori.png",
-        "masala patties.JPG",
-        "sev poori.JPG",
-        "bombay bhel.JPG",
-        "chole tikki (1).JPG"
+        "/kachori.JPG",
+        "/panipoori.png",
+        "/masala patties.JPG",
+        "/sev poori.JPG",
+        "/bombay bhel.JPG",
+        "/chole tikki (1).JPG"
       ]
     },
     fastfood: {
@@ -123,12 +123,12 @@ const Hero = () => {
       desc: "Quick bites made fresh for every craving.",
       items: ["Red Sauce Pasta", "Manchurian", "Schezwan Noodles", "Pav Bhaji", "Chilli Paneer", "Veg Hot Sandwich"],
       images: [
-        "red sauce pasta.JPG",
-        "dry Manchurian (2) (1).JPG",
-        "Schezwan noodles.JPG",
-        "pav bhaji (1).JPG",
-        "chilli paneer.JPG",
-        "veg hot sandwich.JPG"
+        "/red sauce pasta.JPG",
+        "/dry Manchurian (2) (1).JPG",
+        "/Schezwan noodles.JPG",
+        "/pav bhaji (1).JPG",
+        "/chilli paneer.JPG",
+        "/veg hot sandwich.JPG"
       ]
     },
   };
