@@ -23,27 +23,34 @@ const Footer = () => {
             <span>SLICE OF HEAVEN</span>
           </h2>
 
-          <div className="footer-subscribe">
-            <input type="email" placeholder="Email" />
-            <button type="submit">
-              <span  >Subscribe</span>
-            </button>
+          <div className="footer-follow">
+
+            <a
+              href="https://www.instagram.com/your_instagram_handle"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="insta-follow-btn"
+            >
+              <span>Follow on Instagram</span>
+            </a>
           </div>
 
-          <p className="footer-note">
-            We won’t flood your inbox, just sweet updates and offers!
-          </p>
+{/* KEEP THIS AS IT IS */}
+<p className="footer-note">
+  We won’t flood your inbox, just sweet updates and offers!
+</p>
+
         </div>
 
         {/* RIGHT CONTENT */}
         <div className="footer-links">
           <div className="footer-column">
             <h4>Quick Links</h4>
-            <a href="#">Home</a>
-            <a href="#">About Us</a>
-            <a href="#">Our Menu</a>
-            <a href="#">Restaurant</a>
-            <a href="#">Testimonials</a>
+            <a href="/">Home</a>
+            <a href="/about">About Us</a>
+            <a href="/menu">Our Menu</a>
+            <a href="/restaurant">Restaurant</a>
+            <a href="/catering">Catering</a>
           </div>
 
           <div className="footer-column">
@@ -74,7 +81,17 @@ const Footer = () => {
               </div>
             </div>
           </div>
+
+          {/* 👇 ADD GALLERY HERE (RIGHT SIDE, BELOW LINKS) */}
+          <div className="footer-gallery">
+            <img src="/red sauce pasta.JPG" alt="Fresh Indian Sweets" />
+            <img src="/rasmalai.png" alt="Traditional Mithai" />
+            <img src="/chole tikki (1).JPG" alt="Chanchal Sweets Store" />
+          </div>
+
         </div>
+
+
       </div>
 
       {/* BOTTOM */}
@@ -92,7 +109,6 @@ const Footer = () => {
         <div className="footer-bottom-right1">
           <a href="#">Facebook</a>
           <a href="#">Instagram</a>
-          <a href="#">Pinterest</a>
         </div>
       </div>
     </section>

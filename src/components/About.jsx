@@ -30,7 +30,7 @@ const About = () => {
 
       {/* OUR STORY */}
       <section className="about-story" ref={aboutRef}>
-        <img src="/aboutbgc.jpg" className="section-bg" alt="print background" />
+        <img src="/abus.png" className="section-bg" alt="print background" />
 
         <div className="story-container">
 
@@ -99,7 +99,7 @@ const About = () => {
 
       {/* HOUSE OF QUALITY */}
       <section className="quality-section" ref={qualityRef}>
-  <img src="/aboutbgc.jpg" className="section-bg" alt="print background" />
+  <img src="/aboutbgc.jpg" className="section-bg1" alt="print background" />
 
   <h3 className="section-heading">HOUSE OF QUALITY</h3>
 

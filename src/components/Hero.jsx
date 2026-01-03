@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import "./Hero.css";
 import { FaAward, FaLeaf, FaShieldAlt } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   const aboutRef = useRef(null);
@@ -166,9 +167,9 @@ const Hero = () => {
         Crafted with Tradition, Served with Love.
       </p>
 
-      <a href="#products" className="hero-btn">
-        Explore Our Mithai
-      </a>
+      <Link to="/menu" className="hero-btn">
+  Explore More
+</Link>
     </div>
   </div>
 </section>
@@ -238,8 +239,8 @@ const Hero = () => {
           </p>
 
           <div className="about-buttons">
-            <button className="primary">Explore Our Menu</button>
-            <button className="secondary">Know Our Story</button>
+            <Link to="/menu" className="primary">Explore Our Menu</Link>
+            <Link to="/about" className="secondary">Know Our Story</Link>
           </div>
 
           <div className="divider bottom"></div>
@@ -306,7 +307,9 @@ const Hero = () => {
           ))}
         </ul>
 
-        <button>View Menu</button>
+        <Link to="/menu" className="catalog-btn">
+  View Menu
+</Link>
       </div>
 
       {/* IMAGE GRID */}

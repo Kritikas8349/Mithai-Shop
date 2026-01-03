@@ -8,7 +8,8 @@
 .about-page {
   background: linear-gradient(90deg, #fddeac, #f1dab4);
   font-family: "Playfair Display", serif;
-  padding: 10px;
+  /* padding: 10px; */
+  padding-bottom: 10px;
 }
 
 /* ================= OUR STORY ================= */
@@ -20,6 +21,7 @@
   overflow: hidden;
 }
 
+
 /* BACKGROUND IMAGE */
 .section-bg {
   position: absolute;
@@ -27,8 +29,10 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  opacity: 0.70;        
   z-index: 0;
 }
+
 
 /* CONTAINER */
 .story-container {
@@ -217,7 +221,7 @@
 }
 
 /* BACKGROUND TEXTURE */
-.section-bg {
+.section-bg1 {
   position: absolute;
   inset: 0;
   width: 100%;

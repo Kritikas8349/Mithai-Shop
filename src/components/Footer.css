@@ -161,6 +161,96 @@
   opacity: 1;
 }
 
+/* ================= INSTAGRAM FOLLOW ================= */
+
+.footer-follow {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 220px;
+}
+/* Instagram Button */
+.insta-follow-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 18px;
+  border-radius: 8px;
+  background: transparent;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 0.4px;
+  border: 2px solid white;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+  .footer-follow {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+
+/* ================= RIGHT SIDE FOOTER GALLERY ================= */
+
+.footer-gallery {
+  grid-column: 1 / -1;              /* span all 3 right columns */
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.footer-gallery img {
+  width: 100%;
+  height: 115px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.footer-gallery img:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.45);
+}
+
+/* ================= TABLET ================= */
+@media (max-width: 1024px) {
+  .footer-gallery img {
+    height: 105px;
+  }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  .footer-gallery {
+    grid-template-columns: repeat(3, 90px);
+    justify-content: center;
+  }
+
+  .footer-gallery img {
+    height: 90px;
+  }
+}
+
+/* ================= SMALL MOBILE ================= */
+@media (max-width: 480px) {
+  .footer-gallery {
+    grid-template-columns: repeat(3, 80px);
+  }
+
+  .footer-gallery img {
+    height: 80px;
+  }
+}
+
+
+
 /* ================================================= */
 /* ================= RESPONSIVE ==================== */
 /* ================================================= */
