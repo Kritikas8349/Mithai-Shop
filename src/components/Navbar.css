@@ -6,7 +6,8 @@
   font-family: Lexend;
 }
 
-html, body {
+html,
+body {
   width: 100%;
   overflow-x: hidden;
   scroll-behavior: smooth;
@@ -21,11 +22,11 @@ html, body {
   align-items: center;
   overflow: hidden;
   white-space: nowrap;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;
+  /* z-index: 1000; */
 }
 
 .top-bar-track {
@@ -39,7 +40,7 @@ html, body {
   align-items: center;
   font-size: 10px;
   letter-spacing: 1px;
-  padding-right: 60px;
+  padding-right: 20px;
 }
 
 .dot {
@@ -48,13 +49,18 @@ html, body {
 }
 
 @keyframes scrollText {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-30%); }
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 /* ================= NAVBAR ================= */
 .navbar {
-  position: fixed;
+  position: absolute;
   top: 30px;
   left: 0;
   width: 100%;
@@ -97,7 +103,9 @@ body {
   transition: color 0.3s ease;
 }
 
-.nav-links li a:hover { color: #8a5a2b; }
+.nav-links li a:hover {
+  color: #8a5a2b;
+}
 
 .nav-links li a::after {
   content: "";
@@ -113,9 +121,13 @@ body {
 }
 
 .nav-links li a:hover::after,
-.nav-links li a.active::after { transform: scaleX(1); }
+.nav-links li a.active::after {
+  transform: scaleX(1);
+}
 
-.nav-links li a.active { color: #8a5a2b; }
+.nav-links li a.active {
+  color: #8a5a2b;
+}
 
 /* ================= NAV ICONS ================= */
 .nav-icons {
@@ -194,13 +206,14 @@ body {
 /* ================= MOBILE MENU ================= */
 .mobile-menu {
   position: fixed;
-  top: 70px; /* below hamburger */
+  top: 70px;
+  /* below hamburger */
   right: 20px;
   width: 280px;
   background: #fff;
   border-radius: 18px;
   padding: 25px 20px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
   transition: transform 0.4s ease, opacity 0.4s ease;
   transform: translateX(100%);
   opacity: 0;
@@ -250,18 +263,44 @@ body {
 }
 
 /* ================= VISIBILITY ================= */
-.desktop-only { display: inline-block; }
-.mobile-only { display: none; }
+.desktop-only {
+  display: inline-block;
+}
+
+.mobile-only {
+  display: none;
+}
 
 /* ================= MEDIA QUERIES ================= */
 @media (max-width: 900px) {
-  .nav-links { display: none; }
-  .hamburger { display: flex; }
-  .desktop-only { display: none; }
-  .mobile-only { display: block; width: 100%; margin-top: 25px; }
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: block;
+    width: 100%;
+    margin-top: 25px;
+  }
 }
 
 @media (max-width: 600px) {
-  .top-bar-track p { font-size: 9px; padding-right: 40px; }
-  .mobile-menu { width: 90%; max-width: 280px; padding: 20px 15px; }
+  .top-bar-track p {
+    font-size: 9px;
+    padding-right: 40px;
+  }
+
+  .mobile-menu {
+    width: 90%;
+    max-width: 280px;
+    padding: 20px 15px;
+  }
 }
