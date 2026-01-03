@@ -3,40 +3,69 @@ import "./Menu.css";
 
 /* ✅ MENU DATA */
 const menuItems = [
-    { id: 4, name: "Rabri", img: "/rabdi.jpg", category: "Sweets" },
-    { id: 1, name: "Gulab Jamun" ,img: "/gulabjamun.jpg", category: "Sweets" },
-    { id: 2, name: "Rasgulla" ,img: "/ras.jpg", category: "Sweets" },
-    { id: 3, name: "Kaju Katli", img: "/kaju katli.JPG", category: "Sweets" },
-    { id: 5, name: "Sandwich", img: "/sand.jpg", category: "FastFood" },
+    { id: 1, name: "Rabri", img: "/rabdi.jpg", category: "Sweets" },
+    { id: 2, name: "Gulab Jamun" ,img: "/gulabjamun.jpg", category: "Sweets" },
+    { id: 3, name: "Rasgulla" ,img: "/ras.jpg", category: "Sweets" },
+    { id: 4, name: "Kaju Katli", img: "/kaju katli.JPG", category: "Sweets" },
+    { id: 5, name: "Atta Laddu", img: "/atta laddu.jpg", category: "Sweets" },
+    { id: 6, name: "Milk cake", img: "/milk cake1.jpg", category: "Sweets" },
+    { id: 7, name: "Malai Tikiya", img: "/malai tikiya1.JPG", category: "Sweets" },
+    { id: 8, name: "Kheer Kadam", img: "/kheerkadam.jpg", category: "Sweets" },
+    { id: 9, name: "Motichur Laddu", img: "/motichur.jpg", category: "Sweets" },
+    { id: 10, name: "Besan Laddu", img: "/besanladdu.jpg", category: "Sweets" },
+    { id: 11, name: "Dry fruits Laddu", img: "/dry fruit.jpg", category: "Sweets" },
+    { id: 12, name: "Baklava", img: "/baklava1.jpg", category: "Sweets" },
 
-    { id: 6, name: "Kaju Curry" ,img: "/kaju Curry3.JPG", category: "Main Course" },
-    { id: 7, name: "Parantha", img: "/pizz.jpg", category: "Main Course" },
-    { id: 8, name: "French Fries", img: "/french.jpg", category: "Main Course" },
-    { id: 9, name: "Hot Dog", img: "/hot dog.jpg", category: "Main Course" },
-    { id: 10, name: "Sandwich", img: "/sand.jpg", category: "Main Course" },
-    { id: 11, name: "Paneer Butter Masala", img: "/paneer2.jpg", category: "Main Course" },
-    { id: 12, name: "Dal Makhani", img: "/dal.jpg", category: "Main Course" },
-    { id: 13, name: "Garlic Naan", img: "/naan.jpg", category: "Main Course" },
-    { id: 14, name: "Veg Biryani", img: "/biryani.jpg", category: "Main Course" },
-    { id: 15, name: "Matar Panner" ,img: "/matar.jpg", category: "Main Course" },
+    { id: 13, name: "Cheese Hot Sandwich", img: "/cheese sandwich.jpg", category: "FastFood" },
+    { id: 14, name: "Veg Hot Sandwich", img: "/veg sandwich.jpg", category: "FastFood" },
+    { id: 15, name: "Schezwan Noodels", img: "/schezwan noodels.jpg", category: "FastFood" },
+    { id: 16, name: "Schezwan Rice", img: "/schezwanrice.jpg", category: "FastFood" },
+    { id: 17, name: "Dry Manchurian", img: "/dry.jpg", category: "FastFood" },
+    { id: 18, name: "Honey Chili Potato", img: "/honey.jpg", category: "FastFood" },
+    { id: 19, name: "Red Sauce Pasta", img: "/redpasta.jpg", category: "FastFood" },
+    { id: 20, name: "Samosa", img: "/samosa.jpg", category: "FastFood" },
+    { id: 21, name: "Kachori", img: "/kachori1.jpg", category: "FastFood" },
+    { id: 22, name: "Vada Pav", img: "/vadapao.jpg", category: "FastFood" },
+    { id: 23, name: "Cheese Vada Pav", img: "/cheesevada.jpg", category: "FastFood" },
+    { id: 24, name: "Cheese Masala Pav", img: "/masala.jpg", category: "FastFood" },
+    { id: 25, name: "Peanut Masala", img: "/peanut.jpg", category: "FastFood" },
+    { id: 26, name: "Pao Bhaji", img: "/pao.jpg", category: "FastFood" },
+    { id: 27, name: "Papdi Chat", img: "/papdi2.jpg", category: "FastFood" },
+    { id: 28, name: "Masala Patties", img: "/masalapatties.JPG", category: "FastFood" },
+    { id: 29, name: "Bombay Bhel", img: "/bhel.jpg", category: "FastFood" },
+    { id: 30, name: "Dahi Puri", img: "/dahi.jpg", category: "FastFood" },
+    { id: 31, name: "Pani Puri", img: "/pani puri1.jpg", category: "FastFood" },
+    { id: 32, name: "Chole Tikki", img: "/tikki.jpg", category: "FastFood" },
 
-    { id: 16, name: "Paneer Tikka" ,img: "/tikka.jpg", category: "Starters" },
-    { id: 17, name: "Veg Spring Roll" ,img: "/spring.jpg", category: "Starters" },
-    { id: 18, name: "Honey Chilli Potato", img: "/honey chili potato.jpg", category: "Starters" },
-    { id: 19, name: "Baby Corn" ,img: "/baby corn.jpg", category: "Starters" },
-    { id: 20, name: "Hara Bhara Kabab" ,img: "/hara.jpg", category: "Starters" },
 
-    { id: 21, name: "Cold Coffee" ,img: "/cold1.jpg", category: "Beverages" },
-    { id: 22, name: "Lassi" ,img: "/lassi.jpg", category: "Beverages" },
-    { id: 23, name: "Fresh Lime Soda" ,img: "/soda.jpg", category: "Beverages" },
-    { id: 24, name: "Masala Chai", img: "/chaai.jpg", category: "Beverages" },
-    { id: 25, name: "Mocktail", img: "/mock2.jpg", category: "Beverages" },
 
-    { id: 26, name: "Chef Special Thali", img: "/thali.jpg", category: "Our Special" },
-    { id: 27, name: "Royal Biryani", img: "/biryani.jpg", category: "Our Special" },
-    { id: 28, name: "Special chinese Platter", img: "/chi.jpg", category: "Our Special" },
-    { id: 29, name: "Tandoori Combo", img: "/.jpg", category: "Our Special" },
-    { id: 30, name: "Festival Special Dessert", img: "/t.jpg", category: "Our Special" },
+    { id: 33, name: "Kaju Curry" ,img: "/kaju Curry3.JPG", category: "Main Course" },
+    { id: 34, name: "Dal fry", img: "/dal fry1.JPG", category: "Main Course" },
+    { id: 35, name: "Dal Tadka", img: "/dal tadka1.JPG", category: "Main Course" },
+    { id: 36, name: "Mix Veg", img: "/mix veh.jpg", category: "Main Course" },
+    { id: 38, name: "Mushroom Matar Masala", img: "/mushroom.jpg", category: "Main Course" },
+    { id: 39, name: "Paneer Lababdar", img: "/panner lababdar.jpg", category: "Main Course" },
+    { id: 40, name: "Paneer Butter Masala", img: "/paneer2.jpg", category: "Main Course" },
+    { id: 41, name: "Paneer Pasanda", img: "/panner pasanda.jpg", category: "Main Course" },
+    { id: 42, name: "Matar Panner" ,img: "/matar.jpg", category: "Main Course" },
+    { id: 43, name: "Dal Makhani", img: "/dal.jpg", category: "Main Course" },
+    { id: 44, name: "Garlic Naan", img: "/naan.jpg", category: "Main Course" },
+    { id: 45, name: "Mix Veg Paratha", img: "/mix.jpg", category: "Main Course" },
+    { id: 46, name: "Aalu paratha", img: "/aalu.jpg", category: "Main Course" },
+    { id: 46, name: "Tawa Roti", img: "/roti.jpg", category: "Main Course" },
+    { id: 47, name: "Veg Biryani", img: "/biryani.jpg", category: "Main Course" },
+    { id: 48, name: "Dahi Vada", img: "/dahivada.jpg", category: "Main Course" },
+    
+    { id: 49, name: "Sabudana Vada" ,img: "/vada.jpg", category: "Falhari" },
+    { id: 50, name: "Sabudana Khichdi" ,img: "/khichdi.jpg", category: "Falhari" },
+    { id: 51, name: "Falhari Thali", img: "/fal.jpg", category: "Falhari" },
+    
+
+    { id: 52, name: "Chef Special Thali", img: "/thali.jpg", category: "Our Special" },
+    { id: 53, name: "Falhari Thali", img: "/fal.jpg", category: "Our Special" },
+    { id: 54, name: "Honey Chili Potato", img: "/honey.jpg", category: "Our Special" },
+    { id: 55, name: "Milk cake", img: "/milk cake1.jpg", category: "Our Special" },
+    { id: 56, name: "Baklava", img: "/baklava1.jpg", category: "Our Special" },
 ];
 
 const ITEMS_PER_PAGE = 12;
@@ -44,7 +73,7 @@ const ITEMS_PER_PAGE = 12;
 /* ⭐ MOST SELLING ITEMS */
 const popularItems = [
     "Chef Special Thali",
-    "Royal Biryani",
+    "Baklava",
     "Paneer Butter Masala",
     "Cold Coffee"
 ];
@@ -96,7 +125,7 @@ export default function Menu() {
 
                 <h4>All Menu</h4>
                 <ul className="category">
-                    {["All", "Sweets", "FastFood", "Main Course", "Starters", , "Our Special"].map(cat => (
+                    {["All", "Sweets", "FastFood", "Main Course","Falhari" , "Our Special"].map(cat => (
                         <li
                             key={cat}
                             className={category === cat ? "active" : ""}
