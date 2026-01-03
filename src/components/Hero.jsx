@@ -182,14 +182,14 @@ const Hero = () => {
           <span>High Quality</span>
         </div>
 
-        <div className="divider" />
+        <div className="divider1" />
 
         <div className="feature-item">
           <FaLeaf className="feature-icon" />
           <span>100% Vegetarian</span>
         </div>
 
-        <div className="divider" />
+        <div className="divider1" />
 
         <div className="feature-item">
           <FaShieldAlt className="feature-icon" />
@@ -197,52 +197,55 @@ const Hero = () => {
         </div>
       </section>
 
-      <section className="about-section" ref={aboutRef}>
-  <div className="about-container">
 
-    {/* LEFT : SINGLE IMAGE */}
-    <div className="about-image-single">
-      <img
-        src="/fl.png"
-        alt="Chanchal Sweets Special"
-        className="single-img"
-      />
-    </div>
 
-    {/* RIGHT : CONTENT (UNCHANGED) */}
-    <div className="about-content">
-      <img src="/border.png" alt="Top border" className="border-img-top" />
 
-      <span className="about-tag">Our Story</span>
 
-      <h2>
-        Authentic Mithai & <br />
-        Pure Vegetarian Restaurant
-      </h2>
+      <section className="about-section">
+      <div className="about-container">
 
-      <p>
-        <strong>Chanchal Sweets</strong> is a trusted name for premium Indian
-        mithai and traditional vegetarian food. From handcrafted sweets
-        made with pure ingredients to a welcoming family restaurant above,
-        we bring you the true taste of Indian culture and hospitality.
-      </p>
+        {/* LEFT IMAGE GRID */}
+        <div className="about-images">
+          <img src="/noodle.jpg" alt="Indian Mithai" />
+          <img src="/mithais.jpg" alt="Vegetarian Food" />
+          <img src="/gajarhalwa.jpg" alt="Traditional Sweets" />
+          <img src="/manch.jpg" alt="Jalebi" />
+        </div>
 
-      <p>
-        Whether you are celebrating festivals, weddings, or simply craving
-        something delicious, our sweets and meals are prepared fresh every
-        day with unmatched quality and hygiene.
-      </p>
+        {/* RIGHT CONTENT */}
+        <div className="about-content">
+          <div className="divider top"></div>
 
-      <div className="about-buttons">
-        <a href="#menu" className="btn primary">View Menu</a>
-        <a href="#contact" className="btn secondary">About Us</a>
+          <span className="about-tag">Our Story</span>
+
+          <h2>
+            Authentic Mithai & <br />
+            Pure Vegetarian Restaurant in Bhopal
+          </h2>
+
+          <p>
+            <strong>Chanchal Sweets</strong> is a trusted destination in Bhopal
+            for authentic Indian mithai and pure vegetarian food, known for
+            uncompromising quality, taste, and hygiene. For generations, we have
+            been crafting traditional sweets using pure ingredients and
+            time-honored recipes.
+          </p>
+
+          <p>
+            From handcrafted Indian sweets made fresh every day to a warm and
+            welcoming pure vegetarian restaurant, we bring together Indian
+            culinary heritage with modern standards of cleanliness and service.
+          </p>
+
+          <div className="about-buttons">
+            <button className="primary">Explore Our Menu</button>
+            <button className="secondary">Know Our Story</button>
+          </div>
+
+          <div className="divider bottom"></div>
+        </div>
       </div>
-
-      <img src="/border.png" alt="Bottom border" className="border-img-bottom" />
-    </div>
-
-  </div>
-</section>
+    </section>
 
 
 
