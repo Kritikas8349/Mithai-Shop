@@ -6,15 +6,14 @@ const menuItems = [
     { id: 4, name: "Rabri", img: "/rabdi.jpg", category: "Sweets" },
     { id: 1, name: "Gulab Jamun" ,img: "/gulabjamun.jpg", category: "Sweets" },
     { id: 2, name: "Rasgulla" ,img: "/ras.jpg", category: "Sweets" },
-    { id: 3, name: "Kaju Katli", img: "/kaju1.jpg", category: "Sweets" },
-    { id: 5, name: "Jalebi", img: "/jalebi.jpg", category: "Sweets" },
+    { id: 3, name: "Kaju Katli", img: "/kaju katli.JPG", category: "Sweets" },
+    { id: 5, name: "Sandwich", img: "/sand.jpg", category: "FastFood" },
 
-    { id: 6, name: "Veg Burger" ,img: "/burger.jpg", category: "FastFood" },
-    { id: 7, name: "Cheese Pizza", img: "/pizz.jpg", category: "FastFood" },
-    { id: 8, name: "French Fries", img: "/french.jpg", category: "FastFood" },
-    { id: 9, name: "Hot Dog", img: "/hot dog.jpg", category: "FastFood" },
-    { id: 10, name: "Sandwich", img: "/sand.jpg", category: "FastFood" },
-
+    { id: 6, name: "Kaju Curry" ,img: "/kaju Curry3.JPG", category: "Main Course" },
+    { id: 7, name: "Parantha", img: "/pizz.jpg", category: "Main Course" },
+    { id: 8, name: "French Fries", img: "/french.jpg", category: "Main Course" },
+    { id: 9, name: "Hot Dog", img: "/hot dog.jpg", category: "Main Course" },
+    { id: 10, name: "Sandwich", img: "/sand.jpg", category: "Main Course" },
     { id: 11, name: "Paneer Butter Masala", img: "/paneer2.jpg", category: "Main Course" },
     { id: 12, name: "Dal Makhani", img: "/dal.jpg", category: "Main Course" },
     { id: 13, name: "Garlic Naan", img: "/naan.jpg", category: "Main Course" },
@@ -97,7 +96,7 @@ export default function Menu() {
 
                 <h4>All Menu</h4>
                 <ul className="category">
-                    {["All", "Sweets", "FastFood", "Main Course", "Starters", "Beverages", "Our Special"].map(cat => (
+                    {["All", "Sweets", "FastFood", "Main Course", "Starters", , "Our Special"].map(cat => (
                         <li
                             key={cat}
                             className={category === cat ? "active" : ""}

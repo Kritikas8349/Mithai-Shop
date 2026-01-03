@@ -9,31 +9,26 @@ const Resturant = () => {
     {
       title: "Noodles",
       description: "Freshly prepared pasta with authentic Italian spices ",
-      price: "180",
       image: "/noo.jpg",
     },
     {
       title: "Saahi Paneer",
       description: "Freshly prepared pasta with authentic Italian spices ",
-      price: "200",
       image: "/paneer2.jpg",
     },
     {
       title: "Pav Bhaji",
       description: "Freshly prepared pasta with authentic Italian spices ",
-      price: "150",
       image: "/pav2.jpg",
     },
     {
       title: "Special Thali",
       description: "Freshly prepared pasta with authentic Italian spices ",
-      price: "250",
       image: "/plat.jpg",
     },
     {
       title: "Fried Rice",
       description: "Freshly prepared pasta with authentic Italian spices ",
-      price: "250",
       image: "/rice.png",
     },
   ];
@@ -169,7 +164,7 @@ const Resturant = () => {
                 </p>
 
                 <div className="meal-bottom">
-                  <p className="price">₹{meal.price}</p>
+                  <p className="price">{meal.price}</p>
                   <button className="view-btn">View</button>
                 </div>
               </div>

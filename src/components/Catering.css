@@ -1,0 +1,142 @@
+:root {
+  --maroon-c: #6b1e1e;
+  --beige-c: #f6efe6;
+  --gold-c: #c9a24d;
+}
+
+/* PAGE */
+.catering-page-c {
+  font-family: "Poppins", sans-serif;
+  background: var(--beige-c);
+}
+
+/* HERO */
+.catering-hero-c {
+  position: relative;
+  height: 88vh;
+}
+
+.catering-hero-img-c {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.catering-hero-overlay-c {
+  position: absolute;
+  inset: 0;
+  /* background: rgba(167, 153, 153, 0.65); */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+}
+
+.catering-hero-title-c {
+  font-size: 3rem;
+}
+
+.catering-hero-subtitle-c {
+  margin: 10px 0 25px;
+  letter-spacing: 1px;
+}
+
+.catering-hero-btn-c {
+  background: var(--gold-c);
+  color: #3b1a1a;
+  padding: 14px 34px;
+  border-radius: 30px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* OCCASION */
+.catering-occasion-c {
+  background: url("/images/floral-bg.png");
+  background-size: cover;
+  padding: 90px 8%;
+  text-align: center;
+}
+
+.catering-section-title-c {
+  font-size: 2.4rem;
+  color: var(--maroon-c);
+}
+
+.catering-section-desc-c {
+  margin: 15px auto 50px;
+  max-width: 750px;
+}
+
+.catering-cards-c {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 35px;
+}
+
+.catering-card-c {
+  background: #fff;
+  padding: 20px;
+  border-radius: 22px 22px 60px 60px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.catering-card-c img {
+  width: 100%;
+  border-radius: 18px;
+  margin-bottom: 15px;
+}
+
+.catering-card-c h3 {
+  color: var(--maroon-c);
+}
+
+/* BULK */
+.catering-bulk-c {
+  background: linear-gradient(135deg, #6b1e1e, #4a1212);
+  padding: 80px 10%;
+  text-align: center;
+  color: #fff;
+}
+
+.catering-bulk-btn-c {
+  margin-top: 30px;
+  background: var(--gold-c);
+  padding: 14px 36px;
+  border-radius: 30px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* CTA */
+.catering-cta-c {
+  background: var(--beige-c);
+  padding: 90px 10%;
+  text-align: center;
+}
+
+.catering-cta-btn-c {
+  background: var(--maroon-c);
+  color: #fff;
+  padding: 14px 36px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .catering-hero-title-c {
+    font-size: 2.2rem;
+  }
+
+  .catering-occasion-c,
+  .catering-bulk-c,
+  .catering-cta-c {
+    padding: 60px 6%;
+  }
+}

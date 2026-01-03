@@ -65,18 +65,20 @@
   max-width: 100%;
   overflow-x: hidden;
   background-color:#f9f1e4 ;
+  /* position: relative; */
   
 }
 .menu-content::before {
-  /* content: ""; */
+  content: "";
   position: absolute;
   inset: 0;
-  background-image: url("/bgr.png"); /* image path */
+  background-image: url("/bgr.png"); 
   background-size: cover;
-  background-position: center;
+  /* background-position: center; */
   background-repeat: no-repeat;
-  opacity: 0.1;              /* 🔥 opacity yahin control hogi */
+  opacity: 0.2;            
   z-index: 0;
+  pointer-events: none; 
 }
 /* .menu-content > * {
   position: relative;
@@ -93,6 +95,7 @@
 }
 
 .menu-card {
+  /* background-image:url() ; */
   background: #ffffff;
   border-radius: 14px;
   padding: 16px;
@@ -125,7 +128,7 @@
 
 /* PAGINATION */
 .pagination {
-  margin-top: 180px;
+  margin-top: 165px;
   text-align: center;
 }
 
@@ -234,6 +237,9 @@
 
   .menu-content {
     padding: 16px;
+  }
+  .pagination{
+    margin-top: 20px;
   }
 
   .menu-grid {
