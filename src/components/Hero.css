@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap');
 
 
 * {
@@ -7,9 +7,10 @@
   box-sizing: border-box;
 }
 
+
 html, body {
   scroll-behavior: smooth;
-  font-family: 'Lexend', sans-serif;
+  font-family: 'Playfair display', sans-serif;
 }
 
 
@@ -72,7 +73,7 @@ html, body {
   font-size: 4.8rem;
   font-weight: 800;
   line-height: 1.1;
-  font-family: Lexend;
+  /* font-family: Lexend; */
 }
 
 /* ====== Luxury staggered reveal animation ====== */
@@ -120,7 +121,7 @@ html, body {
   font-size: 1.9rem;
   font-weight: 700;
   margin: 18px 0;
-  font-family: Lexend;
+  /* font-family: Lexend; */
 
 }
 
@@ -129,7 +130,7 @@ html, body {
   line-height: 1.4;
   margin-bottom: 36px;
   max-width: 450px;
-  font-family: Lexend;
+  /* font-family: Lexend; */
 
 
 }
@@ -143,7 +144,7 @@ html, body {
   border-radius: 30px;
   text-decoration: none;
   transition: 0.3s ease;
-  font-family: Lexend;
+  /* font-family: Lexend; */
 
 }
 
@@ -161,19 +162,19 @@ html, body {
 
   .hero-right h1 {
     font-size: 4.2rem;
-  font-family: Lexend;
+  /* font-family: Lexend; */
 
   }
 
   .hero-right h2 {
     font-size: 1.7rem;
-  font-family: Lexend;
+  /* font-family: Lexend; */
 
   }
 
   .hero-right p {
     font-size: 1.35rem;
-  font-family: Lexend;
+  /* font-family: Lexend; */
 
   }
 }
@@ -184,13 +185,13 @@ html, body {
 
   .hero {
     min-height: 75vh;
-  font-family: Lexend;
+  /* font-family: Lexend; */
 
   }
 
   .hero-content {
     padding: 0 32px;
-  font-family: Lexend;
+  /* font-family: Lexend; */
 
   }
 
@@ -293,7 +294,7 @@ html, body {
   gap: 56px;
   padding: 22px 24px;
   overflow: hidden;
-  font-family: Lexend;
+  /* font-family: Lexend; */
 
 }
 
@@ -304,7 +305,7 @@ html, body {
   color: #6b4b25;
   font-size: 20px;
   font-weight: 600;
-  font-family: "Lexend";
+  /* font-family: "Lexend"; */
   opacity: 0;
   transform: translateY(20px);
   transition: all 0.6s ease;
@@ -400,7 +401,7 @@ html, body {
   padding: 90px 20px;
   background-image: url("/light-pattern.png");
   background-size: 300px;
-  font-family: Lexend;
+  /* font-family: Lexend; */
 
 }
 
@@ -488,7 +489,7 @@ html, body {
 
 /* HEADING */
 .about-content h2 {
-  font-family: Lexend;
+  /* font-family: Lexend; */
 
   font-size: 44px;
   line-height: 1.25;
@@ -529,7 +530,7 @@ html, body {
 
   cursor: pointer;
   text-decoration: none;     /* link underline remove */
-  font-family: inherit;
+  /* font-family: inherit; */
   white-space: nowrap;
 }
 
@@ -690,7 +691,7 @@ html, body {
   background: linear-gradient(90deg, #f8e5c6, #f3ddba);
   padding: 60px 0;
   overflow: hidden;
-  font-family: Lexend;
+  /* font-family: Lexend; */
 
 }
 
@@ -971,7 +972,7 @@ html, body {
   overflow: hidden;
   display: flex;
   align-items: center;
-  font-family: Lexend;
+  /* font-family: Lexend; */
 
 }
 
@@ -1018,7 +1019,7 @@ html, body {
   max-width: 580px;
   padding-left: 80px;
   color: #6b2b2b;
-  font-family: "Lexend";
+  /* font-family: "Lexend"; */
   text-align: center;
 }
 
@@ -1183,7 +1184,7 @@ html, body {
 
   background-size: cover;
   background-position: center;
-  font-family: Lexend;
+  /* font-family: Lexend; */
 
 }
 
@@ -1232,7 +1233,7 @@ html, body {
   padding: 80px 20px;
   text-align: center;
   background: #fff;
-  font-family: Lexend;
+  /* font-family: Lexend; */
 
 }
 

@@ -280,7 +280,7 @@ body {
   text-transform: uppercase;
   margin-bottom: 18px;
   font-weight: 600;
-  font-family: Lexend;
+  /* font-family: Lexend; */
 }
 
 /* HEADING */
@@ -393,7 +393,7 @@ body {
   position: relative;
   z-index: 1;
   color: #6b2b2b;
-  font-family: "Lexend";
+  /* font-family: "Lexend"; */
 }
 
 /* ------------------------ GRID ------------------------ */
