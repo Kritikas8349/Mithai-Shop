@@ -106,6 +106,7 @@ html,body{
 }
 
 .catering-section-title-c {
+  margin-top: -40px;
   font-size: 2.4rem;
   color: var(--maroon-c);
 }
@@ -135,7 +136,10 @@ html,body{
 }
 
 .catering-card-c h3 {
-  color: var(--maroon-c);
+  color:#6b2b2b;
+}
+.catering-card-c p {
+  color:#8a5a2b;
 }
 
 /* BULK */
@@ -148,16 +152,14 @@ html,body{
 
   max-width: 1400px;
   height: min(55vh, 520px);
-  margin: 40px auto;
-
+  /* margin: 40px auto; */
+  margin: 0px 20px 0px 60px;
   border-radius: 28px;
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
   overflow: hidden;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   padding: 20px;
   text-align: center;
   color: var(--maroon-c);
@@ -205,8 +207,8 @@ html,body{
 
 .catering-bulk-btn-c {
   margin-top: 28px;
-  background: var(--gold-c);
-  color: #3a1b1b;
+  background: #6b2b2b;
+  color:#FFFFFF;
 
   padding: 14px 38px;
   border-radius: 30px;
@@ -219,7 +221,7 @@ html,body{
 
 .catering-bulk-btn-c:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  /* box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25); */
 }
 
 
@@ -249,5 +251,9 @@ html,body{
 @media (max-width: 480px) {
   .catering-bulk-btn-c {
     width: 100%;
+  }
+  
+  .catering-page-c{
+    margin-bottom: -10px;
   }
 }

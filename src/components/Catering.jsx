@@ -14,13 +14,13 @@ const Catering = () => {
         />
 
         <div className="catering-hero-overlay-c">
-          <div className="hero-blur-card-c">
+          {/* <div className="hero-blur-card-c">
             <h1 className="catering-hero-title-c">Premium Catering Services</h1>
             <p className="catering-hero-subtitle-c">
               Traditional Taste • Modern Presentation
             </p>
             <button className="catering-hero-btn-c">Explore Catering</button>
-          </div>
+          </div> */}
         </div>
 
       </section>
@@ -36,7 +36,7 @@ const Catering = () => {
         <div className="catering-cards-c">
 
           <div className="catering-card-c">
-            <img src="/birthday.png" alt="Birthday" />
+            <img src="/birth.png" alt="Birthday" />
             <h3>Birthday Parties</h3>
             <p>Delicious sweets to make your celebrations extra special.</p>
           </div>
@@ -65,7 +65,7 @@ const Catering = () => {
           with care, hygiene, and consistent quality.
         </p>
         <button className="catering-bulk-btn-c">
-          Order Now for Up to 200 Sweet Boxes
+          Order Now 
         </button>
         </div>
       </section>

@@ -74,6 +74,8 @@ html,body{
   overflow-x: hidden;
   background-color: #f9f1e4;
   /* position: relative; */
+  position: relative;   /* ✅ MOST IMPORTANT */
+  isolation: isolate; 
 
 }
 
@@ -81,12 +83,14 @@ html,body{
   content: "";
   position: absolute;
   inset: 0;
+
   background-image: url("/bgr.png");
   background-size: cover;
-  /* background-position: center; */
   background-repeat: no-repeat;
+  background-position: center;
+
   opacity: 0.12;
-  z-index: 0;
+  z-index: 1;          /* ✅ stays behind content */
   pointer-events: none;
 }
 
@@ -309,7 +313,7 @@ html,body{
     font-size: 16px;
     font-weight: 600;
     margin: 0 0 6px;
-    color: #111;
+    color: #6b2b2b;
     margin-left: 40px;
     text-align: right !important;
     /* 👈 ye add karo */
