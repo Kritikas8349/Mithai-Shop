@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Allura&family=Montserrat:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&display=swap');
 
 
 * {
@@ -100,7 +101,7 @@ body {
   width: 100%;
   padding: 12px 0;
   text-align: center;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Playfair Display', serif;
   font-size: 10px;
   letter-spacing: 2px;
   background: rgba(0, 0, 0, 0.7);
@@ -164,7 +165,7 @@ body {
 .why-section {
   padding: 30px 60px;
   background: #fffaf3;
-  font-family: "Inter", sans-serif;
+  font-family: 'Playfair Display', serif;
 }
 
 .why-container {
@@ -222,7 +223,7 @@ body {
   background: #f8e9d4;
   position: relative;
   overflow: hidden;
-  font-family: "Inter", sans-serif;
+  font-family: 'Playfair Display', serif;
 }
 
 /* 🌸 FLORAL BACKGROUND OPTION */
@@ -280,12 +281,12 @@ body {
   text-transform: uppercase;
   margin-bottom: 18px;
   font-weight: 600;
-  font-family: 'Allura', cursive;
+  font-family: 'Playfair Display', serif;
 }
 
 /* HEADING */
 .showcase-content h2 {
-  font-family: "Ultra", serif;
+  font-family: 'Playfair Display', serif;
   font-size: 52px;
   /* ⬆️ BIG & PREMIUM */
   line-height: 1.05;
@@ -345,13 +346,13 @@ body {
   }
 
   .tagline{
-    font-family: 'ultra' serif;
+    font-family: 'Playfair Display', serif;
     margin-top: -20px;
   }
 
   .food-showcase{
 
-    font-family: "Inter", sans-serif  
+    font-family: 'Playfair Display', serif; 
   }
 
   .showcase-content {
@@ -379,7 +380,7 @@ body {
 /* ------------------------ MEALS SECTION ------------------------ */
 .meals-section {
   padding: 90px 20px;
-  font-family: "Inter", sans-serif;
+  font-family: 'Playfair Display', serif;
   background: #f9f6f1;
   position: relative;
 }
@@ -404,7 +405,7 @@ body {
   position: relative;
   z-index: 1;
   color: #6b2b2b;
-  font-family: "Lexend";
+  font-family: 'Playfair Display', serif;
 }
 
 /* ------------------------ GRID ------------------------ */
@@ -519,6 +520,7 @@ body {
   border: 1px solid #6b0f24;
   color: #6b0f24;
   padding: 7px 18px;
+  margin-bottom: 10px;
   border-radius: 24px;
   font-size: 12px;
   font-weight: 500;
