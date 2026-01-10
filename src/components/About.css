@@ -1,3 +1,5 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap'); */
+
 *{
   margin: 0;
   padding: 0;
@@ -7,7 +9,7 @@
 
 .about-page {
   background: linear-gradient(90deg, #fddeac, #f1dab4);
-  font-family: "Playfair Display", serif;
+  /* font-family: "Playfair Display", serif; */
   /* padding: 10px; */
   padding-bottom: 10px;
 }
