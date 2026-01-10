@@ -1,10 +1,32 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const navRef = useRef(null);
 
+  // ✅ Close on scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      if (menuOpen) setMenuOpen(false);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [menuOpen]);
+
+  // ✅ Close when clicking outside navbar
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (menuOpen && navRef.current && !navRef.current.contains(e.target)) {
+        setMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [menuOpen]);
   return (
     <>
       {/* ================= TOP BAR ================= */}
@@ -39,7 +61,7 @@ const Navbar = () => {
 
 
       {/* ================= NAVBAR ================= */}
-      <nav className="navbar">
+      <nav className="navbar" ref={navRef}>
         <img src="clogo.png" alt="Logo" className="logo" />
 
         {/* SAME nav-links */}
