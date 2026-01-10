@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Allura&family=Montserrat:wght@300;400&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap');
 
 
 * {
@@ -101,7 +101,7 @@ body {
   width: 100%;
   padding: 12px 0;
   text-align: center;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair display', sans-serif;
   font-size: 10px;
   letter-spacing: 2px;
   background: rgba(0, 0, 0, 0.7);
@@ -165,7 +165,7 @@ body {
 .why-section {
   padding: 30px 60px;
   background: #fffaf3;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair display', sans-serif;
 }
 
 .why-container {
@@ -192,13 +192,13 @@ body {
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 12px;
-  color: #2b2b2b;
+  color: #6b2b2b;
 }
 
 .why-card p {
   font-size: 14px;
   line-height: 1.7;
-  color: #666;
+  color: #8a5a2b;
   max-width: 280px;
   margin: auto;
 }
@@ -223,7 +223,7 @@ body {
   background: #f8e9d4;
   position: relative;
   overflow: hidden;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', sans-serif;
 }
 
 /* 🌸 FLORAL BACKGROUND OPTION */
@@ -286,7 +286,7 @@ body {
 
 /* HEADING */
 .showcase-content h2 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair display', sans-serif;
   font-size: 52px;
   /* ⬆️ BIG & PREMIUM */
   line-height: 1.05;
@@ -346,13 +346,13 @@ body {
   }
 
   .tagline{
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair display', sans-serif;
     margin-top: -20px;
   }
 
   .food-showcase{
 
-    font-family: 'Playfair Display', serif; 
+    font-family: 'Playfair display', sans-serif; 
   }
 
   .showcase-content {
@@ -380,7 +380,7 @@ body {
 /* ------------------------ MEALS SECTION ------------------------ */
 .meals-section {
   padding: 90px 20px;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair display', sans-serif;
   background: #f9f6f1;
   position: relative;
 }
@@ -485,14 +485,14 @@ body {
 .meal-card h3 {
   font-size: 19px;
   font-weight: 600;
-  color: #2b2b2b;
+  color: #6b2b2b;
   margin-bottom: 6px;
   letter-spacing: 0.3px;
 }
 
 .meal-desc {
   font-size: 13.5px;
-  color: #7a7a7a;
+  color: #8a5a2b;
   line-height: 1.7;
   margin: 8px 0 22px;
   max-width: 300px;
