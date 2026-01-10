@@ -747,9 +747,9 @@ body {
 /* ================= RESPONSIVE ================= */
 
 @media (max-width: 900px) {
-  .offer-wrapper {
+  /* .offer-wrapper {
     
-  }
+  } */
   .offer-right-top{
     height: 30vh;
 }
@@ -789,6 +789,7 @@ body {
 
   .offer-overlay p {
     font-size: 0.95rem;
+    line-height:17px;
   }
 
   .offer-right{

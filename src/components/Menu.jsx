@@ -1,11 +1,11 @@
-import { useState } from "react";
+import { useState, useMemo, useEffect } from "react";
 import "./Menu.css";
 
-/* ✅ MENU DATA */
+/* MENU DATA (unchanged) */
 const menuItems = [
-    { id: 1, name: "Ajeer Milk Cake", img: "/anjeer milk cake.JPG", category: "Sweets" },
-    { id: 2, name: "Ajeer Katli", img: "/anjeer katli.JPG", category: "Sweets" },
-    { id: 3, name: "Ajeer Bite", img: "/anjeer bite.JPG", category: "Sweets" },
+    { id: 1, name: "Anjeer Milk Cake", img: "/anjeer milk cake.JPG", category: "Sweets" },
+    { id: 2, name: "Anjeer Katli", img: "/anjeer katli.JPG", category: "Sweets" },
+    { id: 3, name: "Anjeer Bite", img: "/anjeer bite.JPG", category: "Sweets" },
     { id: 4, name: "Anjeer Slice", img: "/anjeer slice.JPG", category: "Sweets" },
     { id: 5, name: "Ajeer Sugar Free", img: "/anjeer sugar free.JPG", category: "Sweets" },
     { id: 6, name: "Badaam Burfi", img: "/badaam burfi.JPG", category: "Sweets" },
@@ -28,7 +28,7 @@ const menuItems = [
     { id: 24, name: "Ghee Boondi Laddu", img: "/motichur.JPG", category: "Sweets" },
     { id: 25, name: "Ghee Kedar Karachi Halwa", img: "/ghee kedar karachi halwa.JPG", category: "Sweets" },
     { id: 26, name: "Gulkand Chilki", img: "/gulkand chilki.JPG", category: "Sweets" },
-    { id: 27, name: "Gulab Jamun" ,img: "/gulab jamun.png", category: "Sweets" },
+    { id: 27, name: "Gulab Jamun", img: "/gulab jamun.png", category: "Sweets" },
     { id: 28, name: "Kaju Bite", img: "/kaju bite.JPG", category: "Sweets" },
     { id: 29, name: "Kaju Katli", img: "/kaju katli.JPG", category: "Sweets" },
     { id: 30, name: "Kaju Kesar Katori", img: "/kaju kesar katori.JPG", category: "Sweets" },
@@ -41,7 +41,7 @@ const menuItems = [
     { id: 38, name: "Meva Burfi", img: "/mewa burfi.JPG", category: "Sweets" },
     { id: 39, name: "Pista Bite ", img: "/pista bite.JPG", category: "Sweets" },
     { id: 40, name: "Raj Burfi", img: "/raj burfi.JPG", category: "Sweets" },
-    { id: 41, name: "Rasgulla" ,img: "/rasgulla.png", category: "Sweets" },
+    { id: 41, name: "Rasgulla", img: "/rasgulla.png", category: "Sweets" },
     { id: 42, name: "Rasmalai", img: "/rasmalai.png", category: "Sweets" },
     { id: 43, name: "Roasted Almond Khajur", img: "/roasted almond khajur.JPG", category: "Sweets" },
     { id: 44, name: "Rose Honey", img: "/rose honey.JPG", category: "Sweets" },
@@ -51,7 +51,7 @@ const menuItems = [
     { id: 48, name: "Special Khajur Slice", img: "/speciel khajur slice.JPG", category: "Sweets" },
     { id: 49, name: "Sugar Free Anjeer", img: "/sugar free anjeer.JPG", category: "Sweets" },
     { id: 50, name: "Vanila Slice ", img: "/vanilla slice.JPG", category: "Sweets" },
-   
+
 
     { id: 51, name: "Cheese Hot Sandwich", img: "/cheese sandwich.jpg", category: "FastFood" },
     { id: 52, name: "Veg Hot Sandwich", img: "/veg sandwich.jpg", category: "FastFood" },
@@ -76,7 +76,7 @@ const menuItems = [
 
 
 
-    { id: 71, name: "Kaju Curry" ,img: "/kaju Curry3.JPG", category: "Main Course" },
+    { id: 71, name: "Kaju Curry", img: "/kaju Curry3.JPG", category: "Main Course" },
     { id: 72, name: "Dal fry", img: "/dal fry1.JPG", category: "Main Course" },
     { id: 73, name: "Dal Tadka", img: "/dal tadka1.JPG", category: "Main Course" },
     { id: 74, name: "Mix Veg", img: "/mix veh.jpg", category: "Main Course" },
@@ -84,7 +84,7 @@ const menuItems = [
     { id: 76, name: "Paneer Lababdar", img: "/panner lababdar.jpg", category: "Main Course" },
     { id: 77, name: "Paneer Butter Masala", img: "/paneer2.jpg", category: "Main Course" },
     { id: 78, name: "Paneer Pasanda", img: "/panner pasanda.jpg", category: "Main Course" },
-    { id: 79, name: "Matar Panner" ,img: "/matar.jpg", category: "Main Course" },
+    { id: 79, name: "Matar Panner", img: "/matar.jpg", category: "Main Course" },
     { id: 80, name: "Dal Makhani", img: "/dal.jpg", category: "Main Course" },
     { id: 81, name: "Garlic Naan", img: "/naan.jpg", category: "Main Course" },
     { id: 82, name: "Mix Veg Paratha", img: "/mix.jpg", category: "Main Course" },
@@ -92,11 +92,11 @@ const menuItems = [
     { id: 84, name: "Tawa Roti", img: "/roti.jpg", category: "Main Course" },
     { id: 86, name: "Veg Biryani", img: "/biryani.jpg", category: "Main Course" },
     { id: 87, name: "Dahi Vada", img: "/dahivada.jpg", category: "Main Course" },
-    
-    { id: 89, name: "Sabudana Vada" ,img: "/vada.jpg", category: "Falhari" },
-    { id: 90, name: "Sabudana Khichdi" ,img: "/khichdi.jpg", category: "Falhari" },
+
+    { id: 89, name: "Sabudana Vada", img: "/vada.jpg", category: "Falhari" },
+    { id: 90, name: "Sabudana Khichdi", img: "/khichdi.jpg", category: "Falhari" },
     { id: 91, name: "Falhari Thali", img: "/fal.jpg", category: "Falhari" },
-    
+
 
     { id: 92, name: "Chef Special Thali", img: "/thali1.JPG", category: "Our Special" },
     { id: 93, name: "Falhari Thali", img: "/fal.jpg", category: "Our Special" },
@@ -104,12 +104,11 @@ const menuItems = [
     { id: 95, name: "Cheese Hot Sandwich", img: "/cheese sandwich.jpg", category: "Our Special" },
     { id: 96, name: "Baklava nest", img: "/baklava nest.JPG", category: "Our Special" },
     { id: 97, name: "Special Khajur Slice", img: "/speciel khajur slice.JPG", category: "Our Special" },
-    
+
 ];
 
 const ITEMS_PER_PAGE = 12;
 
-/* ⭐ MOST SELLING ITEMS */
 const popularItems = [
     "Chef Special Thali",
     "Baklava",
@@ -122,17 +121,34 @@ export default function Menu() {
     const [category, setCategory] = useState("All");
     const [currentPage, setCurrentPage] = useState(1);
 
-    /* 🔍 FILTER (ORDER SAFE) */
-    const filteredItems = menuItems.filter(item => {
-        const matchCategory = category === "All" || item.category === category;
-        const matchSearch = item.name.toLowerCase().includes(search.toLowerCase());
-        return matchCategory && matchSearch;
-    });
+    /* ✅ FAST FILTERING */
+    const filteredItems = useMemo(() => {
+        return menuItems.filter(item => {
+            const matchCategory = category === "All" || item.category === category;
+            const matchSearch = item.name.toLowerCase().includes(search.toLowerCase());
+            return matchCategory && matchSearch;
+        });
+    }, [search, category]);
 
-    /* 📄 PAGINATION */
+    /* ✅ FAST PAGINATION */
+    const paginatedItems = useMemo(() => {
+        const start = (currentPage - 1) * ITEMS_PER_PAGE;
+        return filteredItems.slice(start, start + ITEMS_PER_PAGE);
+    }, [filteredItems, currentPage]);
+
     const totalPages = Math.ceil(filteredItems.length / ITEMS_PER_PAGE);
-    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
-    const paginatedItems = filteredItems.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+
+    /* ✅ PREFETCH NEXT PAGE IMAGES */
+    useEffect(() => {
+        const nextPage = currentPage + 1;
+        const start = (nextPage - 1) * ITEMS_PER_PAGE;
+        const nextItems = filteredItems.slice(start, start + ITEMS_PER_PAGE);
+
+        nextItems.forEach(item => {
+            const img = new Image();
+            img.src = item.img;
+        });
+    }, [currentPage, filteredItems]);
 
     return (
         <div className="menu-page">
@@ -151,7 +167,7 @@ export default function Menu() {
             </div>
 
             {/* SIDEBAR */}
-            <aside className="sidebar desktop-only">
+            <aside className="sidebar">
                 <input
                     className="search"
                     placeholder="Search..."
@@ -164,7 +180,7 @@ export default function Menu() {
 
                 <h4>All Menu</h4>
                 <ul className="category">
-                    {["All", "Sweets", "FastFood", "Main Course","Falhari" , "Our Special"].map(cat => (
+                    {["All", "Sweets", "FastFood", "Main Course", "Falhari", "Our Special"].map(cat => (
                         <li
                             key={cat}
                             className={category === cat ? "active" : ""}
@@ -178,21 +194,11 @@ export default function Menu() {
                     ))}
                 </ul>
 
-                {/* ⭐ POPULAR / MOST SELLING */}
                 <div className="popular-tags">
                     <h4>Our Special</h4>
                     <div className="tags">
                         {popularItems.map(item => (
-                            <span
-                                key={item}
-                                className="tag"
-                            // onClick={() => {
-                            //   setSearch(item);
-                            //   setCurrentPage(1);
-                            // }}
-                            >
-                                {item}
-                            </span>
+                            <span key={item} className="tag">{item}</span>
                         ))}
                     </div>
                 </div>
@@ -203,10 +209,14 @@ export default function Menu() {
                 <div className="menu-grid">
                     {paginatedItems.map(item => (
                         <div className="menu-card" key={item.id}>
-                            <img src={item.img} alt={item.name} />
+                            <img
+                                src={item.img}
+                                alt={item.name}
+                                loading="lazy"
+                                decoding="async"
+                                fetchpriority="low"
+                            />
                             <h3>{item.name}</h3>
-                            {/* <p>{item.category}</p> */}
-                            <span className="price">{item.price}</span>
                         </div>
                     ))}
                 </div>
@@ -223,7 +233,6 @@ export default function Menu() {
                         </button>
                     ))}
                 </div>
-
             </main>
         </div>
     );

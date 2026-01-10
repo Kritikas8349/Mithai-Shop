@@ -113,6 +113,10 @@
   object-fit: cover;
 }
 
+.menu-card img {
+  content-visibility: auto;
+}
+
 .menu-card h3 {
   margin: 10px 0 4px;
   color: #6b2b2b;
@@ -268,7 +272,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    justify-content: flex-start;
     padding: 14px;
+
     border-radius: 16px;
     /* background: #fff; */
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
@@ -276,7 +282,7 @@
 
   /* LEFT IMAGE */
   .menu-card img {
-    width: 90px;
+    width: 130px;
     height: 90px;
     border-radius: 14px;
     object-fit: cover;
@@ -297,6 +303,9 @@
     font-weight: 600;
     margin: 0 0 6px;
     color: #111;
+    margin-left: 40px;
+    text-align: right !important;
+    /* 👈 ye add karo */
   }
 
   .menu-card p {
@@ -392,110 +401,5 @@
   /* MENU CONTENT */
   .menu-content {
     padding: 14px;
-  }
-}
-
-/* ================= DESKTOP PAGINATION FIX ================= */
-@media (min-width: 800px) {
-
-  .menu-grid {
-    max-height: unset;
-    /* ❌ height restriction hatao */
-  }
-
-  .pagination {
-    margin-top: 40px;
-    /* ✅ natural spacing */
-    margin-bottom: 40px;
-    position: relative;
-  }
-
-  .pagination button {
-    width: 42px;
-    height: 42px;
-    font-size: 14px;
-    margin: 0 6px;
-    cursor: pointer;
-    transition: 0.25s ease;
-  }
-
-  .pagination button:hover {
-    background: #6b0f24;
-    color: #fff;
-  }
-}
-
-/* =========================================================
-   UNIVERSAL SCROLLBAR FOR MENU ITEMS (ALL SCREEN SIZES)
-========================================================= */
-
-/* MENU CONTENT FIXED VIEW */
-.menu-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
-
-/* MENU GRID = SCROLL AREA */
-.menu-grid {
-  flex: 1;
-  overflow-y: auto;
-  overflow-x: hidden;
-  padding-right: 10px;
-
-  /* desktop / tablet height control */
-  max-height: calc(100vh - 260px);
-}
-
-/* ================= CUSTOM SCROLLBAR ================= */
-.menu-grid::-webkit-scrollbar {
-  width: 6px;
-}
-
-.menu-grid::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.menu-grid::-webkit-scrollbar-thumb {
-  background: #6b2b2b;
-  border-radius: 20px;
-}
-
-.menu-grid::-webkit-scrollbar-thumb:hover {
-  background: #8b1d2c;
-}
-
-/* Firefox support */
-.menu-grid {
-  scrollbar-width: thin;
-  scrollbar-color: #6b2b2b transparent;
-}
-
-/* ================= MOBILE SCROLL SUPPORT ================= */
-@media (max-width: 768px) {
-
-  .menu-content {
-    overflow: hidden;
-  }
-
-  .menu-grid {
-    max-height: calc(100vh - 200px);
-    /* mobile header + filters */
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-    /* smooth iOS scroll */
-  }
-
-  /* hide ugly iOS scroll bar but keep scroll */
-  .menu-grid::-webkit-scrollbar {
-    width: 4px;
-  }
-}
-
-/* ================= VERY SMALL DEVICES ================= */
-@media (max-width: 480px) {
-  .menu-grid {
-    max-height: calc(100vh - 180px);
   }
 }
