@@ -101,7 +101,7 @@ const Hero = () => {
         "/rasmalai.png",
         "/dry fruit laddu.JPG",
         "/kaju katli.JPG",
-        "/ghee boondi laddu.JPG",
+        "/motichur.jpg",
         "/kheer kadam.JPG",
         "/sugar free anjeer.JPG"
       ]
@@ -113,7 +113,7 @@ const Hero = () => {
       images: [
         "/kachori.JPG",
         "/panipoori.png",
-        "/masala patties.JPG",
+        "/masalapatties.JPG",
         "/sev poori.JPG",
         "/bombay bhel.JPG",
         "/chole tikki (1).JPG"
@@ -210,7 +210,7 @@ const Hero = () => {
           <img src="/noodle.jpg" alt="Indian Mithai" />
           <img src="/mithais.jpg" alt="Vegetarian Food" />
           <img src="/gajarhalwa.jpg" alt="Traditional Sweets" />
-          <img src="/manch.jpeg" alt="Jalebi" />
+          <img src="/sand.jpg" alt="Jalebi" />
         </div>
 
         {/* RIGHT CONTENT */}
@@ -255,7 +255,7 @@ const Hero = () => {
 
     {/* BACKGROUND IMAGE */}
     <img
-      src="/patterns.jpg"
+      src="/bg1.avif"
       alt="Catalog background"
       className="catalog-bg-img"
     />
@@ -371,6 +371,22 @@ const Hero = () => {
 
 
 
+<section className="map-section">
+  <div className="map-container">
+    <h2 className="map-title">Find Us Here</h2>
+
+    <div className="map-frame">
+      <iframe
+        title="Google Map Location"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1325.11174731885!2d77.33659412096443!3d23.27087321698158!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c67a1e2f725d9%3A0xe23a7b45346f7768!2sChanchal%20Sweet%20House!5e0!3m2!1sen!2sin!4v1768043746579!5m2!1sen!2sin"
+        style={{ border: 0 }}
+        allowFullScreen
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+  </div>
+</section>
 
 
 

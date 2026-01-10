@@ -29,12 +29,33 @@ const Navbar = () => {
 
         {/* SAME nav-links */}
         <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
-          <li><NavLink to="/" end onClick={() => setMenuOpen(false)}>HOME</NavLink></li>
-          <li><NavLink to="/about" onClick={() => setMenuOpen(false)}>ABOUT</NavLink></li>
-          <li><NavLink to="/menu" onClick={() => setMenuOpen(false)}>MENU</NavLink></li>
-          <li><NavLink to="/restaurant" onClick={() => setMenuOpen(false)}>RESTAURANT</NavLink></li>
-          <li><NavLink to="/catering" onClick={() => setMenuOpen(false)}>CATERING</NavLink></li>
-        </ul>
+  <li>
+    <NavLink to="/" end onClick={() => setMenuOpen(false)}>HOME</NavLink>
+  </li>
+  <li>
+    <NavLink to="/about" onClick={() => setMenuOpen(false)}>ABOUT</NavLink>
+  </li>
+  <li>
+    <NavLink to="/menu" onClick={() => setMenuOpen(false)}>MENU</NavLink>
+  </li>
+  <li>
+    <NavLink to="/restaurant" onClick={() => setMenuOpen(false)}>RESTAURANT</NavLink>
+  </li>
+  <li>
+    <NavLink to="/catering" onClick={() => setMenuOpen(false)}>CATERING</NavLink>
+  </li>
+
+  {/* ✅ MOBILE CONTACT BUTTON */}
+  {/* <li className="mobile-contact">
+    <button
+      className="contact-btn mobile-contact-btn"
+      onClick={() => setMenuOpen(false)}
+    >
+      CONTACT US
+    </button>
+  </li> */}
+</ul>
+
 
         <div className="nav-icons">
           <button className="contact-btn desktop-only">CONTACT US</button>

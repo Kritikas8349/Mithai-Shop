@@ -9,6 +9,7 @@
 html,body{
   scroll-behavior: smooth;
 }
+/* ================= HERO BASE ================= */
 
 .hero {
   position: relative;
@@ -20,7 +21,7 @@ html,body{
   background-color: #fff5eb;
 }
 
-/* BACKGROUND IMAGE */
+/* ---------- Background Images ---------- */
 .hero-bg {
   position: absolute;
   inset: 0;
@@ -30,120 +31,95 @@ html,body{
   z-index: 1;
 }
 
-/* OVERLAY */
+.desktop-img { display: block; }
+.mobile-img  { display: none; }
+
+/* ---------- Overlay ---------- */
 .hero-overlay {
   position: absolute;
   inset: 0;
   z-index: 2;
 }
 
-/* CONTENT */
+/* ---------- Content ---------- */
 .hero-content {
   position: relative;
   z-index: 3;
   width: 100%;
-  padding: 0 50px;
+  padding: 0 60px;
   display: flex;
-  justify-content: flex-start;   /* ✅ TEXT ON LEFT */
+  justify-content: flex-start;
 }
 
 .hero-right {
-  max-width: 580px;
+  max-width: 600px;
   color: #6b2b2b;
   text-align: left;
 }
 
-/* TEXT */
+/* ================= TEXT (DESKTOP ≥1200px) ================= */
+
 .hero-right h1 {
   font-size: 4.8rem;
   font-weight: 800;
   line-height: 1.1;
   font-family: Lexend;
-  /* font-style: italic; */
-}
-
-.hero-right h1 span {
-  color: #6b2b2b;
 }
 
 .hero-right h2 {
-  font-size: 1.8rem;
-  font-weight: 800;
-  margin-bottom: 20px;
-  font-family: Lexend;
+  font-size: 1.9rem;
+  font-weight: 700;
+  margin: 18px 0;
 }
 
 .hero-right p {
   font-size: 1.5rem;
-  line-height: 1.3;
-  margin-bottom: 35px;
-  font-family: Lexend;
+  line-height: 1.4;
+  margin-bottom: 36px;
+  max-width: 450px;
+
 }
 
-/* BUTTON */
+/* ---------- Button ---------- */
 .hero-btn {
   display: inline-block;
-  padding: 14px 36px;
+  padding: 14px 38px;
   background-color: #6b2b2b;
   color: #fff;
   border-radius: 30px;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .hero-btn:hover {
   background-color: #8b0f0f;
 }
 
-/* IMAGE VISIBILITY */
-.desktop-img { display: block; }
-.mobile-img { display: none; }
+/* ================= LARGE LAPTOP (992px–1199px) ================= */
 
-/* =====================================================
-   HERO ANIMATIONS (DESKTOP & TABLET)
-===================================================== */
+@media (max-width: 1199px) {
 
-.hero-right > * {
-  opacity: 0;
-  animation: slideUp 0.8s ease forwards;
-}
-
-.hero-right h2 { animation-delay: 0.2s; }
-.hero-right p  { animation-delay: 0.4s; }
-.hero-btn     { animation-delay: 0.6s; }
-
-@keyframes slideUp {
-  from { transform: translateY(30px); opacity: 0; }
-  to   { transform: translateY(0); opacity: 1; }
-}
-
-
-@media (max-width: 1024px) {
-  .hero-content,
-  .hero-overlay {
-    display: none !important;
+  .hero-content {
+    padding: 0 48px;
   }
 
-  .desktop-img {
-    display: none;
+  .hero-right h1 {
+    font-size: 4.2rem;
   }
 
-  .mobile-img {
-    display: block;
-    position: relative;
-    width: 100%;
-    height: auto;
-    object-fit: contain;
+  .hero-right h2 {
+    font-size: 1.7rem;
   }
 
-  .hero {
-    min-height: auto;
+  .hero-right p {
+    font-size: 1.35rem;
   }
 }
 
+/* ================= TABLET (768px–991px) ================= */
 
+@media (max-width: 991px) and (min-width: 768px) {
 
-@media (max-width: 1199px) and (min-width: 768px) {
   .hero {
     min-height: 75vh;
   }
@@ -152,31 +128,65 @@ html,body{
     padding: 0 32px;
   }
 
-
-.hero-right{
-  text-align: start;
-}
+  .hero-right {
+    max-width: 420px;
+  }
 
   .hero-right h1 {
-    font-size: 3.6rem;
+    font-size: 3.4rem;
+    line-height: 1.15;
   }
 
   .hero-right h2 {
-    font-size: 1.5rem;
+    font-size: 1.45rem;
+    margin: 14px 0;
   }
 
   .hero-right p {
-    font-size: 1.2rem;
-    max-width: 250px;
+    font-size: 1.15rem;
+    line-height: 1.4;
+    margin-bottom: 28px;
+    max-width: 300px;
+  }
+
+  .hero-btn {
+    padding: 12px 30px;
+    font-size: 0.95rem;
   }
 }
 
+/* ================= SMALL TABLET / LARGE MOBILE (600px–767px) ================= */
 
+@media (max-width: 767px) and (min-width: 601px) {
 
-@media (max-width: 767px) {
   .hero {
-    min-height: auto;
+    min-height: 70vh;
   }
+
+  .hero-content {
+    padding: 0 24px;
+  }
+
+  .hero-right {
+    max-width: 360px;
+  }
+
+  .hero-right h1 {
+    font-size: 3rem;
+  }
+
+  .hero-right h2 {
+    font-size: 1.3rem;
+  }
+
+  .hero-right p {
+    font-size: 1.05rem;
+  }
+}
+
+/* ================= MOBILE (≤800px → IMAGE ONLY) ================= */
+
+@media (max-width: 800px) {
 
   .desktop-img {
     display: none;
@@ -194,7 +204,15 @@ html,body{
   .hero-overlay {
     display: none;
   }
+
+  .hero {
+    min-height: auto;
+  }
 }
+
+/* ================= NAVBAR SAFETY ================= */
+
+
 
 
 
@@ -267,6 +285,7 @@ html,body{
     scrollbar-width: thin;
     scrollbar-color: #caa46d #f3ddba;
     gap: 34px;
+    padding: 28px 24px;
   }
 
   .feature-item {
@@ -297,11 +316,11 @@ html,body{
 
 @media (max-width: 480px) {
   .feature-item {
-    font-size: 15px;
+    font-size: 18px;
   }
 
   .feature-icon {
-    font-size: 22px;
+    font-size: 36px;
   }
 }
 
@@ -1051,5 +1070,58 @@ html,body{
   .border-img-bottom {
     max-width: 180px;
     margin: 18px auto;
+  }
+}
+
+
+
+.map-section {
+  width: 100%;
+  padding: 40px 20px;
+
+  background:
+    linear-gradient(90deg, rgba(248, 229, 198, 0.9), rgba(243, 221, 186, 0.9)),
+    url("/bg1.avif");
+
+  background-size: cover;
+  background-position: center;
+}
+
+
+
+.map-container {
+  /* max-width: 1200px; */
+  margin: auto;
+  text-align: center;
+}
+
+.map-title {
+  font-size: 46px;
+  margin-bottom: 30px;
+  color: #6b2b2b;
+}
+
+.map-frame {
+  width: 100%;
+  height: 600px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.map-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .map-frame {
+    height: 280px;
+  }
+
+  .map-title {
+    font-size: 24px;
   }
 }
