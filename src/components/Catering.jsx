@@ -59,14 +59,17 @@ const Catering = () => {
       {/* BULK SECTION */}
       <section className="catering-bulk-c">
         <div className="catering-bulk">
-        <h2>Bulk Orders Up to 200 Boxes</h2>
-        <p>
-          From weddings to festivals, we handle large orders
-          with care, hygiene, and consistent quality.
-        </p>
-        <button className="catering-bulk-btn-c">
-          Order Now 
-        </button>
+          <h2>Bulk Orders Up to 200 Boxes</h2>
+          <p>
+            From weddings to festivals, we handle large orders
+            with care, hygiene, and consistent quality.
+          </p>
+          <button onClick={() => {
+
+            window.open("https://www.zomato.com/bhopal/chanchal-sweets-kohefiza", "_blank");
+          }} className="catering-bulk-btn-c">
+            Order Now
+          </button>
         </div>
       </section>
 

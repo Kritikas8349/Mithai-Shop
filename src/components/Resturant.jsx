@@ -137,7 +137,7 @@ const Resturant = () => {
             </p>
 
             {/* <button className="explore-btn" >Explore Menu</button> */}
-           <Link to="/menu" className="explore-btn">Explore Menu</Link>
+            <Link to="/menu" className="explore-btn">Explore Menu</Link>
           </div>
 
         </div>
@@ -192,7 +192,9 @@ const Resturant = () => {
                 Enjoy authentic Indian flavors with a comfortable dine-in
                 experience. Freshly prepared dishes served hot at your table.
               </p>
-              <button>Book a Table</button>
+              <button onClick={() => {
+                window.open("https://www.zomato.com/bhopal/chanchal-sweets-kohefiza", "_blank");
+              }}>Order Now</button>
             </div>
           </div>
 
