@@ -34,7 +34,7 @@
   list-style: none;
   font-weight: 600;
   padding: 8px 0;
-  color:#6b2b2b;
+  color: #6b2b2b;
   cursor: pointer;
 }
 
@@ -52,7 +52,7 @@
 .tags span {
   display: inline-block;
   background: #eee;
-  color:#6b2b2b;
+  color: #6b2b2b;
   padding: 6px 10px;
   margin: 6px 4px;
   border-radius: 20px;
@@ -65,28 +65,30 @@
   padding: 30px;
   max-width: 100%;
   overflow-x: hidden;
-  background-color:#f9f1e4 ;
+  background-color: #f9f1e4;
   /* position: relative; */
-  
+
 }
+
 .menu-content::before {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("/bgr.png"); 
+  background-image: url("/bgr.png");
   background-size: cover;
   /* background-position: center; */
   background-repeat: no-repeat;
-  opacity: 0.12;            
+  opacity: 0.12;
   z-index: 0;
-  pointer-events: none; 
+  pointer-events: none;
 }
+
 /* .menu-content > * {
   position: relative;
   z-index: 1;
 } */
 
-.menu-grid {  
+.menu-grid {
   max-height: 500px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -239,7 +241,8 @@
   .menu-content {
     padding: 16px;
   }
-  .pagination{
+
+  .pagination {
     margin-top: 20px;
   }
 
@@ -389,5 +392,110 @@
   /* MENU CONTENT */
   .menu-content {
     padding: 14px;
+  }
+}
+
+/* ================= DESKTOP PAGINATION FIX ================= */
+@media (min-width: 800px) {
+
+  .menu-grid {
+    max-height: unset;
+    /* ❌ height restriction hatao */
+  }
+
+  .pagination {
+    margin-top: 40px;
+    /* ✅ natural spacing */
+    margin-bottom: 40px;
+    position: relative;
+  }
+
+  .pagination button {
+    width: 42px;
+    height: 42px;
+    font-size: 14px;
+    margin: 0 6px;
+    cursor: pointer;
+    transition: 0.25s ease;
+  }
+
+  .pagination button:hover {
+    background: #6b0f24;
+    color: #fff;
+  }
+}
+
+/* =========================================================
+   UNIVERSAL SCROLLBAR FOR MENU ITEMS (ALL SCREEN SIZES)
+========================================================= */
+
+/* MENU CONTENT FIXED VIEW */
+.menu-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* MENU GRID = SCROLL AREA */
+.menu-grid {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 10px;
+
+  /* desktop / tablet height control */
+  max-height: calc(100vh - 260px);
+}
+
+/* ================= CUSTOM SCROLLBAR ================= */
+.menu-grid::-webkit-scrollbar {
+  width: 6px;
+}
+
+.menu-grid::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.menu-grid::-webkit-scrollbar-thumb {
+  background: #6b2b2b;
+  border-radius: 20px;
+}
+
+.menu-grid::-webkit-scrollbar-thumb:hover {
+  background: #8b1d2c;
+}
+
+/* Firefox support */
+.menu-grid {
+  scrollbar-width: thin;
+  scrollbar-color: #6b2b2b transparent;
+}
+
+/* ================= MOBILE SCROLL SUPPORT ================= */
+@media (max-width: 768px) {
+
+  .menu-content {
+    overflow: hidden;
+  }
+
+  .menu-grid {
+    max-height: calc(100vh - 200px);
+    /* mobile header + filters */
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    /* smooth iOS scroll */
+  }
+
+  /* hide ugly iOS scroll bar but keep scroll */
+  .menu-grid::-webkit-scrollbar {
+    width: 4px;
+  }
+}
+
+/* ================= VERY SMALL DEVICES ================= */
+@media (max-width: 480px) {
+  .menu-grid {
+    max-height: calc(100vh - 180px);
   }
 }

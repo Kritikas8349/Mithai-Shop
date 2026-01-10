@@ -584,302 +584,202 @@ body {
 }
 
 /*---------------------------------- offer----------------------------------- */
-.offers-section {
-  padding: 40px 20px;
-  background: #f8e9d4;
-  font-family: "Inter", sans-serif;
-}
-
-/* GRID */
-.offers-grid {
-  max-width: 1200px;
-  margin: auto;
+/* ================= WRAPPER ================= */
+.offer-wrapper {
+  max-width: 100%;
+  height: 80vh;
+  /* margin: 80px auto; */
+  padding: 0 8%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto;
-  gap: 24px;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 30px;
+  background: linear-gradient(90deg, #f8e5c6, #f3ddba);
 }
 
-/* COMMON CARD */
-.card {
-  border-radius: 22px;
-  overflow: hidden;
+/* ================= LEFT SIDE ================= */
+.offer-left {
+  background: url("/chanchalr1.jpg") center/cover no-repeat;
+  border-radius: 26px;
   position: relative;
+  min-height: 420px;
+  overflow: hidden;
+ margin: 80px 0px 80px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* ---------------- LEFT COUPON ---------------- */
-.coupon-card {
-  background: #6b0f24;
-  padding: 26px;
-  text-align: center;
-  grid-row: span 2;
-  /* 👈 left card full height */
+/* dark overlay for readability */
+.offer-left::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 1;
 }
 
-.food-img {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 16px;
+/* ================= BLUR CARD ================= */
+.hero-blur-card-r {
+  position: relative;
+  z-index: 2;
+
+  background: rgba(248, 246, 246, 0.35);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(9px);
+
+  border-radius: 22px;
+  padding: 26px 40px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+
+  max-width: 680px;
+  width: 85%;
 }
 
-.small-title {
-  text-transform: uppercase;
-  font-size: 13px;
+/* ================= OVERLAY CONTENT ================= */
+.offer-overlay {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 14px;
+}
+
+/* TAG */
+.offer-overlay .tag {
   letter-spacing: 2px;
-  color: #b74b00;
+  font-size: 0.8rem;
+  color: #ffcc80;
+  font-weight: 600;
 }
 
-.coupon-card h2 {
-  font-size: 28px;
-  margin: 8px 0 16px;
+/* HEADING */
+.offer-overlay h2 {
+  font-size: 2.6rem;
+  line-height: 1.2;
+}
+
+/* PARAGRAPH */
+.offer-overlay p {
+  max-width: 520px;
+  line-height: 1.7;
+  font-size: 1.05rem;
+  color: #f3f3f3;
+}
+
+/* BUTTON */
+.offer-overlay button {
+  width: fit-content;
+  padding: 12px 28px;
+  border-radius: 30px;
+  background: #ff7a18;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.offer-overlay button:hover {
+  background: #ff9f45;
+  transform: translateY(-2px);
+}
+
+/* ================= RIGHT SIDE ================= */
+.offer-right {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+}
+
+/* TOP IMAGE */
+.offer-right-top {
+  background: url("/hungry.jpeg") center/cover no-repeat;
+  border-radius: 22px;
+  position: relative;
+  overflow: hidden;
+  background-color: red;
+  margin-top: 80px;
+}
+
+/* BOTTOM IMAGE */
+.offer-right-bottom {
+  background: url("/food.jpg") center/cover no-repeat;
+  border-radius: 22px;
+  position: relative;
+  overflow: hidden;
+  background-color: red;
+  margin-bottom: 80px;
+}
+
+.offer-right-top::after,
+.offer-right-bottom::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+/* TEXT BOX */
+.text-box {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 2;
   color: #fff;
 }
 
-.coupon-box {
-  border: 2px dashed #ff7a00;
-  padding: 14px;
-  border-radius: 12px;
-  margin-bottom: 14px;
-  color: #fff;
+.text-box h3 {
+  font-size: 1.4rem;
+  margin-bottom: 5px;
 }
 
-.coupon-box span {
-  font-size: 22px;
-  font-weight: 700;
+.text-box p {
+  font-size: 0.9rem;
+  opacity: 0.9;
 }
 
-.code-text {
-  font-size: 14px;
-  color: #fff;
+.text-box.dark h3 {
+  color: #ffd166;
 }
 
-/* ---------------- IMAGE CARDS ---------------- */
-.image-card {
-  padding: 0;
-  background: #fff;
-}
+/* ================= RESPONSIVE ================= */
 
-.full-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-/* ---------------- MOBILE ---------------- */
-@media (max-width: 768px) {
-  .offers-grid {
+@media (max-width: 900px) {
+  .offer-wrapper {
     grid-template-columns: 1fr;
   }
 
-  .coupon-card {
-    grid-row: auto;
+  .hero-blur-card-r {
+    width: 90%;
+    padding: 38px 40px;
   }
 
-  .image-card {
-    height: 200px;
-    /* width: 300px; */
+  .offer-overlay h2 {
+    font-size: 2.2rem;
   }
 
-  .image-card img {
-    object-fit: cover;
-    left: 100px;
-  }
-}
-
-/* ================= TABLET RESPONSIVE (768px – 1024px) ================= */
-@media (min-width: 769px) and (max-width: 1024px) {
-
-  /* ---------- HERO ---------- */
-  .restaurant-hero {
-    height: 80vh;
-  }
-
-  .main-heading {
-    font-size: 60px;
-    letter-spacing: 2px;
-  }
-
-  .script-text {
-    font-size: 26px;
-  }
-
-  .small-top {
-    font-size: 11px;
-    letter-spacing: 3px;
-  }
-
-  /* ---------- WHY SECTION ---------- */
-  .why-container {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-  }
-
-  /* ---------- FOOD SHOWCASE ---------- */
-  .showcase-container {
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-  }
-
-  .showcase-image {
-    height: 420px;
-  }
-
-  .showcase-image img {
-    width: 420px;
-  }
-
-  .showcase-content h2 {
-    font-size: 42px;
-  }
-
-  .tagline {
-    font-size: 22px;
-  }
-
-  /* ---------- MEALS SECTION ---------- */
-  .meals-container {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 35px;
-  }
-
-  .meal-image-wrapper {
-    width: 140px;
-    height: 140px;
-  }
-
-  .meal-card h3 {
-    font-size: 17px;
-  }
-
-  /* ---------- OFFERS SECTION ---------- */
-  .offers-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-  }
-
-  .coupon-card h2 {
-    font-size: 24px;
-  }
-
-  .food-img {
-    width: 100px;
-    height: 100px;
+  .offer-left {
+    min-height: 360px;
   }
 }
 
-/* ================= LARGE SCREEN (1084px and above) ================= */
-@media (min-width: 1084px)and (max-width:1200px) {
-
-  /* ---------- HERO ---------- */
-  .restaurant-hero {
-    height: 92vh;
+@media (max-width: 600px) {
+  .hero-blur-card-r {
+    width: 95%;
+    padding: 26px 22px;
   }
 
-  .main-heading {
-    font-size: 88px;
-    letter-spacing: 3px;
+  .offer-overlay h2 {
+    font-size: 1.7rem;
   }
 
-  .script-text {
-    font-size: 34px;
-    word-spacing: 12px;
+  .offer-overlay p {
+    font-size: 0.95rem;
   }
 
-  .small-top {
-    font-size: 12px;
-    letter-spacing: 4px;
-  }
-
-  /* ---------- WHY SECTION ---------- */
-  .why-section {
-    padding: 60px 80px;
-  }
-
-  .why-container {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 70px;
-  }
-
-  .why-card h3 {
-    font-size: 22px;
-  }
-
-  .why-card p {
-    font-size: 15px;
-  }
-
-  /* ---------- FOOD SHOWCASE ---------- */
-  .food-showcase {
-    padding: 80px 40px;
-  }
-
-  .showcase-container {
-    gap: 80px;
-  }
-
-  .showcase-image {
-    height: 600px;
-  }
-
-  .showcase-image img {
-    width: 680px;
-  }
-
-  .tagline {
-    font-size: 30px;
-    letter-spacing: 2.5px;
-  }
-
-  .showcase-content h2 {
-    font-size: 56px;
-  }
-
-  .showcase-content p {
-    font-size: 18px;
-    line-height: 2;
-  }
-
-  /* ---------- MEALS SECTION ---------- */
-  .meals-section {
-    padding: 120px 40px;
-  }
-
-  .meals-container {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 55px;
-  }
-
-  .meal-image-wrapper {
-    width: 180px;
-    height: 180px;
-  }
-
-  .meal-card h3 {
-    font-size: 20px;
-  }
-
-  .meal-desc {
-    font-size: 14px;
-  }
-
-  /* ---------- OFFERS SECTION ---------- */
-  .offers-section {
-    padding: 70px 40px;
-  }
-
-  .offers-grid {
-    gap: 28px;
-  }
-
-  .coupon-card h2 {
-    font-size: 30px;
-  }
-
-  .food-img {
-    width: 130px;
-    height: 130px;
+  .offer-right-top,
+  .offer-right-bottom {
+    min-height: 180px;
   }
 }

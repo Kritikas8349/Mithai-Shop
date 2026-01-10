@@ -71,8 +71,8 @@ const menuItems = [
     { id: 66, name: "Masala Patties", img: "/masalapatties.JPG", category: "FastFood" },
     { id: 67, name: "Bombay Bhel", img: "/bhrl.png", category: "FastFood" },
     { id: 68, name: "Dahi Puri", img: "/dahi puri.png", category: "FastFood" },
-    { id: 69, name: "Pani Puri", img: "/pani puri1.jpg", category: "FastFood" },
-    { id: 70, name: "Chole Tikki", img: "/tikki.jpg", category: "FastFood" },
+    { id: 69, name: "Pani Puri", img: "/panipuri.png", category: "FastFood" },
+    { id: 70, name: "Chole Tikki", img: "/chole tikki.JPG", category: "FastFood" },
 
 
 
@@ -100,9 +100,11 @@ const menuItems = [
 
     { id: 92, name: "Chef Special Thali", img: "/thali1.JPG", category: "Our Special" },
     { id: 93, name: "Falhari Thali", img: "/fal.jpg", category: "Our Special" },
-    { id: 94, name: "Honey Chili Potato", img: "/honey.jpg", category: "Our Special" },
-    { id: 95, name: "Milk cake", img: "/milk cake1.jpg", category: "Our Special" },
-    { id: 96, name: "Baklava", img: "/baklava1.jpg", category: "Our Special" },
+    { id: 94, name: "Honey Chili Potato", img: "/honey potato.png", category: "Our Special" },
+    { id: 95, name: "Cheese Hot Sandwich", img: "/cheese sandwich.jpg", category: "Our Special" },
+    { id: 96, name: "Baklava nest", img: "/baklava nest.JPG", category: "Our Special" },
+    { id: 97, name: "Special Khajur Slice", img: "/speciel khajur slice.JPG", category: "Our Special" },
+    
 ];
 
 const ITEMS_PER_PAGE = 12;

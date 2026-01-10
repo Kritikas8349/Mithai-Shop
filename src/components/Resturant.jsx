@@ -9,7 +9,7 @@ const Resturant = () => {
     {
       title: "Noodles",
       description: "Freshly prepared pasta with authentic Italian spices ",
-      image: "/noo.jpg",
+      image: "/noodle.jpg",
     },
     {
       title: "Saahi Paneer",
@@ -19,12 +19,12 @@ const Resturant = () => {
     {
       title: "Pav Bhaji",
       description: "Freshly prepared pasta with authentic Italian spices ",
-      image: "/pav2.jpg",
+      image: "/paao bhaji.png",
     },
     {
       title: "Special Thali",
       description: "Freshly prepared pasta with authentic Italian spices ",
-      image: "/plat.jpg",
+      image: "/thali1.JPG",
     },
     {
       title: "Fried Rice",
@@ -176,51 +176,46 @@ const Resturant = () => {
 
 
 
-      <section className="offers-section">
-        <div className="offers-grid">
+      <section className="offer-wrapper">
 
-          {/* LEFT COUPON CARD */}
-          <div className="card coupon-card">
-            <img
-              src="plat.jpg"
-              alt="Indian food"
-              className="food-img"
-            />
-
-            <h4 className="small-title">Indian Special</h4>
-            <h2>Coupon Code</h2>
-
-            <div className="coupon-box">
-              <span>60% OFF</span>
-              <p>For all items</p>
+        {/* LEFT SIDE */}
+        <div className="offer-left">
+          <div className="hero-blur-card-r">
+            <div className="offer-overlay">
+              <span className="tag">INDIAN RESTAURANT</span>
+              <h2>Dine-In Service</h2>
+              <p>
+                Enjoy authentic Indian flavors with a comfortable dine-in
+                experience. Freshly prepared dishes served hot at your table.
+              </p>
+              <button>Book a Table</button>
             </div>
-
-            <p className="code-text">
-              Use this code: <strong>FOODDASH60</strong>
-            </p>
-          </div>
-
-          {/* RIGHT TOP IMAGE CARD */}
-          <div className="card image-card">
-            <img
-              src="/Hen2.png"
-              alt="Special Offer"
-              className="full-img"
-            />
-          </div>
-
-          {/* RIGHT BOTTOM IMAGE CARD */}
-          <div className="card image-card">
-            <img
-              src="/maine.jpg"
-              alt="Indian Restaurant"
-              className="full-img"
-            />
           </div>
 
         </div>
-      </section>
 
+        {/* RIGHT SIDE */}
+        <div className="offer-right">
+
+          {/* TOP IMAGE */}
+          <div className="offer-right-top">
+            <div className="text-box">
+              <h3>Special Offers</h3>
+              <p>Delicious food at irresistible prices</p>
+            </div>
+          </div>
+
+          {/* BOTTOM FOOD IMAGE */}
+          <div className="offer-right-bottom">
+            <div className="text-box dark">
+              <h3>Freshly Cooked</h3>
+              <p>Made with premium ingredients</p>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
 
 
 
