@@ -121,7 +121,7 @@ const Hero = () => {
         "/masalapatties.JPG",
         "/sev poori.JPG",
         "/bombay bhel.JPG",
-        "/chole tikki (1).JPG"
+        "/chole tikki.JPG"
       ]
     },
     fastfood: {
