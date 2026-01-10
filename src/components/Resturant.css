@@ -672,7 +672,7 @@ body {
   width: fit-content;
   padding: 12px 28px;
   border-radius: 30px;
-  background: #ff7a18;
+  background: linear-gradient(135deg, #6b0f24, #8a1f36);
   border: none;
   color: #fff;
   font-weight: 600;
@@ -704,7 +704,7 @@ body {
 
 /* BOTTOM IMAGE */
 .offer-right-bottom {
-  background: url("/food.jpg") center/cover no-repeat;
+  background: url("/collage.png") center/cover no-repeat;
   border-radius: 22px;
   position: relative;
   overflow: hidden;
@@ -732,6 +732,7 @@ body {
 .text-box h3 {
   font-size: 1.4rem;
   margin-bottom: 5px;
+  color: #ffd166;
 }
 
 .text-box p {
@@ -747,12 +748,14 @@ body {
 
 @media (max-width: 900px) {
   .offer-wrapper {
-    grid-template-columns: 1fr;
+    
   }
-
+  .offer-right-top{
+    height: 30vh;
+}
   .hero-blur-card-r {
     width: 90%;
-    padding: 38px 40px;
+    /* padding: 38px 40px; */
   }
 
   .offer-overlay h2 {
@@ -760,14 +763,24 @@ body {
   }
 
   .offer-left {
+    margin-top: 20px;
     min-height: 360px;
   }
+
 }
 
 @media (max-width: 600px) {
+  .offer-wrapper {
+    grid-template-columns: 1fr;
+  }
+  .offer-left {
+    margin-top: 10px;
+    min-height: 300px;
+    margin: 10px -20px 2px -20px;
+  }
   .hero-blur-card-r {
-    width: 95%;
-    padding: 26px 22px;
+    width: 90%;
+    padding: 16px 22px;
   }
 
   .offer-overlay h2 {
@@ -776,6 +789,16 @@ body {
 
   .offer-overlay p {
     font-size: 0.95rem;
+  }
+
+  .offer-right{
+    margin-top: -100px;
+    margin:-100px -20px 20px -20px;
+
+  }
+
+  .offer-right-bottom{
+    display: none;
   }
 
   .offer-right-top,
