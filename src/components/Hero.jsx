@@ -72,6 +72,9 @@ const Hero = () => {
   }, []);
 
 
+
+
+
   const data = {
     hampers: {
       title: "Gift Hampers",
@@ -156,21 +159,23 @@ const Hero = () => {
   <div className="hero-overlay"></div>
 
   <div className="hero-content">
-    <div className="hero-right">
-      <h1>
-        Chanchal <span>Sweets</span>
-      </h1>
-      <h2>House of Quality</h2>
+  <div className="hero-right">
+  <h1 className="reveal delay-1">
+    Chanchal <span>Sweets</span>
+  </h1>
 
-      <p>
-        Experience the authentic taste of premium Indian sweets. <br />
-        Crafted with Tradition, Served with Love.
-      </p>
+  <h2 className="reveal delay-2">House of Quality</h2>
 
-      <Link to="/menu" className="hero-btn">
-  Explore More
-</Link>
-    </div>
+  <p className="reveal delay-3">
+    Experience the authentic taste of premium Indian sweets. <br />
+    Crafted with Tradition, Served with Love.
+  </p>
+
+  <Link to="/menu" className="hero-btn reveal delay-4">
+    Explore More
+  </Link>
+</div>
+
   </div>
 </section>
 
@@ -202,51 +207,47 @@ const Hero = () => {
 
 
 
-      <section className="about-section">
-      <div className="about-container">
+      <section className="about-section" ref={aboutRef}>
+  <div className="about-container">
 
-        {/* LEFT IMAGE GRID */}
-        <div className="about-images">
-          <img src="/noodle.jpg" alt="Indian Mithai" />
-          <img src="/mithais.jpg" alt="Vegetarian Food" />
-          <img src="/gajarhalwa.jpg" alt="Traditional Sweets" />
-          <img src="/sand.jpg" alt="Jalebi" />
-        </div>
+    <div className="about-images">
+      <img src="/noodle.jpg" className="about-animate delay-1" />
+      <img src="/mithais.jpg" className="about-animate delay-2" />
+      <img src="/gajarhalwa.jpg" className="about-animate delay-3" />
+      <img src="/sand.jpg" className="about-animate delay-4" />
+    </div>
 
-        {/* RIGHT CONTENT */}
-        <div className="about-content">
-          <div className="divider top"></div>
+    <div className="about-content">
+      <div className="divider top about-animate delay-1"></div>
 
-          <span className="about-tag">Our Story</span>
+      <span className="about-tag about-animate delay-2">Our Story</span>
 
-          <h2>
-            Authentic Mithai & <br />
-            Pure Vegetarian Restaurant in Bhopal
-          </h2>
+      <h2 className="about-animate delay-3">
+        Authentic Mithai & <br />
+        Pure Vegetarian Restaurant in Bhopal
+      </h2>
 
-          <p>
-            <strong>Chanchal Sweets</strong> is a trusted destination in Bhopal
-            for authentic Indian mithai and pure vegetarian food, known for
-            uncompromising quality, taste, and hygiene. For generations, we have
-            been crafting traditional sweets using pure ingredients and
-            time-honored recipes.
-          </p>
+      <p className="about-animate delay-4">
+        <strong>Chanchal Sweets</strong> is a trusted destination in Bhopal
+        for authentic Indian mithai and pure vegetarian food.
+      </p>
 
-          <p>
-            From handcrafted Indian sweets made fresh every day to a warm and
-            welcoming pure vegetarian restaurant, we bring together Indian
-            culinary heritage with modern standards of cleanliness and service.
-          </p>
+      <p className="about-animate delay-5">
+        From handcrafted Indian sweets made fresh every day to a warm and
+        welcoming pure vegetarian restaurant.
+      </p>
 
-          <div className="about-buttons">
-            <Link to="/menu" className="primary">Explore Our Menu</Link>
-            <Link to="/about" className="secondary">Know Our Story</Link>
-          </div>
-
-          <div className="divider bottom"></div>
-        </div>
+      <div className="about-buttons about-animate delay-6">
+        <Link to="/menu" className="primary">Explore Our Menu</Link>
+        <Link to="/about" className="secondary">Know Our Story</Link>
       </div>
-    </section>
+
+      <div className="divider bottom about-animate delay-6"></div>
+    </div>
+  </div>
+</section>
+
+
 
 
 
