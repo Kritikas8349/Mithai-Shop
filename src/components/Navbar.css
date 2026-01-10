@@ -277,7 +277,7 @@ body {
 @media (max-width: 900px) {
 
   .desktop-only {
-    display: none;
+    display: none !important;
   }
 
   .hamburger {
@@ -292,15 +292,16 @@ body {
     top: 35px;
     right: -100%;
     width: 200px;
-    height: 35vh;
-    background: #8a5a2b;
+    height: 40vh;
+    background: #6b2b2b;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 26px;
-    border-radius: 22px 0 0 22px; 
+    border-radius: 22px; 
     transition: right 0.4s ease;
     z-index: 1200;
+    padding-top: 0px;
   }
 
   
@@ -324,7 +325,7 @@ body {
 
 
   .nav-links.open {
-    right: 0; 
+    right: 8px; 
   }
 
   .nav-links li a {
@@ -333,3 +334,66 @@ body {
     letter-spacing: 1px;
   }
 }
+
+
+/* ================= MOBILE CONTACT INSIDE MENU ================= */
+.mobile-contact {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .mobile-contact {
+    display: block;
+    margin-top: 10px;
+  }
+
+  .mobile-contact-btn {
+    border: 2px solid #fff;
+    color: #fff;
+    background: transparent;
+    padding: 10px 20px;
+    border-radius: 22px;
+    font-size: 13px;
+    letter-spacing: 1px;
+  }
+
+  .mobile-contact-btn:hover {
+    background: #fff;
+    color: #8a5a2b;
+  }
+
+  .hamburger.active span {
+    background: #fff;   /* 🔥 cross color white */
+  }
+
+  /* typical cross animation (agar already nahi hai) */
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+  
+}
+
+
+@media (max-width: 768px) {
+  .nav-links {
+    width: 220px;        /* pehle wide hogi */
+    padding: 16px 14px;  /* andar spacing control */
+    border-radius: 16px;
+  }
+
+  .nav-links a {
+    padding: 10px 0;     /* links compact */
+    font-size: 14px;
+    text-align: center;
+  }
+}
+
+

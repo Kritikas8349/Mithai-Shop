@@ -6,6 +6,33 @@ const About = () => {
   const qualityRef = useRef(null);
   const experienceRef = useRef(null);
 
+  const journeyData = [
+    {
+      year: "2015",
+      title: "A Small Beginning",
+      desc: "Started with a small shop and a big dream to serve quality food with honesty.",
+      img: "/shop1.jpg",
+    },
+    {
+      year: "2018",
+      title: "Growing Trust",
+      desc: "Expanded into a bigger outlet as customers trusted our taste and consistency.",
+      img: "/shop2.jpg",
+    },
+    {
+      year: "2021",
+      title: "Restaurant Launch",
+      desc: "Opened our first restaurant combining ambience, taste, and service.",
+      img: "/shop3.jpg",
+    },
+    {
+      year: "2024",
+      title: "Future Vision",
+      desc: "Moving forward with innovation, expansion, and customer-first experiences.",
+      img: "/shop4.jpg",
+    },
+  ];
+
   useEffect(() => {
     const options = { threshold: 0.25 };
 
@@ -30,7 +57,15 @@ const About = () => {
 
       {/* OUR STORY */}
       <section className="about-story" ref={aboutRef}>
-        <img src="/abus.png" className="section-bg" alt="print background" />
+      <img
+          src="/background.jpg"
+          className="section-bg"
+          alt=""
+          fetchpriority="high"
+          loading="eager"
+          decoding="async"
+        />
+
 
         <div className="story-container">
 
@@ -38,8 +73,8 @@ const About = () => {
          {/* LEFT IMAGES */}
 <div className="story-images">
   <img src="/chanchal.jpg" alt="Sweet making" className="img-tall" />
-  <img src="/certificate.png" alt="Mithai preparation" className="img-top" />
-  <img src="/chi.jpg" alt="Traditional sweets" className="img-bottom" />
+  <img src="/shop1.jpeg" alt="Mithai preparation" className="img-top" />
+  <img src="/shop.jpg" alt="Traditional sweets" className="img-bottom" />
 </div>
 
 
@@ -96,6 +131,9 @@ const About = () => {
           </div>
         </div>
       </section>
+     
+
+
 
       {/* HOUSE OF QUALITY */}
       <section className="quality-section" ref={qualityRef}>

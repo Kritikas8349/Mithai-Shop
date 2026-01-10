@@ -84,9 +84,9 @@ const Footer = () => {
 
           {/* 👇 ADD GALLERY HERE (RIGHT SIDE, BELOW LINKS) */}
           <div className="footer-gallery">
-            <img src="/red sauce pasta.JPG" alt="Fresh Indian Sweets" />
-            <img src="/rasmalai.png" alt="Traditional Mithai" />
-            <img src="/chole tikki (1).JPG" alt="Chanchal Sweets Store" />
+            <img src="/shop8.jpeg" alt="Fresh Indian Sweets" />
+            <img src="/shop4.jpg" alt="Traditional Mithai" />
+            <img src="/shop3.jpg" alt="Chanchal Sweets Store" />
           </div>
 
         </div>

@@ -72,6 +72,9 @@ const Hero = () => {
   }, []);
 
 
+
+
+
   const data = {
     hampers: {
       title: "Gift Hampers",
@@ -101,7 +104,7 @@ const Hero = () => {
         "/rasmalai.png",
         "/dry fruit laddu.JPG",
         "/kaju katli.JPG",
-        "/ghee boondi laddu.JPG",
+        "/motichur.jpg",
         "/kheer kadam.JPG",
         "/sugar free anjeer.JPG"
       ]
@@ -113,7 +116,7 @@ const Hero = () => {
       images: [
         "/kachori.JPG",
         "/panipoori.png",
-        "/masala patties.JPG",
+        "/masalapatties.JPG",
         "/sev poori.JPG",
         "/bombay bhel.JPG",
         "/chole tikki (1).JPG"
@@ -156,21 +159,23 @@ const Hero = () => {
   <div className="hero-overlay"></div>
 
   <div className="hero-content">
-    <div className="hero-right">
-      <h1>
-        Chanchal <span>Sweets</span>
-      </h1>
-      <h2>House of Quality</h2>
+  <div className="hero-right">
+  <h1 className="reveal delay-1">
+    Chanchal <span>Sweets</span>
+  </h1>
 
-      <p>
-        Experience the authentic taste of premium Indian sweets. <br />
-        Crafted with Tradition, Served with Love.
-      </p>
+  <h2 className="reveal delay-2">House of Quality</h2>
 
-      <Link to="/menu" className="hero-btn">
-  Explore More
-</Link>
-    </div>
+  <p className="reveal delay-3">
+    Experience the authentic taste of premium Indian sweets. <br />
+    Crafted with Tradition, Served with Love.
+  </p>
+
+  <Link to="/menu" className="hero-btn reveal delay-4">
+    Explore More
+  </Link>
+</div>
+
   </div>
 </section>
 
@@ -202,51 +207,47 @@ const Hero = () => {
 
 
 
-      <section className="about-section">
-      <div className="about-container">
+      <section className="about-section" ref={aboutRef}>
+  <div className="about-container">
 
-        {/* LEFT IMAGE GRID */}
-        <div className="about-images">
-          <img src="/noodle.jpg" alt="Indian Mithai" />
-          <img src="/mithais.jpg" alt="Vegetarian Food" />
-          <img src="/gajarhalwa.jpg" alt="Traditional Sweets" />
-          <img src="/manch.jpeg" alt="Jalebi" />
-        </div>
+    <div className="about-images">
+      <img src="/noodle.jpg" className="about-animate delay-1" />
+      <img src="/mithais.jpg" className="about-animate delay-2" />
+      <img src="/gajarhalwa.jpg" className="about-animate delay-3" />
+      <img src="/sand.jpg" className="about-animate delay-4" />
+    </div>
 
-        {/* RIGHT CONTENT */}
-        <div className="about-content">
-          <div className="divider top"></div>
+    <div className="about-content">
+      <div className="divider top about-animate delay-1"></div>
 
-          <span className="about-tag">Our Story</span>
+      <span className="about-tag about-animate delay-2">Our Story</span>
 
-          <h2>
-            Authentic Mithai & <br />
-            Pure Vegetarian Restaurant in Bhopal
-          </h2>
+      <h2 className="about-animate delay-3">
+        Authentic Mithai & <br />
+        Pure Vegetarian Restaurant in Bhopal
+      </h2>
 
-          <p>
-            <strong>Chanchal Sweets</strong> is a trusted destination in Bhopal
-            for authentic Indian mithai and pure vegetarian food, known for
-            uncompromising quality, taste, and hygiene. For generations, we have
-            been crafting traditional sweets using pure ingredients and
-            time-honored recipes.
-          </p>
+      <p className="about-animate delay-4">
+        <strong>Chanchal Sweets</strong> is a trusted destination in Bhopal
+        for authentic Indian mithai and pure vegetarian food.
+      </p>
 
-          <p>
-            From handcrafted Indian sweets made fresh every day to a warm and
-            welcoming pure vegetarian restaurant, we bring together Indian
-            culinary heritage with modern standards of cleanliness and service.
-          </p>
+      <p className="about-animate delay-5">
+        From handcrafted Indian sweets made fresh every day to a warm and
+        welcoming pure vegetarian restaurant.
+      </p>
 
-          <div className="about-buttons">
-            <Link to="/menu" className="primary">Explore Our Menu</Link>
-            <Link to="/about" className="secondary">Know Our Story</Link>
-          </div>
-
-          <div className="divider bottom"></div>
-        </div>
+      <div className="about-buttons about-animate delay-6">
+        <Link to="/menu" className="primary">Explore Our Menu</Link>
+        <Link to="/about" className="secondary">Know Our Story</Link>
       </div>
-    </section>
+
+      <div className="divider bottom about-animate delay-6"></div>
+    </div>
+  </div>
+</section>
+
+
 
 
 
@@ -255,7 +256,7 @@ const Hero = () => {
 
     {/* BACKGROUND IMAGE */}
     <img
-      src="/patterns.jpg"
+      src="/bg1.avif"
       alt="Catalog background"
       className="catalog-bg-img"
     />
@@ -371,6 +372,22 @@ const Hero = () => {
 
 
 
+<section className="map-section">
+  <div className="map-container">
+    <h2 className="map-title">Find Us Here</h2>
+
+    <div className="map-frame">
+      <iframe
+        title="Google Map Location"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1325.11174731885!2d77.33659412096443!3d23.27087321698158!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c67a1e2f725d9%3A0xe23a7b45346f7768!2sChanchal%20Sweet%20House!5e0!3m2!1sen!2sin!4v1768043746579!5m2!1sen!2sin"
+        style={{ border: 0 }}
+        allowFullScreen
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+  </div>
+</section>
 
 
 
