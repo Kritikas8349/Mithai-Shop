@@ -1196,3 +1196,140 @@ html,body{
     font-size: 24px;
   }
 }
+
+
+
+.testimonial-section {
+  padding: 80px 20px;
+  text-align: center;
+  background: #fff;
+}
+
+.testimonial-tag {
+  color: #6b2b2b;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.testimonial-heading {
+  font-size: 46px;
+  font-weight: 700;
+  margin: 10px 0 50px;
+  color: #6b2b2b;
+}
+
+/* ================= LAYOUT FIX ================= */
+.testimonial-wrapper {
+  position: relative;
+  max-width: 1400px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cards on desktop */
+  gap: 30px;
+}
+
+/* Card */
+.testimonial-card-modern {
+  background: #fff;
+  padding: 35px 25px;
+  position: relative;
+  width: 100%; /* important */
+  text-align: left;
+  border-radius: 32px 0px 32px 0px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  border: 3px solid #8a5a2b;
+}
+
+/* Text */
+.testimonial-content h4 {
+  font-size: 16px;
+  color: #6b2b2b;
+}
+
+.testimonial-content h4 span {
+  font-weight: 400;
+  font-size: 13px;
+  color: #8a5a2b;
+}
+
+.testimonial-content p {
+  font-size: 16px;
+  margin-top: 10px;
+  color: #8a5a2b;
+  line-height: 1.6;
+}
+
+/* ⭐ Stars */
+.testimonial-stars {
+  margin: 6px 0 8px;
+  display: flex;
+  gap: 4px;
+  color: #eea964;
+  font-size: 14px;
+}
+
+/* Quote */
+.quote-right {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 42px;
+  color: #6b2b2b;
+  font-weight: bold;
+}
+
+/* Slider arrows */
+.testimonial-arrows {
+  grid-column: 1 / -1; /* arrows go full width under all cards */
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 20px;
+  color: #6b2b2b;
+}
+
+.testimonial-arrows span {
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  transition: 0.2s ease;
+  background: rgba(107, 43, 43, 0.1);
+}
+
+.testimonial-arrows span:hover {
+  background: rgba(107, 43, 43, 0.2);
+}
+
+/* Bottom heading */
+.success-text {
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 64px;
+  color: #6b2b2b;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* Tablet: 2 cards */
+@media (max-width: 1024px) {
+  .testimonial-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile: 1 card */
+@media (max-width: 600px) {
+  .testimonial-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial-heading {
+    font-size: 32px;
+  }
+
+  .testimonial-arrows span {
+    padding: 14px;
+    font-size: 22px;
+  }
+}

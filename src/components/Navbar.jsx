@@ -8,20 +8,35 @@ const Navbar = () => {
   return (
     <>
       {/* ================= TOP BAR ================= */}
-      <div className="top-bar">
-        <div className="top-bar-track">
-          <p>
-            SAME DAY DELIVERY WITHIN BHOPAL
-            <span className="dot">•</span>
-            FRESHNESS AND HYGIENE ASSURED
-          </p>
-          <p aria-hidden="true">
-            SAME DAY DELIVERY WITHIN BHOPAL
-            <span className="dot">•</span>
-            FRESHNESS AND HYGIENE ASSURED
-          </p>
-        </div>
-      </div>
+     {/* ================= TOP BAR ================= */}
+<div className="top-bar">
+  <div className="top-bar-track">
+    <p>
+      SAME DAY DELIVERY WITHIN BHOPAL
+      <span className="dot">•</span>
+      FRESHNESS AND HYGIENE ASSURED
+    </p>
+
+    <p aria-hidden="true">
+      SAME DAY DELIVERY WITHIN BHOPAL
+      <span className="dot">•</span>
+      FRESHNESS AND HYGIENE ASSURED
+    </p>
+
+    <p aria-hidden="true">
+      SAME DAY DELIVERY WITHIN BHOPAL
+      <span className="dot">•</span>
+      FRESHNESS AND HYGIENE ASSURED
+    </p>
+
+    <p aria-hidden="true">
+      SAME DAY DELIVERY WITHIN BHOPAL
+      <span className="dot">•</span>
+      FRESHNESS AND HYGIENE ASSURED
+    </p>
+  </div>
+</div>
+
 
       {/* ================= NAVBAR ================= */}
       <nav className="navbar">
@@ -46,19 +61,29 @@ const Navbar = () => {
   </li>
 
   {/* ✅ MOBILE CONTACT BUTTON */}
-  {/* <li className="mobile-contact">
-    <button
-      className="contact-btn mobile-contact-btn"
-      onClick={() => setMenuOpen(false)}
-    >
-      CONTACT US
-    </button>
-  </li> */}
+  <li className="mobile-contact">
+  <button
+  className="contact-btn mobile-contact-btn"
+  onClick={() => {
+    setMenuOpen(false);
+    window.open("https://www.zomato.com/bhopal/chanchal-sweets-kohefiza", "_blank");
+  }}
+>
+  ORDER NOW
+</button>
+
+  </li>
 </ul>
 
 
         <div className="nav-icons">
-          <button className="contact-btn desktop-only">CONTACT US</button>
+        <button
+  className="contact-btn desktop-only"
+  onClick={() => window.open("https://www.zomato.com/bhopal/chanchal-sweets-kohefiza", "_blank")}
+>
+  ORDER NOW
+</button>
+
 
           {/* HAMBURGER = ONLY CLOSE */}
           <div

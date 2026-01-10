@@ -14,6 +14,7 @@ body {
 }
 
 /* ================= TOP BAR ================= */
+/* ================= TOP BAR ================= */
 .top-bar {
   background: #6b2b2b;
   color: #fff;
@@ -31,27 +32,31 @@ body {
 
 .top-bar-track {
   display: flex;
-  width: max-content;
+  width: fit-content;
   animation: scrollText 18s linear infinite;
 }
 
 .top-bar-track p {
   display: flex;
   align-items: center;
-  font-size: 10px;
+  white-space: nowrap;
+  font-size: 11px;
   letter-spacing: 1px;
-  padding-right: 20px;
+  padding-right: 80px;
+  margin: 0;
 }
 
 .dot {
-  margin: 0 14px;
+  margin: 0 12px;
   font-size: 16px;
 }
 
+/* Perfect seamless loop */
 @keyframes scrollText {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
 }
+
 
 /* ================= NAVBAR ================= */
 .navbar {
@@ -284,27 +289,25 @@ body {
     display: flex;
     z-index: 1400;
     position: relative;
-  right: -14px;  
+    right: -14px;  
   }
 
   .nav-links {
     position: fixed;
     top: 35px;
     right: -100%;
-    width: 200px;
-    height: 40vh;
+    width: 150px;
+    height: 38vh;
     background: #6b2b2b;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 26px;
+    gap: 16px; /* 🔥 slightly more breathing space */
     border-radius: 22px; 
     transition: right 0.4s ease;
     z-index: 1200;
-    padding-top: 0px;
   }
 
-  
   .nav-links li {
     opacity: 0;
     transform: translateY(12px);
@@ -322,15 +325,13 @@ body {
   .nav-links.open li:nth-child(4) { transition-delay: 0.34s; }
   .nav-links.open li:nth-child(5) { transition-delay: 0.42s; }
 
-
-
   .nav-links.open {
     right: 8px; 
   }
 
   .nav-links li a {
     color: #fff;
-    font-size: 14px;
+    font-size: 12px;
     letter-spacing: 1px;
   }
 }
@@ -344,11 +345,11 @@ body {
 @media (max-width: 900px) {
   .mobile-contact {
     display: block;
-    margin-top: 10px;
+    margin-top: 0px;
   }
 
   .mobile-contact-btn {
-    border: 2px solid #fff;
+    border: 2px solid #8a5a2b;
     color: #fff;
     background: transparent;
     padding: 10px 20px;
@@ -363,12 +364,12 @@ body {
   }
 
   .hamburger.active span {
-    background: #fff;   /* 🔥 cross color white */
+    background: #fff;
   }
 
-  /* typical cross animation (agar already nahi hai) */
+  /* 🔥 Smaller & cleaner cross */
   .hamburger.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
+    transform: rotate(45deg) translate(3px, 3px);
   }
 
   .hamburger.active span:nth-child(2) {
@@ -376,24 +377,24 @@ body {
   }
 
   .hamburger.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(6px, -6px);
+    transform: rotate(-45deg) translate(3px, -3px);
   }
-  
 }
 
 
 @media (max-width: 768px) {
   .nav-links {
-    width: 220px;        /* pehle wide hogi */
-    padding: 16px 14px;  /* andar spacing control */
+    width: 200px;
+    padding: 32px 14px;   /* 🔥 more top-bottom padding */
     border-radius: 16px;
   }
 
   .nav-links a {
-    padding: 10px 0;     /* links compact */
-    font-size: 14px;
+    padding: 20px 0;
+    font-size: 12px;
     text-align: center;
   }
 }
+
 
 

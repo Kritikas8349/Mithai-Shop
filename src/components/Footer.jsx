@@ -26,7 +26,7 @@ const Footer = () => {
           <div className="footer-follow">
 
             <a
-              href="https://www.instagram.com/your_instagram_handle"
+              href="https://www.instagram.com/chanchalsweets/reels/?utm_source=chatgpt.com"
               target="_blank"
               rel="noopener noreferrer"
               className="insta-follow-btn"
@@ -56,9 +56,8 @@ const Footer = () => {
           <div className="footer-column">
             <h4>Customer Support</h4>
             <a href="#">Contact Us</a>
-            <a href="#">FAQs</a>
-            <a href="#">Location</a>
-            <a href="#">Returns & Refunds</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#location">Location</a>
           </div>
 
           <div className="footer-badges">
@@ -103,12 +102,12 @@ const Footer = () => {
         </div>
 
         <div className="footer-bottom-center1">
-          Chanchal Sweets © 2025. All Rights Reserved.
+          Chanchal Sweets © 2026. All Rights Reserved.
         </div>
 
         <div className="footer-bottom-right1">
-          <a href="#">Facebook</a>
-          <a href="#">Instagram</a>
+          <a href="https://www.facebook.com/chanchalsweetsandrestaurant/?utm_source=chatgpt.com">Facebook</a>
+          <a href="https://www.instagram.com/chanchalsweets/reels/?utm_source=chatgpt.com">Instagram</a>
         </div>
       </div>
     </section>

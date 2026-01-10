@@ -2,6 +2,8 @@ import { useState, useEffect, useRef } from "react";
 import "./Hero.css";
 import { FaAward, FaLeaf, FaShieldAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { FaChevronLeft, FaChevronRight, FaStar } from "react-icons/fa";
+
 
 const Hero = () => {
   const aboutRef = useRef(null);
@@ -136,6 +138,52 @@ const Hero = () => {
       ]
     },
   };
+
+
+  const review = [
+    {
+      name: "Kunal Balchandani",
+      text: "Chanchal Sweet House has a wide variety of fresh and tasty sweets. The quality is really good.",
+    },
+    {
+      name: "Sharad Agrawal",
+      text: "Quality food, good hygiene, fast preparation and excellent taste. One of the best fast food places I’ve tried recently .",
+    },
+    {
+      name: "Vipul Phulwani",
+      text: "Inside Infrastructure is very amazing n good looking when u have a seat then u will feel comfortable n relax moreover food is very tasty n delicious must try Spring roll, mushroom pizza🍕, soups and paneer tikka😋😋😋 .",
+    },
+    {
+      name: "Shubham Jain",
+      text: "Famous sweet shop in bhopal for offering a variety of sweets, also now known for offering good snacks and chaat items. Sandwiches and aloo paties served here are something you must try out.",
+    },
+    {
+      name: "Prem Prakash Mishra",
+      text: "Delicious chaat taste and fast food Chinese. Hygienic Restaurent since 1950. Variety Sweet good taste and service.",
+    },
+    {
+      name: "SK Sofiquee Fiaz",
+      text: "I had an absolutely wonderful experience dining at Chanchal Sweet House! From start to finish, everything was perfect. The atmosphere was warm and inviting, with comfortable seating and tasteful decor.",
+    },
+    {
+      name: "Maneesh Lingwan",
+      text: "Excellent for Veg Indian and Chinese food. Neat and clean, sweets are also good to try.",
+    },
+  ];
+  
+    const [index, setIndex] = useState(0);
+  
+    const prevSlide = () => {
+      setIndex((prev) => (prev === 0 ? review.length - 3 : prev - 1));
+    };
+    
+    const nextSlide = () => {
+      setIndex((prev) => (prev >= review.length - 3 ? 0 : prev + 1));
+    };
+    
+  
+  
+
 
   const [active, setActive] = useState("hampers");
 
@@ -372,7 +420,7 @@ const Hero = () => {
 
 
 
-<section className="map-section">
+<section className="map-section" id="location">
   <div className="map-container">
     <h2 className="map-title">Find Us Here</h2>
 
@@ -388,6 +436,74 @@ const Hero = () => {
     </div>
   </div>
 </section>
+
+
+<section className="testimonial-section" id="testimonials">
+  <p className="testimonial-tag">Testimonials</p>
+  <h2 className="testimonial-heading">What Our Customers Say</h2>
+
+  <div className="testimonial-wrapper">
+    {/* Card 1 */}
+    <div className="testimonial-card-modern">
+      <div className="testimonial-content">
+        <h4>
+          {review[index].name} <span>• {review[index].role}</span>
+        </h4>
+
+        <div className="testimonial-stars">
+          <FaStar /><FaStar /><FaStar /><FaStar /><FaStar />
+        </div>
+
+        <p>{review[index].text}</p>
+      </div>
+      <div className="quote-right">” </div>
+    </div>
+
+    {/* Card 2 */}
+    <div className="testimonial-card-modern">
+      <div className="testimonial-content">
+        <h4>
+          {review[(index + 1) % review.length].name}{" "}
+          <span>• {review[(index + 1) % review.length].role}</span>
+        </h4>
+
+        <div className="testimonial-stars">
+          <FaStar /><FaStar /><FaStar /><FaStar /><FaStar />
+        </div>
+
+        <p>{review[(index + 1) % review.length].text}</p>
+      </div>
+      <div className="quote-right">” </div>
+    </div>
+
+    <div className="testimonial-card-modern">
+  <div className="testimonial-content">
+    <h4>
+      {review[(index + 2) % review.length].name}{" "}
+      <span>• {review[(index + 2) % review.length].role}</span>
+    </h4>
+
+    <div className="testimonial-stars">
+      <FaStar /><FaStar /><FaStar /><FaStar /><FaStar />
+    </div>
+
+    <p>{review[(index + 2) % review.length].text}</p>
+  </div>
+  <div className="quote-right">”</div>
+</div>
+
+    {/* Arrows */}
+    <div className="testimonial-arrows">
+      <span onClick={prevSlide}><FaChevronLeft /></span>
+      <span onClick={nextSlide}><FaChevronRight /></span>
+    </div>
+  </div>
+
+  {/* <p className="happy-client">Sweet Smiles Everywhere</p> */}
+{/* <h3 className="success-text">Sweet Smiles Everywhere</h3> */}
+
+</section>
+
 
 
 
