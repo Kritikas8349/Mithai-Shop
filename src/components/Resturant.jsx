@@ -1,6 +1,7 @@
 import React from "react";
 import { GiBowlOfRice, GiChefToque, GiHealthPotion } from "react-icons/gi";
-import { FiEye } from "react-icons/fi";
+// import { FiEye } from "react-icons/fi";
+import { Link } from "react-router-dom";
 import "./Resturant.css";
 
 const Resturant = () => {
@@ -135,7 +136,8 @@ const Resturant = () => {
               experience flavors that stay with you forever.
             </p>
 
-            <button className="explore-btn">Explore Menu</button>
+            {/* <button className="explore-btn" >Explore Menu</button> */}
+           <Link to="/menu" className="explore-btn">Explore Menu</Link>
           </div>
 
         </div>
@@ -165,7 +167,9 @@ const Resturant = () => {
 
                 <div className="meal-bottom">
                   <p className="price">{meal.price}</p>
-                  <button className="view-btn">View</button>
+
+                  {/* <button className="view-btn">View</button> */}
+                  <Link to="/menu" className="view-btn">View</Link>
                 </div>
               </div>
 
