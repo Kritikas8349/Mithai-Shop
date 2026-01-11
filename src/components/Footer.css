@@ -335,13 +335,13 @@
   /* FOOTER BOTTOM */
   .footer-bottom1 {
     grid-template-columns: 1fr;
-    text-align: left;   /* changed */
+    text-align: center;   /* changed */
     gap: 15px;
   }
 
   .footer-bottom-left1,
   .footer-bottom-right1 {
-    justify-content: flex-start;   /* changed */
+    justify-content: center;   /* changed */
   }
 }
 
@@ -379,12 +379,12 @@
   }
 
   .footer-bottom1 {
-    text-align: left;
+    text-align: center;
   }
 
   .footer-bottom-left1,
   .footer-bottom-right1 {
-    justify-content: flex-start;
+    justify-content:center;
   }
 
   /* existing styles */
