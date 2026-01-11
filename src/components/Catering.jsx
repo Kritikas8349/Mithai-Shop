@@ -47,9 +47,15 @@ const Catering = () => {
             with Exquisite Catering."
           </h1>
 
-          <button className="c-hero-btn">
-            Enquire Now
+          <button className="catering-bulk-btn-c">
+            <a
+              href="tel:+917554057404"
+              className="catering-bulk-btn"
+            >
+              Enquire Now
+            </a>
           </button>
+
         </div>
 
         <button className="c-arrow c-left" onClick={prevSlide}>❮</button>

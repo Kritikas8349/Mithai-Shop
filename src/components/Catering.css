@@ -156,8 +156,8 @@ html,body{
 
 @media (max-width: 768px) {
   .c-slide:nth-child(2) {
-    /* background-position: right  ; */
-    background-position-x: -140px;
+    background-position: right  ;
+    background-position-x: 0px;
   }
   .c-hero-overlay h1 {
     font-size: 1.8rem;
@@ -287,11 +287,12 @@ html,body{
 
 
 .catering-bulk-btn-c {
+  white-space: nowrap;
   margin-top: 28px;
   background: #6b2b2b;
   color:#FFFFFF;
   text-decoration: none;
-  padding: 14px 38px;
+  padding: 13px 8px 14px 8px;
   border-radius: 30px;
   border: none;
   font-weight: 600;
@@ -333,7 +334,7 @@ html,body{
   color: #ffffff;              /* white text */
   text-decoration: none;       /* remove underline */
   display: inline-block;
-  width: 100%;
+  width: 50%;
   height: 100%;
 }
 
@@ -347,7 +348,7 @@ html,body{
 @media (max-width: 480px) {
   .catering-bulk-btn-c {
     text-decoration: none;
-    width: 100%;
+    width: 50%;
   }
   
   .catering-page-c{
