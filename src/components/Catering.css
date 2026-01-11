@@ -156,8 +156,8 @@ html,body{
 
 @media (max-width: 768px) {
   .c-slide:nth-child(2) {
-    background-position: right  ;
-    background-position-x: 0px;
+    background-position: left  ;
+    background-position-x: -170px;
   }
   .c-hero-overlay h1 {
     font-size: 1.8rem;
