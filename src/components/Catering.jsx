@@ -1,29 +1,71 @@
-import React from "react";
+// import React from "react";
 import "./Catering.css";
+import React, { useState, useEffect } from "react";
+
+
 
 const Catering = () => {
+
+  const images = [
+    "/cathome3.jpg",
+    "/cathome4.jpg",
+    "/catHome2.png",
+    
+  ]
+
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % images.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const prevSlide = () =>
+    setIndex(index === 0 ? images.length - 1 : index - 1);
+
+  const nextSlide = () =>
+    setIndex((index + 1) % images.length);
+
   return (
     <div className="catering-page-c">
 
       {/* HERO SECTION */}
-      <section className="catering-hero-c">
-        <img
-          src="/catHome.jpg"
-          alt="Catering Services"
-          className="catering-hero-img-c"
-        />
+      <section className="c-hero-slider">
+        {images.map((img, i) => (
+          <div
+            key={i}
+            className={`c-slide ${i === index ? "c-active" : ""}`}
+            style={{ backgroundImage: `url(${img})` }}
+          />
+        ))}
 
-        <div className="catering-hero-overlay-c">
-          {/* <div className="hero-blur-card-c">
-            <h1 className="catering-hero-title-c">Premium Catering Services</h1>
-            <p className="catering-hero-subtitle-c">
-              Traditional Taste • Modern Presentation
-            </p>
-            <button className="catering-hero-btn-c">Explore Catering</button>
-          </div> */}
+        <div className="c-hero-overlay">
+          <h1>
+            "Crafting Memorable Events <br />
+            with Exquisite Catering."
+          </h1>
+
+          <button className="c-hero-btn">
+            Enquire Now
+          </button>
         </div>
 
+        <button className="c-arrow c-left" onClick={prevSlide}>❮</button>
+        <button className="c-arrow c-right" onClick={nextSlide}>❯</button>
+
+        <div className="c-dots">
+          {images.map((_, i) => (
+            <span
+              key={i}
+              className={`c-dot ${i === index ? "c-active" : ""}`}
+              onClick={() => setIndex(i)}
+            />
+          ))}
+        </div>
       </section>
+
 
       {/* OCCASION SECTION */}
       <section className="catering-occasion-c">
@@ -36,9 +78,9 @@ const Catering = () => {
         <div className="catering-cards-c">
 
           <div className="catering-card-c">
-            <img src="/birth.png" alt="Birthday" />
-            <h3>Birthday Parties</h3>
-            <p>Delicious sweets to make your celebrations extra special.</p>
+            <img src="/wedding1.png" alt="Birthday" />
+            <h3>Grand Wedding</h3>
+            <p>Delicious sweets to make your Wedding extra special.</p>
           </div>
 
           <div className="catering-card-c">
@@ -59,16 +101,13 @@ const Catering = () => {
       {/* BULK SECTION */}
       <section className="catering-bulk-c">
         <div className="catering-bulk">
-          <h2>Bulk Orders Up to 200 Boxes</h2>
+          <h2>Bulk Orders Up to 300 Boxes</h2>
           <p>
             From weddings to festivals, we handle large orders
             with care, hygiene, and consistent quality.
           </p>
-          <button onClick={() => {
-
-            window.open("https://www.zomato.com/bhopal/chanchal-sweets-kohefiza", "_blank");
-          }} className="catering-bulk-btn-c">
-            Order Now
+          <button href="tel:+917554057404" className="catering-bulk-btn-c">
+            Contact Now
           </button>
         </div>
       </section>
