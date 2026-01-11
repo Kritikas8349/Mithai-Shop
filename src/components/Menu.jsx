@@ -25,7 +25,7 @@ const menuItems = [
     { id: 20, name: "Doda Burfi", img: "/doda burfi.JPG", category: "Sweets" },
     { id: 21, name: "Dry Fruit Laddu", img: "/dry fruit laddu.JPG", category: "Sweets" },
     { id: 23, name: "Gajar Halwa", img: "/gajar halwa.JPG", category: "Sweets" },
-    { id: 24, name: "Ghee Boondi Laddu", img: "/motichur.JPG", category: "Sweets" },
+    { id: 24, name: "Ghee Boondi Laddu", img: "/motichur.jpg", category: "Sweets" },
     { id: 25, name: "Ghee Karachi Halwa", img: "/ghee kedar karachi halwa.JPG", category: "Sweets" },
     { id: 26, name: "Gulkand Chilki", img: "/gulkand chilki.JPG", category: "Sweets" },
     { id: 27, name: "Gulab Jamun", img: "/gulab jamun.png", category: "Sweets" },

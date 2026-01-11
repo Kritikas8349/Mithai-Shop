@@ -58,7 +58,7 @@ const Footer = () => {
 
           <div className="footer-column">
             <h4>Customer Support</h4>
-            <a href="#">Contact Us</a>
+            <a href="tel:+917554057404">Contact Us</a>
             <a href="#testimonials">Testimonials</a>
             <a href="#location">Location</a>
           </div>

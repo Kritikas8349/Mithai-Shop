@@ -458,13 +458,13 @@
     top: auto;
     left: auto;
     transform: none;
-    max-width: 80%;
+    max-width: 100%;
     padding: 26px 22px;
 
     /* ===== WHITE GLASS BLUR EFFECT ===== */
     background: rgba(255, 255, 255, 0.35);
     backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(8px);
+    /* -webkit-backdrop-filter: blur(8px); */
 
     border-radius: 20px;
     box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);

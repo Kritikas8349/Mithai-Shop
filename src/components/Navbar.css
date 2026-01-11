@@ -372,7 +372,7 @@ body {
 
   /* 🔥 Smaller & cleaner cross */
   .hamburger.active span:nth-child(1) {
-    transform: rotate(45deg) translate(3px, 3px);
+    transform: rotate(45deg) translate(8px, 8px);
   }
 
   .hamburger.active span:nth-child(2) {
