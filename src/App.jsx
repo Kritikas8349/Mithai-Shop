@@ -5,23 +5,22 @@ import Hero from './components/Hero';
 import Menu from './components/Menu';   
 import Resturant from './components/Resturant';
 import Catering from './components/Catering';
-import { Routes, Route } from "react-router-dom";
 import About from "./components/About";
 import ScrollToTop from './components/ScrollToTop';
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <>
-      <ScrollToTop/>
+      <ScrollToTop />
       <Navbar />
 
       <Routes>
         <Route path="/" element={<Hero />} />
         <Route path="/about" element={<About />} />
         <Route path="/menu" element={<Menu />} />
-        <Route path="/restaurant" element={<Resturant/>} />
-        <Route path="/catering" element={<Catering/>} />
-
+        <Route path="/restaurant" element={<Resturant />} />
+        <Route path="/catering" element={<Catering />} />
       </Routes>
 
       <Footer />
