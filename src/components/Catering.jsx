@@ -10,7 +10,7 @@ const Catering = () => {
     "/cathome3.jpg",
     "/cathome4.jpg",
     "/catHome2.png",
-    
+
   ]
 
   const [index, setIndex] = useState(0);
@@ -106,8 +106,13 @@ const Catering = () => {
             From weddings to festivals, we handle large orders
             with care, hygiene, and consistent quality.
           </p>
-          <button href="tel:+917554057404" className="catering-bulk-btn-c">
-            Contact Now
+          <button className="catering-bulk-btn-c">
+            <a
+              href="tel:+917554057404"
+              className="catering-bulk-btn"
+            >
+              Contact Now
+            </a>
           </button>
         </div>
       </section>

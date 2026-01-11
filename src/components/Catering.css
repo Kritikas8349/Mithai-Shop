@@ -157,7 +157,7 @@ html,body{
 @media (max-width: 768px) {
   .c-slide:nth-child(2) {
     /* background-position: right  ; */
-    background-position-x: -100px;
+    background-position-x: -140px;
   }
   .c-hero-overlay h1 {
     font-size: 1.8rem;
@@ -180,7 +180,7 @@ html,body{
 .catering-occasion-c {
   background: url("/images/floral-bg.png");
   background-size: cover;
-  padding: 90px 8%;
+  padding: 70px 8% 20px;
   text-align: center;
   background: #f8ddba;
 }
@@ -290,7 +290,7 @@ html,body{
   margin-top: 28px;
   background: #6b2b2b;
   color:#FFFFFF;
-
+  text-decoration: none;
   padding: 14px 38px;
   border-radius: 30px;
   border: none;
@@ -328,9 +328,25 @@ html,body{
     font-size: 1.4rem;
   }
 }
+/* Anchor inside catering bulk button */
+.catering-bulk-btn-c a {
+  color: #ffffff;              /* white text */
+  text-decoration: none;       /* remove underline */
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Hover par bhi underline na aaye */
+.catering-bulk-btn-c a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
 
 @media (max-width: 480px) {
   .catering-bulk-btn-c {
+    text-decoration: none;
     width: 100%;
   }
   
