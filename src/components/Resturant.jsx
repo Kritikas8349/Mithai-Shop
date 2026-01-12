@@ -193,7 +193,7 @@ const Resturant = () => {
                 experience. Freshly prepared dishes served hot at your table.
               </p>
               <button onClick={() => {
-                window.open("https://www.zomato.com/bhopal/chanchal-sweets-kohefiza", "_blank");
+                window.open("https://zomato.onelink.me/xqzv/8zunoq5d", "_blank");
               }}>Order Now</button>
             </div>
           </div>
