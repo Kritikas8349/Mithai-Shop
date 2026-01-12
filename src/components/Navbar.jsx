@@ -88,7 +88,7 @@ const Navbar = () => {
   className="contact-btn mobile-contact-btn"
   onClick={() => {
     setMenuOpen(false);
-    window.open("https://www.zomato.com/bhopal/chanchal-sweets-kohefiza", "_blank");
+    window.open("https://zomato.onelink.me/xqzv/8zunoq5d", "_blank");
   }}
 >
   ORDER NOW
@@ -101,7 +101,7 @@ const Navbar = () => {
         <div className="nav-icons">
         <button
   className="contact-btn desktop-only"
-  onClick={() => window.open("https://www.zomato.com/bhopal/chanchal-sweets-kohefiza", "_blank")}
+  onClick={() => window.open("https://zomato.onelink.me/xqzv/8zunoq5d", "_blank")}
 >
   ORDER NOW
 </button>
