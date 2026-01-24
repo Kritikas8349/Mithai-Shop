@@ -214,7 +214,7 @@ export default function Menu() {
                                 alt={item.name}
                                 loading="lazy"
                                 decoding="async"
-                                fetchpriority="low"
+                                fetchPriority="low"
                             />
                             <h3>{item.name}</h3>
                         </div>

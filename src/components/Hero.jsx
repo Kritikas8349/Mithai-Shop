@@ -90,12 +90,12 @@ const Hero = () => {
         "Baklava Box"
       ],
       images: [
-        "diwali mawa sweets.JPG",
-        "4 in 1 dry fruit box.JPG",
-        "Hamper.JPG",
-        "mix lai chikki 1kg.JPG",
-        "4 in 1 mix box.JPG",
-        "baklava.JPG"
+        "diwali mawa sweets.webp",
+        "4 in 1 dry fruit box.webp",
+        "Hamper.webp",
+        "mix lai chikki 1kg.webp",
+        "4 in 1 mix box.webp",
+        "baklava.webp"
       ]
     },
     sweets: {
@@ -103,12 +103,12 @@ const Hero = () => {
       desc: "Traditional mithai prepared with love since 1957.",
       items: ["Rasmalai", "Dryfruit Laddu", "Kaju Katli", "Ghee Boondi Ladoo", "Kheer Kadam", "Sugar Free Anjeer"],
       images: [
-        "/rasmalai.png",
-        "/dry fruit laddu.JPG",
-        "/kaju katli.JPG",
-        "/motichur.jpg",
-        "/kheer kadam.JPG",
-        "/sugar free anjeer.JPG"
+        "/rasmalai.webp",
+        "/dry fruit laddu.webp",
+        "/kaju katli.webp",
+        "/motichur.webp",
+        "/kheer kadam.webp",
+        "/sugar free anjeer.webp"
       ]
     },
     chaat: {
@@ -116,12 +116,12 @@ const Hero = () => {
       desc: "Street-style chaat with authentic Indian flavors.",
       items: ["Kachori", "Pani Puri", "Masala Patties", "Sev Poori", "Bombay Bhel", "Chole Tikki"],
       images: [
-        "/kachori.JPG",
-        "/panipoori.png",
-        "/masalapatties.JPG",
-        "/sev poori.JPG",
-        "/bombay bhel.JPG",
-        "/chole tikki.JPG"
+        "/kachori.webp",
+        "/panipoori.webp",
+        "/masalapatties.webp",
+        "/sev poori.webp",
+        "/bombay bhel.webp",
+        "/chole tikki.webp"
       ]
     },
     fastfood: {
@@ -129,12 +129,12 @@ const Hero = () => {
       desc: "Quick bites made fresh for every craving.",
       items: ["Red Sauce Pasta", "Manchurian", "Schezwan Noodles", "Pav Bhaji", "Chilli Paneer", "Veg Hot Sandwich"],
       images: [
-        "/red sauce pasta.JPG",
-        "/dry Manchurian (2) (1).JPG",
-        "/Schezwan noodles.JPG",
-        "/pav bhaji (1).JPG",
-        "/chilli paneer.JPG",
-        "/veg hot sandwich.JPG"
+        "/red sauce pasta.webp",
+        "/dry Manchurian (2) (1).webp",
+        "/Schezwan noodles.webp",
+        "/pav bhaji (1).webp",
+        "/chilli paneer.webp",
+        "/veg hot sandwich.webp"
       ]
     },
   };
@@ -191,18 +191,22 @@ const Hero = () => {
     <div className="main" id="home" >
      <section className="hero">
   {/* DESKTOP IMAGE */}
-  <img
-    src="edits1.png"
-    alt="Chanchal Sweets traditional Indian mithai"
-    className="hero-bg desktop-img"
-  />
+      <img
+      src="edits1.webp"
+      alt="Chanchal Sweets traditional Indian mithai"
+      className="hero-bg desktop-img"
+      fetchPriority="high"
+      decoding="async"
+    />
 
-  {/* MOBILE IMAGE */}
-  <img
-    src="mobile.png"
-    alt="Chanchal Sweets Mithai"
-    className="hero-bg mobile-img"
-  />
+    <img
+      src="mobile.webp"
+      alt="Chanchal Sweets Mithai"
+      className="hero-bg mobile-img"
+      fetchPriority="high"
+      decoding="async"
+    />
+
 
   <div className="hero-overlay"></div>
 
@@ -259,10 +263,12 @@ const Hero = () => {
   <div className="about-container">
 
     <div className="about-images">
-      <img src="/noodle.jpg" className="about-animate delay-1" />
-      <img src="/mithais.jpg" className="about-animate delay-2" />
-      <img src="/gajarhalwa.jpg" className="about-animate delay-3" />
-      <img src="/sand.jpg" className="about-animate delay-4" />
+      
+      <img src="/noodle.webp" loading="lazy" decoding="async" className="about-animate delay-1" />
+      <img src="/mithais.jpg" loading="lazy" decoding="async" className="about-animate delay-2"/>
+      <img src="/gajarhalwa.webp" loading="lazy" decoding="async" className="about-animate delay-3"/>
+      <img src="/sand.webp" loading="lazy" decoding="async" className="about-animate delay-4"/>
+
     </div>
 
     <div className="about-content">
@@ -377,18 +383,9 @@ const Hero = () => {
 
 <section className="philosophy-section">
   {/* DESKTOP IMAGE */}
-  <img
-    src="ladoobg1.png"
-    alt="Traditional Indian Mithai"
-    className="philosophy-bg desktop-img"
-  />
+  <img src="ladoobg1.webp" className="philosophy-bg desktop-img" loading="lazy" decoding="async" />
+<img src="ladoobg2.webp" className="philosophy-bg mobile-img" loading="lazy" decoding="async" />
 
-  {/* MOBILE IMAGE */}
-  <img
-    src="ladoobg2.png"
-    alt="Traditional Indian Mithai"
-    className="philosophy-bg mobile-img"
-  />
 
   <div className="philosophy-overlay"></div>
 
