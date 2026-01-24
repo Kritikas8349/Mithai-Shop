@@ -58,10 +58,10 @@ const About = () => {
       {/* OUR STORY */}
       <section className="about-story" ref={aboutRef}>
       <img
-          src="/background.jpg"
+          src="/background.webp"
           className="section-bg"
           alt=""
-          fetchpriority="high"
+          fetchPriority="high"
           loading="eager"
           decoding="async"
         />
@@ -72,9 +72,9 @@ const About = () => {
           {/* LEFT IMAGES */}
          {/* LEFT IMAGES */}
 <div className="story-images">
-  <img src="/chanchal.jpg" alt="Sweet making" className="img-tall" />
-  <img src="/shop1.jpeg" alt="Mithai preparation" className="img-top" />
-  <img src="/shop.jpg" alt="Traditional sweets" className="img-bottom" />
+  <img src="/chanchal.webp" alt="Sweet making" className="img-tall" />
+  <img src="/shop1.webp" alt="Mithai preparation" className="img-top" />
+  <img src="/shop.webp" alt="Traditional sweets" className="img-bottom" />
 </div>
 
 
@@ -137,7 +137,7 @@ const About = () => {
 
       {/* HOUSE OF QUALITY */}
       <section className="quality-section" ref={qualityRef}>
-  <img src="/aboutbgc.jpg" className="section-bg1" alt="print background" />
+  <img src="/aboutbgc.webp" className="section-bg1" alt="print background" />
 
   <h3 className="section-heading">HOUSE OF QUALITY</h3>
 
@@ -145,7 +145,7 @@ const About = () => {
 
     <div className="quality-card">
       <div className="icon-wrap">
-        <img src="/leaf1.png" alt="" />
+        <img src="/leaf1.webp" alt="" />
       </div>
       <h4>Pure Ingredients</h4>
       <p>Only the finest milk, dry fruits & ghee</p>
@@ -153,7 +153,7 @@ const About = () => {
 
     <div className="quality-card">
       <div className="icon-wrap">
-        <img src="/chef.png" alt="" />
+        <img src="/chef.webp" alt="" />
       </div>
       <h4>Expert Halwais</h4>
       <p>Crafted by skilled sweet makers</p>
@@ -161,7 +161,7 @@ const About = () => {
 
     <div className="quality-card">
       <div className="icon-wrap">
-        <img src="/quality.png" alt="" />
+        <img src="/quality.webp" alt="" />
       </div>
       <h4>Hygiene Assured</h4>
       <p>Clean kitchens & fresh batches</p>
@@ -169,7 +169,7 @@ const About = () => {
 
     <div className="quality-card">
       <div className="icon-wrap">
-        <img src="/chef1.png" alt="" />
+        <img src="/chef1.webp" alt="" />
       </div>
       <h4>100% Vegetarian</h4>
       <p>Authentic family-friendly dining</p>

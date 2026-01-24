@@ -7,9 +7,9 @@ import React, { useState, useEffect } from "react";
 const Catering = () => {
 
   const images = [
-    "/cathome3.jpg",
-    "/cathome4.jpg",
-    "/catHome2.png",
+    "/cathome3.webp",
+    "/cathome4.webp",
+    "/catHome2.webp",
 
   ]
 
@@ -84,19 +84,19 @@ const Catering = () => {
         <div className="catering-cards-c">
 
           <div className="catering-card-c">
-            <img src="/wedding1.png" alt="Birthday" />
+            <img src="/wedding1.webp" alt="Birthday" />
             <h3>Grand Wedding</h3>
             <p>Delicious sweets to make your Wedding extra special.</p>
           </div>
 
           <div className="catering-card-c">
-            <img src="/family1.png" alt="Family Function" />
+            <img src="/family1.webp" alt="Family Function" />
             <h3>Family Functions</h3>
             <p>Adding sweetness to your family gatherings and festivities.</p>
           </div>
 
           <div className="catering-card-c">
-            <img src="/corporate.png" alt="Corporate" />
+            <img src="/corporate.webp" alt="Corporate" />
             <h3>Corporate & Events</h3>
             <p>Elegant sweet boxes for corporate events and meetings.</p>
           </div>
