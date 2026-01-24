@@ -10,22 +10,22 @@ const Resturant = () => {
     {
       title: "Noodles",
       description: "Freshly prepared pasta with authentic Italian spices ",
-      image: "/noodle.jpg",
+      image: "/Schezwan noodles.webp",
     },
     {
       title: "Saahi Paneer",
       description: "Freshly prepared pasta with authentic Italian spices ",
-      image: "/paneer2.jpg",
+      image: "/panner lababdar.webp",
     },
     {
       title: "Pav Bhaji",
       description: "Freshly prepared pasta with authentic Italian spices ",
-      image: "/paao bhaji.png",
+      image: "/paao bhaji.webp",
     },
     {
       title: "Special Thali",
       description: "Freshly prepared pasta with authentic Italian spices ",
-      image: "/thali1.JPG",
+      image: "/thali1.webp",
     },
     {
       title: "Fried Rice",

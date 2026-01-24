@@ -38,15 +38,15 @@ body {
 /* 👇 SLIDING IMAGES */
 @keyframes bgSlide {
   0% {
-    background-image: url("/chanchalr1.jpg");
+    background-image: url("/chanchalr1.webp");
   }
 
   50% {
-    background-image: url("/sw.jpg");
+    background-image: url("/sw.webp");
   }
 
   100% {
-    background-image: url("/chanchalr3.jpg");
+    background-image: url("/chanchalr3.webp");
   }
 }
 
@@ -471,9 +471,9 @@ body {
   object-fit: cover;
 }
 
-.meal-card:hover .meal-image-wrapper {
+/* .meal-card:hover .meal-image-wrapper {
   transform: rotate(60deg) scale(1.05);
-}
+} */
 
 /* ------------------------ CONTENT ------------------------ */
 .meal-content {
@@ -616,7 +616,7 @@ body {
 
 /* ================= LEFT SIDE ================= */
 .offer-left {
-  background: url("/chanchalr1.jpg") center/cover no-repeat;
+  background: url("/chanchalr1.webp") center/cover no-repeat;
   border-radius: 26px;
   position: relative;
   min-height: 420px;
@@ -712,7 +712,7 @@ body {
 
 /* TOP IMAGE */
 .offer-right-top {
-  background: url("/hungry.jpeg") center/cover no-repeat;
+  background: url("/hungry.webp") center/cover no-repeat;
   border-radius: 22px;
   position: relative;
   overflow: hidden;
@@ -722,7 +722,7 @@ body {
 
 /* BOTTOM IMAGE */
 .offer-right-bottom {
-  background: url("/collage.png") center/cover no-repeat;
+  background: url("/collage.webp") center/cover no-repeat;
   border-radius: 22px;
   position: relative;
   overflow: hidden;
